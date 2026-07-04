@@ -248,7 +248,7 @@
     * ------------------------------------------------------ */
     const ssLightbox = function() {
 
-        const folioLinks = document.querySelectorAll('.folio-list__item-link');
+        const folioLinks = document.querySelectorAll('.folio-list__item-link, .folio-list__proj-link');
         const modals = [];
 
         folioLinks.forEach(function(link) {
