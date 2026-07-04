@@ -4081,6 +4081,10 @@ img.u-pull-left {
     margin-left : 0;
 }
 
+.developer-credit {
+    opacity : 0.5;
+}
+
 .contact-social li {
     display      : inline-block;
     padding-left : 0;
