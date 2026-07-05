@@ -712,6 +712,11 @@ h1 span {
     background: #0e141b;
 }
 
+#system-map,
+#system-map-title {
+    scroll-margin-top: 96px;
+}
+
 .system-map-header {
     min-height: 104px;
     padding: 1.4rem 1.6rem;
