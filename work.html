@@ -1,0 +1,96 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Work — Zaidh Rizme</title>
+    <meta name="description" content="Selected robotics, embedded systems, CAD, PCB, and automation work by Zaidh Rizme.">
+    <meta name="theme-color" content="#b9eef8">
+    <link rel="icon" href="favicon.ico">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Assistant:wght@400;500;600;700;800&family=IBM+Plex+Mono:wght@400&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/styles.css?v=20260705-4">
+    <script src="js/main.js?v=20260705-4" defer></script>
+</head>
+<body>
+    <a class="skip-link" href="#main">Skip to content</a>
+    <div class="page-transition" aria-hidden="true"></div>
+    <header class="site-header">
+        <p class="location">Colombo, Sri Lanka</p>
+        <nav class="nav-dock" aria-label="Primary navigation">
+            <a href="index.html" aria-label="Home"><span class="nav-icon">⌂</span><span class="nav-label">Home</span></a>
+            <a href="about.html" aria-label="About"><span class="nav-icon">◎</span><span class="nav-label">About</span></a>
+            <a class="is-active" href="work.html" aria-current="page" aria-label="Work"><span class="nav-icon">▦</span><span class="nav-label">Work</span></a>
+            <a href="contact.html" aria-label="Contact"><span class="nav-icon">✉</span><span class="nav-label">Contact</span></a>
+            <a href="Zaidh_Rizme_CV.pdf" target="_blank" rel="noopener" aria-label="Open CV"><span class="nav-icon">↗</span><span class="nav-label">CV</span></a>
+        </nav>
+        <p class="local-time" data-time>--:--:--</p>
+    </header>
+
+    <main id="main" class="site-main">
+        <header class="work-intro reveal">
+            <h1>ZR Work</h1>
+            <p>Robotics, CAD, PCB, and automation projects by Zaidh Rizme</p>
+        </header>
+
+        <section class="project-feed work-feed" aria-label="Selected projects">
+            <article class="project-article reveal" id="slam">
+                <div class="article-media">
+                    <video autoplay muted loop playsinline preload="metadata" poster="images/projects/pcb-layout.png">
+                        <source src="images/projects/slam-simulation.mp4" type="video/mp4">
+                    </video>
+                </div>
+                <div class="article-copy">
+                    <p class="article-type">Robotics · Embedded · MATLAB · 2026</p>
+                    <h2>Time-of-Flight SLAM Robot</h2>
+                    <p>An autonomous mobile robot that combines an ESP32 control stack, VL53L8CX time-of-flight sensing, MPU6050 inertial data, wheel odometry, and a swept sensor mechanism. MATLAB and Python tools are used to validate motion estimates and occupancy mapping against repeatable simulation runs.</p>
+                    <a href="mailto:rizme.zaidh@gmail.com?subject=Time-of-Flight%20SLAM%20Robot">Discuss project <span>→</span></a>
+                </div>
+            </article>
+
+            <article class="project-article reveal" id="control-pcb">
+                <div class="article-media pcb-media"><img src="images/projects/pcb-layout.png" alt="Custom ESP32 control PCB layout" loading="lazy"></div>
+                <div class="article-copy">
+                    <p class="article-type">Electronics · KiCad · PCB Design</p>
+                    <h2>Custom Robot Control PCB</h2>
+                    <p>A dedicated control board for the SLAM platform, bringing regulated power, ESP32 processing, motor connections, and sensor interfaces into one compact layout. The design was developed in KiCad with component libraries, schematic checks, routing, and manufacturing constraints considered together.</p>
+                    <a href="mailto:rizme.zaidh@gmail.com?subject=Custom%20Robot%20Control%20PCB">Discuss project <span>→</span></a>
+                </div>
+            </article>
+
+            <article class="project-article reveal">
+                <div class="article-media generated-visual visual-oil" aria-hidden="true"><span>MS5837</span><i></i><b>LEVEL / 73%</b></div>
+                <div class="article-copy">
+                    <p class="article-type">Industrial sensing · ATmega328P</p>
+                    <h2>Oil Level Detection System</h2>
+                    <p>A machinery-monitoring system using an MS5837 pressure sensor and ATmega328P firmware to estimate oil level and report threshold conditions. The project includes sensor integration, embedded logic, dedicated schematics, and a custom PCB.</p>
+                    <a href="mailto:rizme.zaidh@gmail.com?subject=Oil%20Level%20Detection%20System">Discuss project <span>→</span></a>
+                </div>
+            </article>
+
+            <article class="project-article reveal">
+                <div class="article-media generated-visual visual-posture" aria-hidden="true"><span>POSTURE</span><i></i><b>ALIGNMENT / OK</b></div>
+                <div class="article-copy">
+                    <p class="article-type">Wearable · Hall sensing · Prototype</p>
+                    <h2>Posture Detection Wearable</h2>
+                    <p>A compact posture-correction concept that uses neodymium magnets and Hall-effect sensing to identify changes in upper-body alignment. The prototype explores sensing geometry, wearable packaging, and a simple feedback architecture.</p>
+                    <a href="mailto:rizme.zaidh@gmail.com?subject=Posture%20Detection%20Wearable">Discuss project <span>→</span></a>
+                </div>
+            </article>
+
+            <article class="project-article reveal">
+                <div class="article-media generated-visual visual-iron" aria-hidden="true"><span>AUTO / IRON</span><i></i><b>TEMP / MOTION / TIME</b></div>
+                <div class="article-copy">
+                    <p class="article-type">Industrial automation · Pneumatics</p>
+                    <h2>Automated Modified Iron</h2>
+                    <p>An apparel-production aid combining relay logic, timing, temperature control, and pneumatic motion. The system was developed to improve pre-heating consistency while reducing repetitive manual handling during the process.</p>
+                    <a href="mailto:rizme.zaidh@gmail.com?subject=Automated%20Modified%20Iron">Discuss project <span>→</span></a>
+                </div>
+            </article>
+        </section>
+    </main>
+
+    <footer class="site-footer"><p>© <span data-year>2026</span> · Zaidh Rizme</p><a href="about.html">About</a><a href="mailto:rizme.zaidh@gmail.com">Email</a></footer>
+</body>
+</html>
