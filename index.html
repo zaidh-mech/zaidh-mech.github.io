@@ -167,6 +167,80 @@
                 </article>
             </div>
 
+            <section class="system-map reveal" aria-labelledby="system-map-title">
+                <header class="system-map-header">
+                    <div>
+                        <p class="brief-label">Interactive architecture</p>
+                        <h3 id="system-map-title">How the SLAM system thinks</h3>
+                    </div>
+                    <a href="https://notebooklm.google.com/notebook/ca5d9d91-2cff-4313-9a30-04c70249b283/artifact/b54a620b-051e-4b64-8858-d194f2486850?utm_source=nlm_web_share&amp;utm_medium=google_oo&amp;utm_campaign=art_share_1_"
+                       target="_blank"
+                       rel="noopener"
+                       aria-label="Open the complete SLAM research mind map in NotebookLM">
+                        Open full research map <span aria-hidden="true">↗</span>
+                    </a>
+                </header>
+
+                <div class="system-map-layout">
+                    <div class="map-canvas" data-system-map aria-label="Interactive diagram of the SLAM robot architecture">
+                        <svg class="map-routes" viewBox="0 0 1000 620" preserveAspectRatio="none" aria-hidden="true">
+                            <path data-route="sensing" d="M430 285 C330 285 300 155 190 155"/>
+                            <path data-route="localization" d="M570 285 C660 285 680 135 800 135"/>
+                            <path data-route="mapping" d="M570 330 C670 330 695 390 825 390"/>
+                            <path data-route="motion" d="M430 330 C325 330 300 445 180 445"/>
+                            <path data-route="hardware" d="M500 365 C500 430 500 480 500 535"/>
+                        </svg>
+
+                        <button class="map-node map-node-core is-active" type="button" data-map-topic="core" aria-pressed="true">
+                            <span>Autonomous platform</span>
+                            <strong>ToF SLAM</strong>
+                            <small>Sense → estimate → map → move</small>
+                        </button>
+                        <button class="map-node map-node-sensing" type="button" data-map-topic="sensing" aria-pressed="false">
+                            <span>01 / Input</span>
+                            <strong>Sensing</strong>
+                            <small>VL53L8CX · MPU6050 · encoders</small>
+                        </button>
+                        <button class="map-node map-node-localization" type="button" data-map-topic="localization" aria-pressed="false">
+                            <span>02 / State</span>
+                            <strong>Localization</strong>
+                            <small>Pose · yaw · wheel odometry</small>
+                        </button>
+                        <button class="map-node map-node-mapping" type="button" data-map-topic="mapping" aria-pressed="false">
+                            <span>03 / Model</span>
+                            <strong>Mapping</strong>
+                            <small>Ray projection · occupancy grid</small>
+                        </button>
+                        <button class="map-node map-node-motion" type="button" data-map-topic="motion" aria-pressed="false">
+                            <span>04 / Output</span>
+                            <strong>Motion</strong>
+                            <small>Motor ramps · closed-loop control</small>
+                        </button>
+                        <button class="map-node map-node-hardware" type="button" data-map-topic="hardware" aria-pressed="false">
+                            <span>05 / Platform</span>
+                            <strong>Hardware</strong>
+                            <small>ESP32 · custom PCB · chassis</small>
+                        </button>
+                    </div>
+
+                    <aside class="map-readout" aria-live="polite">
+                        <p class="map-readout-kicker" data-map-kicker>System / overview</p>
+                        <h4 data-map-title>One loop, not five separate demos.</h4>
+                        <p data-map-copy>The platform continually turns physical measurements into a pose and a map, then feeds that state back into controlled motion.</p>
+                        <dl>
+                            <div>
+                                <dt>Signal direction</dt>
+                                <dd data-map-signal>Sensors → estimate → decision → motors</dd>
+                            </div>
+                            <div>
+                                <dt>Explore</dt>
+                                <dd>Select a node to inspect its role.</dd>
+                            </div>
+                        </dl>
+                    </aside>
+                </div>
+            </section>
+
             <figure class="pcb-feature reveal">
                 <img src="images/projects/pcb-layout.png" alt="Rendered custom ESP32 control PCB for the ToF SLAM robot" loading="lazy">
                 <figcaption>

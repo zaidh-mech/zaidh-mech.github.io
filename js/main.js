@@ -57,5 +57,73 @@ if (!reducedMotion && telemetry.yaw && telemetry.range && telemetry.loop) {
     }, 1800);
 }
 
+const mapTopics = {
+    core: {
+        kicker: "System / overview",
+        title: "One loop, not five separate demos.",
+        copy: "The platform continually turns physical measurements into a pose and a map, then feeds that state back into controlled motion.",
+        signal: "Sensors → estimate → decision → motors"
+    },
+    sensing: {
+        kicker: "01 / physical input",
+        title: "Measure the room and the robot.",
+        copy: "A swept VL53L8CX captures range, the MPU6050 tracks rotation, and wheel encoders measure translation before the data enters the estimator.",
+        signal: "Range + yaw + wheel ticks → time-aligned samples"
+    },
+    localization: {
+        kicker: "02 / state estimation",
+        title: "Keep a usable pose while moving.",
+        copy: "Encoder motion and inertial yaw are fused into the robot pose, giving every accepted range ray a position and heading in the world frame.",
+        signal: "Odometry + IMU → x, y, θ"
+    },
+    mapping: {
+        kicker: "03 / environment model",
+        title: "Turn range rays into spatial evidence.",
+        copy: "Validated measurements are projected from the estimated pose into an occupancy grid for simulation, comparison, and live map construction.",
+        signal: "Pose + accepted rays → occupancy grid"
+    },
+    motion: {
+        kicker: "04 / controlled output",
+        title: "Move without starving the sensing loop.",
+        copy: "Non-blocking scan motion, motor ramping, and closed-loop commands keep actuation predictable while sensing and telemetry continue in real time.",
+        signal: "Motion target + feedback → motor commands"
+    },
+    hardware: {
+        kicker: "05 / physical platform",
+        title: "Make the architecture buildable.",
+        copy: "The ESP32 control board, regulated power, motor and sensor interfaces, swept mount, and chassis package the full loop into one robot.",
+        signal: "Firmware + PCB + mechanics → integrated platform"
+    }
+};
+
+const systemMap = document.querySelector("[data-system-map]");
+const mapTitle = document.querySelector("[data-map-title]");
+const mapKicker = document.querySelector("[data-map-kicker]");
+const mapCopy = document.querySelector("[data-map-copy]");
+const mapSignal = document.querySelector("[data-map-signal]");
+
+systemMap?.querySelectorAll("[data-map-topic]").forEach((node) => {
+    node.addEventListener("click", () => {
+        const topicName = node.dataset.mapTopic;
+        const topic = mapTopics[topicName];
+        if (!topic) return;
+
+        systemMap.querySelectorAll("[data-map-topic]").forEach((item) => {
+            const selected = item === node;
+            item.classList.toggle("is-active", selected);
+            item.setAttribute("aria-pressed", String(selected));
+        });
+
+        systemMap.querySelectorAll("[data-route]").forEach((route) => {
+            route.classList.toggle("is-active", route.dataset.route === topicName);
+        });
+
+        if (mapTitle) mapTitle.textContent = topic.title;
+        if (mapKicker) mapKicker.textContent = topic.kicker;
+        if (mapCopy) mapCopy.textContent = topic.copy;
+        if (mapSignal) mapSignal.textContent = topic.signal;
+    });
+});
+
 const year = document.querySelector("[data-year]");
 if (year) year.textContent = new Date().getFullYear();

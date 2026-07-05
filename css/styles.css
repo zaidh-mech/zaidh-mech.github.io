@@ -706,6 +706,251 @@ h1 span {
     text-transform: uppercase;
 }
 
+.system-map {
+    margin-top: 5rem;
+    border: 1px solid var(--line);
+    background: #0e141b;
+}
+
+.system-map-header {
+    min-height: 104px;
+    padding: 1.4rem 1.6rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 2rem;
+    border-bottom: 1px solid var(--line);
+}
+
+.system-map-header p {
+    margin: 0 0 .3rem;
+}
+
+.system-map-header h3 {
+    margin: 0;
+    font-size: clamp(1.45rem, 2.5vw, 2.15rem);
+    letter-spacing: -.035em;
+}
+
+.system-map-header a {
+    flex: none;
+    padding: .7rem .9rem;
+    border: 1px solid var(--blue);
+    color: var(--blue);
+    font-family: var(--mono);
+    font-size: .65rem;
+    letter-spacing: .04em;
+    text-transform: uppercase;
+    transition: color .2s ease, background .2s ease;
+}
+
+.system-map-header a:hover {
+    color: var(--ink);
+    background: var(--blue);
+}
+
+.system-map-layout {
+    display: grid;
+    grid-template-columns: minmax(0, 1fr) 300px;
+}
+
+.map-canvas {
+    position: relative;
+    min-height: 620px;
+    overflow: hidden;
+    border-right: 1px solid var(--line);
+    background:
+        linear-gradient(rgb(78 161 255 / .055) 1px, transparent 1px),
+        linear-gradient(90deg, rgb(78 161 255 / .055) 1px, transparent 1px);
+    background-size: 40px 40px;
+}
+
+.map-canvas::after {
+    content: "ARCHITECTURE / SELECT A NODE";
+    position: absolute;
+    right: 1rem;
+    bottom: .7rem;
+    color: #536171;
+    font-family: var(--mono);
+    font-size: .55rem;
+    letter-spacing: .09em;
+}
+
+.map-routes {
+    position: absolute;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+}
+
+.map-routes path {
+    fill: none;
+    stroke: #3a4b5d;
+    stroke-width: 1.5;
+    stroke-dasharray: 4 7;
+    vector-effect: non-scaling-stroke;
+    transition: stroke .2s ease, stroke-width .2s ease;
+}
+
+.map-routes path.is-active {
+    stroke: var(--blue);
+    stroke-width: 2.5;
+    stroke-dasharray: none;
+}
+
+.map-node {
+    position: absolute;
+    z-index: 2;
+    width: 190px;
+    padding: .9rem 1rem;
+    border: 1px solid #354454;
+    color: var(--mist);
+    background: #151e27;
+    text-align: left;
+    cursor: pointer;
+    transition: border-color .2s ease, background .2s ease, transform .2s ease;
+}
+
+.map-node:hover {
+    border-color: #66809a;
+    transform: translateY(-2px);
+}
+
+.map-node.is-active {
+    border-color: var(--blue);
+    background: #192a3a;
+    box-shadow: 0 0 0 1px rgb(78 161 255 / .12), 0 16px 40px rgb(0 0 0 / .25);
+}
+
+.map-node span,
+.map-node small {
+    display: block;
+    font-family: var(--mono);
+}
+
+.map-node span {
+    margin-bottom: .35rem;
+    color: var(--blue);
+    font-size: .54rem;
+    letter-spacing: .09em;
+    text-transform: uppercase;
+}
+
+.map-node strong {
+    display: block;
+    font-family: var(--display);
+    font-size: .88rem;
+}
+
+.map-node small {
+    margin-top: .35rem;
+    color: var(--muted);
+    font-size: .52rem;
+    line-height: 1.45;
+}
+
+.map-node-core {
+    top: 44%;
+    left: 50%;
+    width: 220px;
+    padding: 1.15rem 1.2rem;
+    transform: translate(-50%, -50%);
+}
+
+.map-node-core:hover {
+    transform: translate(-50%, calc(-50% - 2px));
+}
+
+.map-node-core strong {
+    font-size: 1.1rem;
+}
+
+.map-node-sensing {
+    top: 16%;
+    left: 5%;
+}
+
+.map-node-localization {
+    top: 13%;
+    right: 4%;
+}
+
+.map-node-mapping {
+    top: 57%;
+    right: 2%;
+}
+
+.map-node-motion {
+    top: 66%;
+    left: 4%;
+}
+
+.map-node-hardware {
+    bottom: 3%;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.map-node-hardware:hover {
+    transform: translate(-50%, -2px);
+}
+
+.map-readout {
+    padding: 2rem 1.6rem;
+    background: var(--steel);
+}
+
+.map-readout-kicker {
+    margin: 0 0 2rem;
+    color: var(--copper);
+    font-family: var(--mono);
+    font-size: .6rem;
+    letter-spacing: .1em;
+    text-transform: uppercase;
+}
+
+.map-readout h4 {
+    margin: 0 0 1rem;
+    font-family: var(--display);
+    font-size: 1.4rem;
+    line-height: 1.25;
+    letter-spacing: -.035em;
+}
+
+.map-readout > p:not(.map-readout-kicker) {
+    color: var(--muted);
+    font-size: .92rem;
+}
+
+.map-readout dl {
+    margin: 2.5rem 0 0;
+    border-top: 1px solid var(--line);
+}
+
+.map-readout dl div {
+    padding: 1rem 0;
+    border-bottom: 1px solid var(--line);
+}
+
+.map-readout dt,
+.map-readout dd {
+    margin: 0;
+}
+
+.map-readout dt {
+    color: var(--muted);
+    font-family: var(--mono);
+    font-size: .55rem;
+    letter-spacing: .08em;
+    text-transform: uppercase;
+}
+
+.map-readout dd {
+    margin-top: .25rem;
+    color: #c6d0da;
+    font-size: .76rem;
+}
+
 .pcb-feature {
     margin: 5rem 0 0;
     border: 1px solid var(--line);
@@ -997,6 +1242,15 @@ footer p {
         grid-template-columns: 1fr 1fr;
     }
 
+    .system-map-layout {
+        grid-template-columns: 1fr;
+    }
+
+    .map-canvas {
+        border-right: 0;
+        border-bottom: 1px solid var(--line);
+    }
+
     .experience .section-heading {
         position: static;
     }
@@ -1032,6 +1286,50 @@ footer p {
     .project-details,
     .capability-grid {
         grid-template-columns: 1fr;
+    }
+
+    .system-map-header {
+        align-items: flex-start;
+        flex-direction: column;
+    }
+
+    .map-canvas {
+        min-height: 0;
+        padding: 1rem;
+        display: grid;
+        grid-template-columns: 1fr;
+        gap: .65rem;
+        background-size: 32px 32px;
+    }
+
+    .map-routes {
+        display: none;
+    }
+
+    .map-node,
+    .map-node-core,
+    .map-node-sensing,
+    .map-node-localization,
+    .map-node-mapping,
+    .map-node-motion,
+    .map-node-hardware {
+        position: static;
+        width: 100%;
+        transform: none;
+    }
+
+    .map-node:hover,
+    .map-node-core:hover,
+    .map-node-hardware:hover {
+        transform: none;
+    }
+
+    .map-node-core {
+        order: -1;
+    }
+
+    .map-canvas::after {
+        display: none;
     }
 
     .system-strip li {
