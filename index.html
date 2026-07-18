@@ -4,7 +4,7 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Zaidh Rizme — Mechatronics & Robotics Engineer</title>
-    <meta name="description" content="Portfolio of Zaidh Rizme, Mechatronics & Robotics Engineer and CAD/PCB Designer.">
+    <meta name="description" content="Portfolio of Zaidh Rizme, Mechatronics and Robotics Engineer focused on PCB design, CAD, embedded systems, and industrial automation.">
     <meta name="theme-color" content="#b9eef8">
     <meta property="og:title" content="Zaidh Rizme — Mechatronics & Robotics Engineer">
     <meta property="og:description" content="Mechatronics & Robotics Engineer, CAD/PCB Designer.">
@@ -15,8 +15,8 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Assistant:wght@400;500;600;700;800&family=IBM+Plex+Mono:wght@400&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="css/styles.css?v=20260705-4">
-    <script src="js/main.js?v=20260705-4" defer></script>
+    <link rel="stylesheet" href="css/styles.css?v=20260718-1">
+    <script src="js/main.js?v=20260718-1" defer></script>
 </head>
 <body>
     <a class="skip-link" href="#main">Skip to content</a>
@@ -26,7 +26,7 @@
         <p class="location">Colombo, Sri Lanka</p>
         <nav class="nav-dock" aria-label="Primary navigation">
             <a class="is-active" href="index.html" aria-current="page" aria-label="Home"><span class="nav-icon">⌂</span><span class="nav-label">Home</span></a>
-            <a href="about.html" aria-label="About"><span class="nav-icon">◎</span><span class="nav-label">About</span></a>
+            <a href="about.html" aria-label="About"><span class="nav-icon">●</span><span class="nav-label">About</span></a>
             <a href="work.html" aria-label="Work"><span class="nav-icon">▦</span><span class="nav-label">Work</span></a>
             <a href="contact.html" aria-label="Contact"><span class="nav-icon">✉</span><span class="nav-label">Contact</span></a>
             <a href="Zaidh_Rizme_CV.pdf" target="_blank" rel="noopener" aria-label="Open CV"><span class="nav-icon">↗</span><span class="nav-label">CV</span></a>
@@ -35,53 +35,102 @@
     </header>
 
     <main id="main" class="site-main">
-        <section class="hero">
+        <section class="hero hero-simple">
             <div class="hero-inner">
                 <p class="identity-code" aria-label="Zaidh Rizme">Z A I D H R I Z M E</p>
                 <h1>Mechatronics &amp;<br>Robotics Engineer,<br>CAD/PCB Designer.</h1>
-                <p class="hero-intro">Hi! I’m Zaidh. I design robotics and embedded systems from mechanical CAD and custom electronics through to firmware, control, and validation.</p>
-                <a class="profile-link" href="about.html"><span class="profile-avatar" aria-hidden="true">ZR</span>About Me</a>
+                <p class="hero-intro">I build practical engineering systems across PCB design, 3D CAD, embedded firmware, sensor integration, and industrial automation.</p>
+                <div class="hero-actions">
+                    <a class="profile-link" href="work.html"><span class="profile-avatar" aria-hidden="true">ZR</span>View work</a>
+                    <a class="text-link" href="Zaidh_Rizme_CV.pdf" target="_blank" rel="noopener">Download CV ↗</a>
+                </div>
             </div>
-            <div class="hero-drawing" aria-hidden="true"><span></span><span></span><i></i></div>
+
+            <figure class="hero-robot" aria-label="Minimal line robot illustration">
+                <svg viewBox="0 0 260 340" role="img">
+                    <title>Minimal robot illustration</title>
+                    <g class="robot-line">
+                        <path d="M130 34v45" />
+                        <circle cx="130" cy="25" r="8" />
+                        <rect x="63" y="78" width="134" height="108" rx="34" />
+                        <path d="M91 122h78" />
+                        <circle cx="99" cy="122" r="7" />
+                        <circle cx="161" cy="122" r="7" />
+                        <path d="M104 153c16 10 36 10 52 0" />
+                        <path d="M63 128H38c-16 0-28 12-28 28v28" />
+                        <path d="M197 128h25c16 0 28 12 28 28v28" />
+                        <path d="M84 186v42h92v-42" />
+                        <path d="M107 228v72" />
+                        <path d="M153 228v72" />
+                        <path d="M83 300h49" />
+                        <path d="M128 300h49" />
+                    </g>
+                    <g class="robot-fill">
+                        <rect x="88" y="204" width="84" height="42" rx="19" />
+                        <path d="M101 247h58" />
+                    </g>
+                </svg>
+                <figcaption>ZR / BOT-01</figcaption>
+            </figure>
         </section>
 
         <section class="skills-loop" aria-label="Technical skills">
             <div class="skills-track">
-                <span>SolidWorks</span><span>KiCad</span><span>ESP32</span><span>C/C++</span><span>MATLAB</span><span>Simulink</span><span>Python</span><span>SLAM</span><span>PCB Design</span><span>Mechanical CAD</span><span>Automation</span><span>Sensor Fusion</span>
-                <span aria-hidden="true">SolidWorks</span><span aria-hidden="true">KiCad</span><span aria-hidden="true">ESP32</span><span aria-hidden="true">C/C++</span><span aria-hidden="true">MATLAB</span><span aria-hidden="true">Simulink</span><span aria-hidden="true">Python</span><span aria-hidden="true">SLAM</span><span aria-hidden="true">PCB Design</span><span aria-hidden="true">Mechanical CAD</span><span aria-hidden="true">Automation</span><span aria-hidden="true">Sensor Fusion</span>
+                <span>PCB Design</span><span>SolidWorks</span><span>ESP32</span><span>ATmega328P</span><span>C/C++</span><span>MATLAB</span><span>Python</span><span>PLC</span><span>Vision Systems</span><span>Pneumatics</span><span>Testing</span><span>Documentation</span>
+                <span aria-hidden="true">PCB Design</span><span aria-hidden="true">SolidWorks</span><span aria-hidden="true">ESP32</span><span aria-hidden="true">ATmega328P</span><span aria-hidden="true">C/C++</span><span aria-hidden="true">MATLAB</span><span aria-hidden="true">Python</span><span aria-hidden="true">PLC</span><span aria-hidden="true">Vision Systems</span><span aria-hidden="true">Pneumatics</span><span aria-hidden="true">Testing</span><span aria-hidden="true">Documentation</span>
             </div>
         </section>
 
-        <section class="project-feed home-feed" aria-labelledby="featured-title">
-            <header class="feed-heading reveal">
-                <p>Selected work</p>
-                <h2 id="featured-title">Engineering across the full system.</h2>
-                <a href="work.html">View all work →</a>
-            </header>
+        <section class="section-block reveal" aria-labelledby="profile-title">
+            <p class="section-kicker">Profile</p>
+            <div class="split-block">
+                <h2 id="profile-title">Hands-on engineer for physical systems.</h2>
+                <p>Mechatronics engineer with experience creating electronic schematics and PCB layouts, SolidWorks parts and assemblies, embedded C/C++ firmware, MATLAB analysis tools, and automation systems using sensors, PLCs, vision, and pneumatics.</p>
+            </div>
+        </section>
 
-            <article class="project-article reveal">
-                <div class="article-media">
-                    <video autoplay muted loop playsinline preload="metadata" poster="images/projects/pcb-layout.png">
-                        <source src="images/projects/slam-simulation.mp4" type="video/mp4">
-                    </video>
+        <section class="section-block reveal" aria-labelledby="projects-title">
+            <div class="section-head">
+                <div>
+                    <p class="section-kicker">Selected projects</p>
+                    <h2 id="projects-title">Recent engineering work</h2>
                 </div>
-                <div class="article-copy">
-                    <p class="article-type">Robotics · Embedded · 2026</p>
-                    <h2>Time-of-Flight SLAM Robot</h2>
-                    <p>An autonomous mobile platform built around an ESP32, VL53L8CX time-of-flight sensing, MPU6050 inertial data, and wheel odometry. The system sweeps its range sensor, estimates motion, and constructs an occupancy map while the robot moves.</p>
-                    <a href="work.html#slam">View project <span>→</span></a>
-                </div>
-            </article>
+                <a class="text-link" href="work.html">All projects ↗</a>
+            </div>
 
-            <article class="project-article reveal">
-                <div class="article-media pcb-media"><img src="images/projects/pcb-layout.png" alt="Custom ESP32 control PCB for the SLAM robot" loading="lazy"></div>
-                <div class="article-copy">
-                    <p class="article-type">Electronics · PCB Design</p>
-                    <h2>Custom Robot Control PCB</h2>
-                    <p>A purpose-built control board that consolidates regulated power, the ESP32 controller, motor interfaces, and sensor connections into one manufacturable assembly designed in KiCad.</p>
-                    <a href="work.html#control-pcb">View project <span>→</span></a>
-                </div>
-            </article>
+            <div class="compact-grid">
+                <article class="compact-card">
+                    <span>Final year project</span>
+                    <h3>ToF SLAM Autonomous Robot</h3>
+                    <p>ESP32-based autonomous robot using ToF sensing, IMU and wheel encoder data for localization, mapping, navigation, and MATLAB validation.</p>
+                </article>
+                <article class="compact-card">
+                    <span>Industrial automation</span>
+                    <h3>Automated Modified Iron</h3>
+                    <p>Relay, timer, temperature-control, pneumatic-cylinder, and movable-arm system for consistent garment pre-heating at MAS Intimates.</p>
+                </article>
+                <article class="compact-card">
+                    <span>Embedded PCB</span>
+                    <h3>Oil Level Monitoring System</h3>
+                    <p>ATmega328P and MS5837-based industrial oil-level monitor with custom schematic, PCB, firmware, alerts, and testing.</p>
+                </article>
+            </div>
+        </section>
+
+        <section class="section-block reveal" aria-labelledby="experience-title">
+            <p class="section-kicker">Experience</p>
+            <div class="timeline-simple">
+                <article>
+                    <span>Jul 2025 - Feb 2026</span>
+                    <h2 id="experience-title">Autonomation Engineer</h2>
+                    <p>MAS Capital - Intimates Division. Implemented autonomation systems, integrated sensors, PLCs and vision systems, designed CAD assemblies, and supported testing and documentation.</p>
+                </article>
+                <article>
+                    <span>2024 - 2025</span>
+                    <h2>Academic Assistant</h2>
+                    <p>LivePhysics. Prepared physics papers, marking schemes, lesson presentations, and coordinated learning material planning.</p>
+                </article>
+            </div>
         </section>
     </main>
 
