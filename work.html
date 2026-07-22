@@ -3,87 +3,168 @@
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Work — Zaidh Rizme</title>
-    <meta name="description" content="Selected robotics, embedded systems, CAD, PCB, and automation work by Zaidh Rizme.">
-    <meta name="theme-color" content="#b9eef8">
+    <title>Projects & Case Studies — Zaidh Rizme</title>
+    <meta name="description" content="Engineering case studies by Zaidh Rizme, including robotics, embedded PCB systems and industrial automation.">
+    <meta name="theme-color" content="#ffffff">
     <link rel="icon" href="favicon.ico">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Assistant:wght@400;500;600;700;800&family=IBM+Plex+Mono:wght@400&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="css/styles.css?v=20260718-1">
-    <script src="js/main.js?v=20260718-1" defer></script>
+    <link rel="stylesheet" href="css/styles.css?v=20260722-1">
+    <script src="js/main.js?v=20260722-1" defer></script>
 </head>
 <body>
     <a class="skip-link" href="#main">Skip to content</a>
-    <div class="page-transition" aria-hidden="true"></div>
-
-    <header class="site-header">
-        <p class="location">Colombo, Sri Lanka</p>
-        <nav class="nav-dock" aria-label="Primary navigation">
-            <a href="index.html" aria-label="Home"><span class="nav-icon">⌂</span><span class="nav-label">Home</span></a>
-            <a href="about.html" aria-label="About"><span class="nav-icon">●</span><span class="nav-label">About</span></a>
-            <a class="is-active" href="work.html" aria-current="page" aria-label="Work"><span class="nav-icon">▦</span><span class="nav-label">Work</span></a>
-            <a href="contact.html" aria-label="Contact"><span class="nav-icon">✉</span><span class="nav-label">Contact</span></a>
-            <a href="Zaidh_Rizme_CV.pdf" target="_blank" rel="noopener" aria-label="Open CV"><span class="nav-icon">↗</span><span class="nav-label">CV</span></a>
+    <aside class="site-rail">
+        <a class="brand" href="index.html">ZAIDH RIZME</a>
+        <nav class="rail-nav" aria-label="Primary navigation">
+            <a href="index.html">Home</a><a href="about.html">About</a><a href="work.html" aria-current="page">Projects</a><a href="contact.html">Contact</a>
         </nav>
-        <p class="local-time" data-time>--:--:--</p>
-    </header>
+        <div class="rail-bottom">
+            <p class="availability">Available for engineering roles</p>
+            <a class="rail-cta" href="Zaidh_Rizme_CV.pdf" target="_blank" rel="noopener">View CV <span>↗</span></a>
+            <p class="rail-meta">Colombo, Sri Lanka<br><span data-time>--:--</span> SLST</p>
+        </div>
+    </aside>
 
-    <main id="main" class="site-main work-main">
-        <section class="page-hero reveal">
-            <p class="identity-code">WORK</p>
-            <h1>Engineering projects</h1>
-            <p>A focused selection from robotics, embedded systems, PCB design, CAD, and industrial automation work.</p>
-        </section>
+    <main id="main" class="site-main">
+        <header class="page-hero content-shell">
+            <div class="eyebrow"><span>Projects / Case studies</span><span>2024—Present</span></div>
+            <h1 class="reveal">Inside the engineering.</h1>
+            <p class="page-intro reveal">Each case study documents the problem, system architecture, engineering decisions and validation—not only the final result.</p>
+        </header>
 
-        <section class="project-list" aria-label="Selected projects">
-            <article class="project-row reveal" id="slam">
-                <div class="project-index">01</div>
-                <div>
-                    <p class="article-type">Dec 2025 - Present · University of Wolverhampton</p>
-                    <h2>ToF Based SLAM and Autonomous Mobile Robot</h2>
-                    <p>Final year project developing a ToF-based autonomous localization and mapping system. The robot uses ESP32-based embedded control, IMU and wheel encoder fusion for pose estimation, real-time navigation and motion control, plus MATLAB tools for mapping, visualization, and performance analysis.</p>
+        <nav class="project-nav" aria-label="Case study navigation">
+            <a href="#slam">01 ToF SLAM Robot</a><a href="#oil-monitor">02 Oil Level Monitor</a><a href="#automation">03 Automated Iron</a><a href="#posture">04 Posture Corrector</a>
+        </nav>
+
+        <article class="case-study" id="slam">
+            <div class="content-shell">
+                <header class="case-header reveal">
+                    <span class="project-no">Case 01</span>
+                    <div class="case-title">
+                        <h2>ToF Based SLAM & Autonomous Mobile Robot</h2>
+                        <p>An ESP32-based mobile robot built to localize itself, map an indoor environment and navigate using fused distance, inertial and wheel-motion data.</p>
+                    </div>
+                    <div class="case-meta">
+                        <div><span class="meta-label">Context</span><p>Final year project</p></div>
+                        <div><span class="meta-label">Timeline</span><p>Dec 2025—Present</p></div>
+                        <div><span class="meta-label">Role</span><p>System design & build</p></div>
+                        <div><span class="meta-label">Tools</span><p>ESP32, MATLAB, C++</p></div>
+                    </div>
+                </header>
+                <figure class="case-hero reveal">
+                    <video autoplay muted loop playsinline controls aria-label="SLAM simulation and mapping validation">
+                        <source src="images/projects/slam-simulation.mp4" type="video/mp4">
+                    </video>
+                </figure>
+                <div class="case-body">
+                    <h3>Engineering narrative</h3>
+                    <div class="case-story">
+                        <article><h4>Challenge</h4><p>Create a compact autonomous platform that can estimate pose and map indoor space using cost-effective sensing and embedded control.</p></article>
+                        <article><h4>Architecture</h4><p>ToF range measurements describe surrounding geometry while the IMU and wheel encoders estimate movement. The ESP32 manages acquisition, control and navigation; MATLAB supports mapping, visualization and performance analysis.</p></article>
+                        <article><h4>Key decisions</h4><p>Separate sensing, pose estimation and motion-control subsystems so each can be validated independently before full integration. A custom 4-layer PCB consolidates sensor and actuator interfaces.</p></article>
+                        <article><h4>Validation</h4><p>Compare estimated motion and generated maps against known paths and room geometry, then tune sensor fusion and control parameters from measured error.</p></article>
+                    </div>
                 </div>
-            </article>
+                <section class="artifact-tray" aria-labelledby="slam-artifacts">
+                    <div class="artifact-head"><h3 id="slam-artifacts">Engineering artifacts</h3><p>Replace any card link with the final PDF, spreadsheet, STEP file, repository or test report when ready.</p></div>
+                    <div class="artifacts">
+                        <a class="artifact" href="images/projects/pcb-layout.png" target="_blank"><span class="artifact-type">Schematic / PCB</span><span class="artifact-icon">⌁</span><h4>Robot control board</h4><p>PNG · board layout preview ↗</p></a>
+                        <a class="artifact" href="#slam-artifacts"><span class="artifact-type">Bill of materials</span><span class="artifact-icon">≣</span><h4>Electronics BOM</h4><p>CSV/XLSX slot · add file</p></a>
+                        <a class="artifact" href="#slam-artifacts"><span class="artifact-type">3D design</span><span class="artifact-icon">◇</span><h4>Robot assembly</h4><p>STEP/SolidWorks slot · add file</p></a>
+                        <a class="artifact" href="https://github.com/zaidh-mech" target="_blank" rel="noopener"><span class="artifact-type">Code / validation</span><span class="artifact-icon">⌘</span><h4>Firmware & MATLAB</h4><p>Repository ↗</p></a>
+                    </div>
+                </section>
+            </div>
+        </article>
 
-            <article class="project-row reveal" id="automated-iron">
-                <div class="project-index">02</div>
-                <div>
-                    <p class="article-type">Jul 2025 - Dec 2025 · MAS Capital</p>
-                    <h2>Automated Modified Iron</h2>
-                    <p>Industrial garment pre-heating system using relay logic, timers, temperature control, a pneumatic cylinder, and movable arms. Built to improve heating consistency, reduce repetitive manual effort, and support reliable production use.</p>
+        <article class="case-study" id="oil-monitor">
+            <div class="content-shell">
+                <header class="case-header reveal">
+                    <span class="project-no">Case 02</span>
+                    <div class="case-title"><h2>Automated Oil Level Monitoring System</h2><p>An industrial monitoring system combining pressure-based level sensing, a custom control PCB and embedded alert logic for production machinery.</p></div>
+                    <div class="case-meta">
+                        <div><span class="meta-label">Context</span><p>Brother Industries</p></div>
+                        <div><span class="meta-label">Timeline</span><p>Oct 2024—Apr 2025</p></div>
+                        <div><span class="meta-label">Role</span><p>Electronics & firmware</p></div>
+                        <div><span class="meta-label">Tools</span><p>ATmega328P, MS5837, C</p></div>
+                    </div>
+                </header>
+                <figure class="case-hero reveal"><img src="images/projects/pcb-layout.png" alt="PCB layout for the custom embedded monitoring board"></figure>
+                <div class="case-body">
+                    <h3>Engineering narrative</h3>
+                    <div class="case-story">
+                        <article><h4>Challenge</h4><p>Replace manual oil-level checks with continuous monitoring that can identify an out-of-range condition reliably in an industrial environment.</p></article>
+                        <article><h4>Architecture</h4><p>An MS5837 pressure sensor feeds an ATmega328P-based custom PCB. Embedded C processes the readings, applies thresholds and controls alert outputs.</p></article>
+                        <article><h4>Delivery</h4><p>Electronic schematic, component selection, PCB layout, sensor integration, firmware and a practical testing sequence for dependable operation.</p></article>
+                        <article><h4>Validation</h4><p>Calibrate level estimates against known oil levels, check threshold behavior and repeat trials to assess stability and false alerts.</p></article>
+                    </div>
                 </div>
-            </article>
+                <section class="artifact-tray" aria-labelledby="oil-artifacts">
+                    <div class="artifact-head"><h3 id="oil-artifacts">Engineering artifacts</h3><p>The same tray supports visual evidence and downloadable source files.</p></div>
+                    <div class="artifacts">
+                        <a class="artifact" href="images/projects/pcb-layout.png" target="_blank"><span class="artifact-type">PCB layout</span><span class="artifact-icon">⌁</span><h4>Control PCB</h4><p>PNG · open preview ↗</p></a>
+                        <a class="artifact" href="#oil-artifacts"><span class="artifact-type">Schematic</span><span class="artifact-icon">⎍</span><h4>Sensor & alert circuit</h4><p>PDF slot · add file</p></a>
+                        <a class="artifact" href="#oil-artifacts"><span class="artifact-type">Bill of materials</span><span class="artifact-icon">≣</span><h4>Production BOM</h4><p>XLSX slot · add file</p></a>
+                        <a class="artifact" href="#oil-artifacts"><span class="artifact-type">Test evidence</span><span class="artifact-icon">✓</span><h4>Calibration report</h4><p>PDF/CSV slot · add file</p></a>
+                    </div>
+                </section>
+            </div>
+        </article>
 
-            <article class="project-row reveal" id="oil-monitoring">
-                <div class="project-index">03</div>
-                <div>
-                    <p class="article-type">Oct 2024 - Apr 2025 · Brother Industries</p>
-                    <h2>Automated Oil Level Monitoring System</h2>
-                    <p>Industrial machinery monitoring system designed around an ATmega328P and MS5837 pressure sensor. The work included electronic schematic design, custom PCB layout, C firmware for data processing, alert logic, and reliability testing.</p>
+        <article class="case-study" id="automation">
+            <div class="content-shell">
+                <header class="case-header reveal">
+                    <span class="project-no">Case 03</span>
+                    <div class="case-title"><h2>Automated Modified Iron</h2><p>A garment pre-heating station integrating controlled heating, relay logic, timers, a pneumatic cylinder and movable arms for consistent production use.</p></div>
+                    <div class="case-meta">
+                        <div><span class="meta-label">Context</span><p>MAS Capital</p></div>
+                        <div><span class="meta-label">Timeline</span><p>Jul—Dec 2025</p></div>
+                        <div><span class="meta-label">Role</span><p>Automation engineer</p></div>
+                        <div><span class="meta-label">Tools</span><p>CAD, controls, pneumatics</p></div>
+                    </div>
+                </header>
+                <figure class="case-hero reveal" style="background:#181818;color:#fff"><div class="diagram-art" aria-hidden="true"><i class="diagram-line"></i></div></figure>
+                <div class="case-body">
+                    <h3>Engineering narrative</h3>
+                    <div class="case-story">
+                        <article><h4>Challenge</h4><p>Improve pre-heating consistency while reducing repetitive manual handling in a branded-apparel manufacturing process.</p></article>
+                        <article><h4>System</h4><p>Relay and timer logic coordinate temperature control and pneumatic motion. Movable arms position the work consistently before pressing.</p></article>
+                        <article><h4>Mechanical design</h4><p>CAD parts and assemblies translate reach, motion and installation constraints into a practical mechanism that production teams can operate and maintain.</p></article>
+                        <article><h4>Validation</h4><p>Test cycle timing, heating consistency, cylinder motion and repeated operation; troubleshoot faults and optimize settings for production reliability.</p></article>
+                    </div>
                 </div>
-            </article>
+                <section class="artifact-tray" aria-labelledby="automation-artifacts">
+                    <div class="artifact-head"><h3 id="automation-artifacts">Engineering artifacts</h3><p>Designed for the documentation reviewers expect from an automation project.</p></div>
+                    <div class="artifacts">
+                        <a class="artifact" href="#automation-artifacts"><span class="artifact-type">System diagram</span><span class="artifact-icon">⌁</span><h4>Control architecture</h4><p>PDF slot · add file</p></a>
+                        <a class="artifact" href="#automation-artifacts"><span class="artifact-type">Pneumatics</span><span class="artifact-icon">⇄</span><h4>Circuit schematic</h4><p>PDF slot · add file</p></a>
+                        <a class="artifact" href="#automation-artifacts"><span class="artifact-type">3D design</span><span class="artifact-icon">◇</span><h4>Station assembly</h4><p>STEP/SolidWorks slot · add file</p></a>
+                        <a class="artifact" href="#automation-artifacts"><span class="artifact-type">Documentation</span><span class="artifact-icon">✓</span><h4>BOM & test report</h4><p>XLSX/PDF slot · add files</p></a>
+                    </div>
+                </section>
+            </div>
+        </article>
 
-            <article class="project-row reveal" id="posture-corrector">
-                <div class="project-index">04</div>
-                <div>
-                    <p class="article-type">Jan 2024 - Apr 2024 · OREL Corporation</p>
-                    <h2>Wearable Active Posture Corrector Device</h2>
-                    <p>Research project investigating neodymium magnets and Hall effect sensors to detect upper-body posture deviations with high sensitivity, including sensing layout, wearable concept development, and prototype-level validation.</p>
-                </div>
-            </article>
-
-            <article class="project-row reveal" id="robot-pcb">
-                <div class="project-index">05</div>
-                <div>
-                    <p class="article-type">PCB Design · Robotics</p>
-                    <h2>Custom ToF Robot PCB</h2>
-                    <p>Custom PCB for the ToF robot using a 4-layer stack-up and copper-zone filling, with schematic capture, sensor interfacing, embedded-system integration, and board-level layout considerations.</p>
-                </div>
-            </article>
-        </section>
+        <article class="case-study" id="posture">
+            <div class="content-shell">
+                <header class="case-header reveal">
+                    <span class="project-no">Case 04</span>
+                    <div class="case-title"><h2>Wearable Active Posture Corrector</h2><p>Research into a sensitive wearable posture-detection concept using neodymium magnets and Hall-effect sensors.</p></div>
+                    <div class="case-meta">
+                        <div><span class="meta-label">Context</span><p>OREL Corporation</p></div>
+                        <div><span class="meta-label">Timeline</span><p>Jan—Apr 2024</p></div>
+                        <div><span class="meta-label">Role</span><p>Research & prototyping</p></div>
+                        <div><span class="meta-label">Domain</span><p>Wearable sensing</p></div>
+                    </div>
+                </header>
+                <figure class="case-hero reveal" style="background:var(--mint)"><div class="diagram-art" aria-hidden="true"><i class="diagram-line"></i></div></figure>
+                <div class="case-body"><h3>Engineering narrative</h3><div class="case-story">
+                    <article><h4>Question</h4><p>Can compact magnetic sensing detect meaningful upper-body posture deviations with enough sensitivity for a wearable feedback device?</p></article>
+                    <article><h4>Approach</h4><p>Investigate magnet and Hall-effect sensor placement, observe response to relative movement and develop a prototype-level wearable concept.</p></article>
+                    <article><h4>Evidence</h4><p>Document sensing behavior, placement constraints and repeatability to identify what a future active feedback prototype must solve.</p></article>
+                </div></div>
+            </div>
+        </article>
     </main>
-
-    <footer class="site-footer"><p>© <span data-year>2026</span> · Zaidh Rizme</p><a href="about.html">About</a><a href="mailto:rizme.zaidh@gmail.com">Email</a></footer>
+    <footer class="site-footer"><p>© <span data-year>2026</span> Zaidh Rizme</p><p><a href="mailto:rizme.zaidh@gmail.com">rizme.zaidh@gmail.com</a></p></footer>
 </body>
 </html>
