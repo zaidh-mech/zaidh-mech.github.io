@@ -205,6 +205,8 @@ p { text-wrap: pretty; }
 .project-card[data-project='oil'] .project-image img { object-position: center 45%; }
 .project-card[data-project='tof'] .project-image { background: #eef0ee; }
 .project-card[data-project='tof'] .project-image img { object-fit: contain; padding: 1rem; }
+.project-card[data-project='hopper'] .project-image { background: #eef0ee; }
+.project-card[data-project='hopper'] .project-image img { object-fit: contain; padding: 1rem; }
 .project-content { display: grid; grid-template-columns: 1fr auto; gap: 1rem; padding: 1.25rem; }
 .project-content h3 { margin: .45rem 0 .55rem; font-size: clamp(1.35rem, 2.7vw, 2rem); line-height: 1.1; font-weight: 500; }
 .project-content p { margin: 0; color: var(--muted); }
@@ -260,6 +262,8 @@ p { text-wrap: pretty; }
 .case-main-image.contain img { object-fit: contain; padding: clamp(1rem, 4vw, 3rem); }
 .case-main-image.robot-main { background: #eef0ee; }
 .case-main-image.robot-main img { object-fit: contain; padding: clamp(1rem, 5vw, 4rem); }
+.case-main-image.hopper-main { background: #eef0ee; }
+.case-main-image.hopper-main img { object-fit: contain; padding: clamp(1rem, 5vw, 4rem); }
 
 .case-section { padding: clamp(4rem, 8vw, 7rem) 0; border-bottom: 1px solid var(--line); }
 .case-layout { display: grid; grid-template-columns: minmax(10rem, .6fr) 1.7fr; gap: clamp(2rem, 6vw, 6rem); }
@@ -286,6 +290,24 @@ p { text-wrap: pretty; }
 .iron-gallery .gallery-media img { object-fit: contain; padding: clamp(.5rem, 2vw, 1.25rem); }
 .gallery-media.cad-stage { background: #eef0ee; }
 .gallery-media.cad-stage img { object-fit: contain; padding: clamp(1rem, 3vw, 2rem); }
+.subsection-head { margin: clamp(4rem, 8vw, 7rem) 0 2rem; padding-top: 1.5rem; border-top: 1px solid var(--ink); }
+.subsection-head h2 { max-width: 760px; margin: .75rem 0 0; font-size: clamp(2rem, 4vw, 3.8rem); line-height: 1.05; font-weight: 500; }
+.configuration-grid { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: clamp(1.5rem, 3vw, 2.5rem); }
+.configuration-grid figure { min-width: 0; margin: 0; }
+.configuration-media,
+.part-media { aspect-ratio: 4 / 3; overflow: hidden; border-radius: 5px; background: #eef0ee; }
+.configuration-media img,
+.part-media img { height: 100%; object-fit: contain; padding: clamp(.65rem, 2vw, 1.25rem); }
+.configuration-grid figcaption { padding-top: .8rem; border-top: 1px solid var(--line); }
+.configuration-grid h3,
+.part-grid h3 { margin: 0 0 .5rem; font-size: 1rem; font-weight: 500; }
+.configuration-grid p,
+.part-grid p { margin: 0; color: var(--muted); font-size: .9rem; }
+.part-grid { display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: clamp(1.5rem, 3vw, 2.5rem); }
+.part-grid article { min-width: 0; }
+.part-grid h3 { margin-top: .8rem; }
+.hopper-photo-gallery .gallery-media { background: #eef0ee; }
+.hopper-photo-gallery .gallery-media img { object-fit: contain; padding: clamp(.4rem, 1vw, .75rem); }
 .caption { margin-top: .65rem; color: var(--muted); text-transform: none; }
 .drawing-link { display: block; }
 .drawing-sheet { background: white; border: 1px solid var(--line); }
@@ -344,6 +366,8 @@ p { text-wrap: pretty; }
     .capability { border-bottom: 1px solid var(--line); }
     .learning-grid { grid-template-columns: 1fr; }
     .pcb-stage { grid-template-columns: 1fr; }
+    .configuration-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+    .part-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
     .meta { grid-template-columns: 1fr 1fr; }
 }
 
@@ -365,6 +389,8 @@ p { text-wrap: pretty; }
     .meta { grid-template-columns: 1fr 1fr; }
     .gallery figure { grid-column: 1 / -1; }
     .gallery-media.wide { aspect-ratio: 4 / 3; }
+    .configuration-grid,
+    .part-grid { grid-template-columns: 1fr; }
     .timeline-row { grid-template-columns: 1fr; gap: .5rem; }
     .footer-row { flex-direction: column; gap: .5rem; }
 }

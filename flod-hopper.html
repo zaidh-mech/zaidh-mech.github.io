@@ -1,20 +1,151 @@
 <!doctype html>
 <html lang="en">
-<head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><meta name="description" content="Case study: FLOD hopper mechanical design and build completed during industrial training by Zaidh Rizme."><title>FLOD Hopper | Zaidh Rizme</title><link rel="icon" href="favicon.ico"><link rel="stylesheet" href="css/styles.css?v=20260808"><script src="js/main.js?v=20260806" defer></script></head>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="Case study: reverse-engineered FLOD glue-pellet hopper designed during industrial training by Zaidh Rizme.">
+    <title>FLOD Hopper | Zaidh Rizme</title>
+    <link rel="icon" href="favicon.ico">
+    <link rel="stylesheet" href="css/styles.css?v=20260808-3">
+    <script src="js/main.js?v=20260806" defer></script>
+</head>
 <body>
 <a class="skip-link" href="#main">Skip to content</a>
-<header class="site-header"><div class="nav-shell"><a class="brand" href="index.html">Zaidh Rizme<span>Mechatronics & Robotics</span></a><nav class="main-nav" aria-label="Primary navigation"><a href="index.html">Home</a><a href="work.html" aria-current="page">Projects</a><a href="about.html">About</a><a href="contact.html">Contact</a></nav><a class="button small nav-cv" href="Zaidh-Rizme-CV.pdf" target="_blank" rel="noopener">CV <span class="arrow">&nearr;</span></a></div></header>
+<header class="site-header">
+    <div class="nav-shell">
+        <a class="brand" href="index.html">Zaidh Rizme<span>Mechatronics &amp; Robotics</span></a>
+        <nav class="main-nav" aria-label="Primary navigation"><a href="index.html">Home</a><a href="work.html" aria-current="page">Projects</a><a href="about.html">About</a><a href="contact.html">Contact</a></nav>
+        <a class="button small nav-cv" href="Zaidh-Rizme-CV.pdf" target="_blank" rel="noopener">CV <span class="arrow">&nearr;</span></a>
+    </div>
+</header>
 <main id="main">
-    <header class="case-intro shell"><a class="back-link" href="work.html">&larr; All projects</a><p class="kicker">Mechanical design / Internship</p><h1>FLOD Hopper</h1><p class="case-deck">A compact motor-driven hopper developed to store and feed material reliably, with a transparent level window and parts designed for practical fabrication.</p><dl class="meta"><div><dt>Context</dt><dd>Industrial training project</dd></div><div><dt>Period</dt><dd>2025</dd></div><div><dt>Role</dt><dd>CAD, fabrication & integration</dd></div><div><dt>Tools</dt><dd>SolidWorks, 3D printing, DC motor</dd></div></dl></header>
-    <figure class="case-main-image contain"><img src="images/projects/hopper/hopper-cad.webp" alt="SolidWorks CAD model of the FLOD hopper"></figure>
-    <section class="case-section"><div class="shell case-layout"><h2>The challenge</h2><div class="case-copy"><p>Develop a small hopper that could feed material predictably within the available machine space and make the remaining level easy to inspect.</p><p>The design brought together the hopper body, lid, shaft, coupling, motor mount, side acrylic and fastening details as a complete assembly.</p><div class="detail-grid"><article><h3>Material path</h3><p>The body geometry guides material toward the outlet while the driven internal element supports consistent discharge.</p></article><article><h3>Drive system</h3><p>A 12 V DC motor, shaft and custom coupling form the compact actuation arrangement.</p></article><article><h3>Inspection</h3><p>A clear side window allows operators to see material level without opening the unit.</p></article><article><h3>Fabrication</h3><p>3D-printed parts and readily available hardware enabled fast iteration and assembly.</p></article></div></div></div></section>
-    <section class="case-section"><div class="shell case-layout"><h2>My contribution</h2><div class="case-copy"><p>I developed and refined the SolidWorks model, prepared the component assembly and supported the physical build and electrical integration.</p><ul class="evidence-list"><li><span>01</span>Designed the hopper body, lid, shaft, motor mount, coupling, spacer and acrylic-side interfaces.</li><li><span>02</span>Checked component clearances and assembly access in the CAD model.</li><li><span>03</span>Supported fabrication and fitted the motor-driven mechanism into the printed housing.</li><li><span>04</span>Integrated relay and buck-converter hardware and checked operation during testing.</li></ul></div></div></section>
-    <section class="case-section"><div class="shell"><div class="section-head"><p class="section-label">Build evidence</p><div><h2>Design details carried into the physical assembly.</h2></div></div><div class="gallery">
-        <figure><div class="gallery-media"><img src="images/projects/hopper/hopper-front.webp" alt="Front of the fabricated FLOD hopper" loading="lazy"></div><figcaption class="caption">Fabricated housing with transparent material-level window.</figcaption></figure>
-        <figure><div class="gallery-media"><img src="images/projects/hopper/hopper-inner.webp" alt="Inside the FLOD hopper showing the motor and feed mechanism" loading="lazy"></div><figcaption class="caption">Internal motor, feed path and fastening arrangement.</figcaption></figure>
-        <figure class="wide"><div class="gallery-media wide"><img src="images/projects/hopper/hopper-controls.webp" alt="Relay and buck-converter hardware used with the hopper" loading="lazy"></div><figcaption class="caption">Relay and adjustable DC conversion used during system integration.</figcaption></figure>
-    </div></div></section>
+    <header class="case-intro shell">
+        <a class="back-link" href="work.html">&larr; All projects</a>
+        <p class="kicker">Reverse engineering / Industrial training</p>
+        <h1>FLOD Glue-Pellet Hopper</h1>
+        <p class="case-deck">A configurable replacement hopper developed around an existing Flat Line On Demand machine to improve pellet flow, reduce blockage and add a compact motor-driven clearing mechanism.</p>
+        <dl class="meta"><div><dt>Context</dt><dd>MAS Intimates / Unichela</dd></div><div><dt>Period</dt><dd>2025</dd></div><div><dt>Role</dt><dd>Reverse engineering, CAD &amp; integration</dd></div><div><dt>Tools</dt><dd>SolidWorks, 3D printing, controls</dd></div></dl>
+    </header>
+
+    <figure class="case-main-image hopper-main"><img src="images/projects/hopper/hopper-cad.webp?v=20260808-3" alt="SolidWorks assembly of the FLOD glue-pellet hopper"></figure>
+
+    <section class="case-section">
+        <div class="shell case-layout">
+            <h2>Why it was designed</h2>
+            <div class="case-copy">
+                <p>The existing FLOD machine needed a more dependable way to deliver glue pellets into its screw and extrusion system.</p>
+                <p>Production trials showed that inconsistent flow and pellet blockage could interrupt feeding. The replacement also had to fit the existing machine without altering the supplier's core equipment, remain light enough for practical handling, and be straightforward to fabricate, commission and maintain.</p>
+                <div class="detail-grid">
+                    <article><h3>Consistent feeding</h3><p>Guide pellets toward the screw inlet with fewer stagnant areas and a smoother outlet transition.</p></article>
+                    <article><h3>Machine compatibility</h3><p>Preserve the existing mounting envelope and interfaces instead of redesigning the FLOD machine.</p></article>
+                    <article><h3>Blockage control</h3><p>Add a compact motor-driven internal shaft to help clear the feeding path when pellets collect near the outlet.</p></article>
+                    <article><h3>Practical maintenance</h3><p>Provide a hinged lid, visible level window and accessible fasteners for inspection and servicing.</p></article>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="case-section">
+        <div class="shell case-layout">
+            <h2>Reverse-engineering approach</h2>
+            <div class="case-copy">
+                <p>I began with the machine that already existed, treating its available space, screw inlet and mounting points as fixed design constraints.</p>
+                <ul class="evidence-list">
+                    <li><span>01</span>Observed the FLOD machine during plant visits and recorded the available envelope, mounting position and pellet-feed path.</li>
+                    <li><span>02</span>Recreated the interface geometry in SolidWorks so the replacement could attach without modifying the supplier's machine.</li>
+                    <li><span>03</span>Built the hopper as a configurable model, then developed matching lids and side-window variants for different sizes.</li>
+                    <li><span>04</span>Produced a physical prototype and checked fit, access, pellet path, motor placement and assembly sequence.</li>
+                    <li><span>05</span>Used commissioning feedback to refine wall angles, outlet geometry, mounting features and weight.</li>
+                    <li><span>06</span>Added fillets along the sloped transition to reduce the bottleneck where pellets enter the feeding mouth.</li>
+                </ul>
+            </div>
+        </div>
+    </section>
+
+    <section class="case-section" id="configurations">
+        <div class="shell">
+            <div class="section-head"><p class="section-label">SolidWorks configurations</p><div><h2>One model family, sized for different machine conditions.</h2><p>I used named configurations to manage the customer 80 mm design, 100 mm and 150 mm variants, and the original baseline geometry within the same hopper file. Matching lid configurations kept the enclosure coordinated as the body size changed.</p></div></div>
+            <div class="configuration-grid">
+                <figure><div class="configuration-media"><img src="images/projects/hopper/config-body-80.webp" alt="Customer 80 millimetre FLOD hopper SolidWorks configuration" loading="lazy"></div><figcaption><h3>Customer design / 80 mm</h3><p>The compact customer-specific configuration used for the constrained machine setup.</p></figcaption></figure>
+                <figure><div class="configuration-media"><img src="images/projects/hopper/config-body-100.webp" alt="100 millimetre FLOD hopper SolidWorks configuration" loading="lazy"></div><figcaption><h3>100 mm configuration</h3><p>A revised body variant retaining the same outlet and mounting relationships.</p></figcaption></figure>
+                <figure><div class="configuration-media"><img src="images/projects/hopper/config-body-150.webp" alt="150 millimetre FLOD hopper SolidWorks configuration" loading="lazy"></div><figcaption><h3>150 mm configuration</h3><p>The larger nominal size managed from the same parametric part file.</p></figcaption></figure>
+                <figure><div class="configuration-media"><img src="images/projects/hopper/config-body-100-original.webp" alt="Original 100 millimetre hopper baseline configuration" loading="lazy"></div><figcaption><h3>Original 100 mm baseline</h3><p>Retained in the model for comparison with the revised geometry.</p></figcaption></figure>
+                <figure><div class="configuration-media"><img src="images/projects/hopper/config-body-150-original.webp" alt="Original 150 millimetre hopper baseline configuration" loading="lazy"></div><figcaption><h3>Original 150 mm baseline</h3><p>The larger original variant preserved alongside the improved design.</p></figcaption></figure>
+            </div>
+
+            <div class="subsection-head"><p class="section-label">Coordinated lids</p><h2>80, 100 and 150 mm lid configurations.</h2></div>
+            <div class="configuration-grid">
+                <figure><div class="configuration-media"><img src="images/projects/hopper/config-lid-80.webp" alt="80 millimetre hopper lid SolidWorks configuration" loading="lazy"></div><figcaption><h3>80 mm lid</h3><p>Customer-size cover with the hinge geometry retained.</p></figcaption></figure>
+                <figure><div class="configuration-media"><img src="images/projects/hopper/config-lid-100.webp" alt="100 millimetre hopper lid SolidWorks configuration" loading="lazy"></div><figcaption><h3>100 mm lid</h3><p>Matched to the 100 mm hopper body configuration.</p></figcaption></figure>
+                <figure><div class="configuration-media"><img src="images/projects/hopper/config-lid-150.webp" alt="150 millimetre hopper lid SolidWorks configuration" loading="lazy"></div><figcaption><h3>150 mm lid</h3><p>Expanded cover for the larger body while keeping the hinge layout consistent.</p></figcaption></figure>
+            </div>
+        </div>
+    </section>
+
+    <section class="case-section" id="components">
+        <div class="shell">
+            <div class="section-head"><p class="section-label">Part by part</p><div><h2>The assembly was developed as manufacturable components.</h2><p>Each part addressed a specific function in the feed path, drive system, inspection access or machine interface.</p></div></div>
+            <div class="part-grid">
+                <article><div class="part-media"><img src="images/projects/hopper/part-coupling.webp" alt="Custom 4 by 4 millimetre FLOD hopper motor coupling" loading="lazy"></div><h3>4 x 4 mm coupling</h3><p>Custom adapter connecting the DC motor output to the clearing shaft.</p></article>
+                <article><div class="part-media"><img src="images/projects/hopper/part-motor.webp" alt="12 volt DC motor CAD model" loading="lazy"></div><h3>12 V DC motor</h3><p>Compact actuator selected to drive the internal clearing mechanism.</p></article>
+                <article><div class="part-media"><img src="images/projects/hopper/part-motor-mount.webp" alt="FLOD hopper DC motor mounting lid" loading="lazy"></div><h3>Motor mount</h3><p>Retains the motor while leaving the shaft path and service access clear.</p></article>
+                <article><div class="part-media"><img src="images/projects/hopper/part-clearing-shaft.webp" alt="3.5 millimetre bent clearing shaft for the hopper" loading="lazy"></div><h3>3.5 mm clearing shaft</h3><p>Bent internal element used to disturb pellets near the restricted feed region.</p></article>
+                <article><div class="part-media"><img src="images/projects/hopper/part-hinge-shaft.webp" alt="Stepped shaft used in the hopper assembly" loading="lazy"></div><h3>Hinge shaft</h3><p>Stepped pin supporting repeatable lid movement and assembly alignment.</p></article>
+                <article><div class="part-media"><img src="images/projects/hopper/part-side-acrylic.webp" alt="Revised transparent acrylic level window for the hopper" loading="lazy"></div><h3>Side acrylic window</h3><p>Provides a direct material-level check without opening the hopper.</p></article>
+                <article><div class="part-media"><img src="images/projects/hopper/part-side-acrylic-original.webp" alt="Original acrylic window configuration for the hopper" loading="lazy"></div><h3>Original window variant</h3><p>Baseline configuration kept in the model while the interface was refined.</p></article>
+                <article><div class="part-media"><img src="images/projects/hopper/part-spacer.webp" alt="Five millimetre hopper spacer and interface plate" loading="lazy"></div><h3>5 mm spacer</h3><p>Interface plate controlling clearance around the outlet and drive assembly.</p></article>
+            </div>
+        </div>
+    </section>
+
+    <section class="case-section">
+        <div class="shell case-layout">
+            <h2>Drive &amp; control integration</h2>
+            <div class="case-copy">
+                <p>The clearing motor had to work with the FLOD machine without direct access to the supplier's hopper-screw control.</p>
+                <p>I used the existing 24 V extrusion-motor signal through a relay and stepped the supply down to 12 V with an adjustable buck converter. The first normally-open relay arrangement activated the clearing motor too late, because extrusion began after pellet feeding. During commissioning I identified this timing problem and changed the relay logic so the motor could operate during the period when the feed path needed to be cleared.</p>
+                <div class="detail-grid">
+                    <article><h3>Non-invasive interface</h3><p>The external circuit avoided changes to the supplier's internal machine controller.</p></article>
+                    <article><h3>Voltage conversion</h3><p>A buck converter adapted the available 24 V control supply for the 12 V motor.</p></article>
+                    <article><h3>Commissioning feedback</h3><p>Observed machine timing exposed why the first relay state could not prevent the blockage.</p></article>
+                    <article><h3>Control enclosure</h3><p>The relay and converter were organized as a serviceable external control unit.</p></article>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="case-section">
+        <div class="shell case-layout">
+            <h2>My contribution</h2>
+            <div class="case-copy">
+                <p>I worked from plant observation and dimensional constraints through configurable CAD, prototyping, drive integration and production-readiness checks.</p>
+                <ul class="evidence-list">
+                    <li><span>01</span>Reverse-engineered the existing machine envelope and hopper interface.</li>
+                    <li><span>02</span>Designed the hopper body and individual mechanical parts in SolidWorks.</li>
+                    <li><span>03</span>Created body, lid and acrylic configurations for several hopper sizes and design stages.</li>
+                    <li><span>04</span>Supported 3D printing, assembly, coupling fabrication and on-machine fit checks.</li>
+                    <li><span>05</span>Integrated the DC motor, relay and buck converter, then revised the control logic after testing.</li>
+                    <li><span>06</span>Refined the outlet, wall transitions, fillets and mounting features from commissioning feedback.</li>
+                </ul>
+            </div>
+        </div>
+    </section>
+
+    <section class="case-section">
+        <div class="shell">
+            <div class="section-head"><p class="section-label">Prototype evidence</p><div><h2>From CAD configuration to physical hopper.</h2><p>The fabricated unit shows the level window, machine-side mounting face, internal motor and clearing shaft, lid access and the external control hardware.</p></div></div>
+            <div class="gallery hopper-photo-gallery">
+                <figure><div class="gallery-media"><img src="images/projects/hopper/photo-side-window.webp" alt="Fabricated FLOD hopper side with transparent pellet-level window" loading="lazy"></div><figcaption class="caption">Side window and bolted acrylic retaining strip.</figcaption></figure>
+                <figure><div class="gallery-media"><img src="images/projects/hopper/photo-rear.webp" alt="Rear mounting face of the fabricated FLOD hopper" loading="lazy"></div><figcaption class="caption">Rear mounting face, lid hinges and outlet interface.</figcaption></figure>
+                <figure><div class="gallery-media"><img src="images/projects/hopper/photo-interior-front.webp" alt="Inside the fabricated FLOD hopper showing the DC motor" loading="lazy"></div><figcaption class="caption">Internal motor position and sloped feed surfaces.</figcaption></figure>
+                <figure><div class="gallery-media"><img src="images/projects/hopper/photo-interior-side.webp" alt="Internal side view of the hopper drive and window fasteners" loading="lazy"></div><figcaption class="caption">Drive placement, cable routing and window fasteners.</figcaption></figure>
+                <figure class="wide"><div class="gallery-media wide"><img src="images/projects/hopper/photo-controls.webp" alt="Relay and buck-converter control hardware used with the hopper" loading="lazy"></div><figcaption class="caption">Relay and adjustable buck converter used for the external 24 V-to-12 V motor interface.</figcaption></figure>
+            </div>
+        </div>
+    </section>
+
     <nav class="next-project"><div class="shell"><a href="tof-slam.html"><span>Next: ToF SLAM Robot</span><span>&rarr;</span></a></div></nav>
 </main>
 <footer class="site-footer"><div class="shell footer-row"><p>&copy; <span data-year>2026</span> Zaidh Rizme</p><p><a href="work.html">All projects</a></p></div></footer>
-</body></html>
+</body>
+</html>
