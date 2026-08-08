@@ -325,6 +325,58 @@ p { text-wrap: pretty; }
 .pcb-image img { max-height: 560px; object-fit: contain; }
 .pcb-stage.advanced .pcb-image { background: #d9d9e7; }
 
+.criteria-strip {
+    display: grid;
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+    border-top: 1px solid var(--ink);
+}
+.criteria-strip article { min-width: 0; padding: 1.4rem 1.25rem 0 0; border-right: 1px solid var(--line); }
+.criteria-strip article + article { padding-left: 1.25rem; }
+.criteria-strip article:last-child { border-right: 0; }
+.criteria-strip span { color: var(--forest); font: .68rem/1 'IBM Plex Mono', monospace; }
+.criteria-strip h3 { margin: 1.4rem 0 .55rem; font-size: 1rem; font-weight: 500; }
+.criteria-strip p { margin: 0; color: var(--muted); font-size: .9rem; }
+
+.tof-part-grid .part-media { aspect-ratio: 1 / 1; }
+.pcb-stage-link { display: block; }
+.pcb-stage-link .pcb-stage { transition: background .25s ease, padding .25s var(--ease); }
+.pcb-stage-link:hover .pcb-stage { background: var(--surface); padding-inline: clamp(.75rem, 2vw, 1.5rem); }
+.stage-cta { display: inline-flex; align-items: center; gap: .75rem; margin-top: 1.5rem; color: var(--forest); font-size: .82rem; font-weight: 500; }
+.stage-cta b { font-size: 1rem; transition: transform .2s var(--ease); }
+.pcb-stage-link:hover .stage-cta b { transform: translateX(5px); }
+
+.case-main-image.pcb-hero { background: #eef0ee; }
+.case-main-image.pcb-hero img { object-fit: contain; padding: clamp(1rem, 5vw, 4rem); }
+.case-main-image.advanced-pcb-hero { background: #d9d9e7; }
+.technical-media { background: #f0f2f0; }
+.technical-media img { object-fit: contain; padding: clamp(.65rem, 2vw, 1.5rem); }
+.technical-media.portrait-tech { aspect-ratio: 4 / 5; }
+.technical-media.wide-tech { aspect-ratio: 16 / 10; }
+
+.pcb-layer-grid { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: clamp(1.5rem, 3vw, 2.5rem); }
+.pcb-layer-grid figure { min-width: 0; margin: 0; }
+.layer-media { aspect-ratio: 4 / 3; display: grid; place-items: center; overflow: hidden; border: 1px solid var(--line); border-radius: 5px; background: white; }
+.layer-media img { width: 100%; height: 100%; object-fit: contain; padding: clamp(.5rem, 1.5vw, 1rem); }
+.pcb-layer-grid figcaption { padding-top: .85rem; border-top: 1px solid var(--line); }
+.pcb-layer-grid h3 { margin: 0 0 .4rem; font-size: 1rem; font-weight: 500; }
+.pcb-layer-grid p { margin: 0; color: var(--muted); font-size: .88rem; }
+
+.document-preview { display: block; border: 1px solid var(--line); border-radius: 5px; overflow: hidden; background: white; transition: border-color .2s ease, transform .2s var(--ease); }
+.document-preview img { aspect-ratio: 16 / 10; object-fit: contain; padding: clamp(.5rem, 2vw, 1.5rem); }
+.document-preview span { display: flex; justify-content: flex-end; padding: .8rem 1rem; border-top: 1px solid var(--line); color: var(--forest); font: .69rem/1.4 'IBM Plex Mono', monospace; text-transform: uppercase; }
+.document-preview:hover { border-color: var(--forest); transform: translateY(-2px); }
+
+.bom-shell { max-height: 36rem; overflow: auto; border: 1px solid var(--line); border-radius: 5px; background: var(--surface); }
+.bom-table { width: 100%; min-width: 760px; border-collapse: collapse; font-size: .82rem; }
+.bom-table th { position: sticky; z-index: 1; top: 0; padding: .8rem 1rem; background: var(--ink); color: white; text-align: left; font: .65rem/1.3 'IBM Plex Mono', monospace; text-transform: uppercase; }
+.bom-table td { padding: .72rem 1rem; border-bottom: 1px solid var(--line); vertical-align: top; }
+.bom-table td:nth-child(1) { width: 20%; font-family: 'IBM Plex Mono', monospace; }
+.bom-table td:nth-child(2) { width: 20%; font-weight: 500; }
+.bom-table td:nth-child(3) { width: 8%; }
+.bom-table td:nth-child(4) { color: var(--muted); font-family: 'IBM Plex Mono', monospace; font-size: .74rem; overflow-wrap: anywhere; }
+.bom-shell.is-error { display: none; }
+.resource-actions { display: flex; flex-wrap: wrap; gap: .75rem; margin-top: 1.25rem; }
+
 .next-project { padding: 3rem 0; }
 .next-project a { display: flex; justify-content: space-between; gap: 2rem; align-items: center; font-size: clamp(1.4rem, 3vw, 2.5rem); }
 .next-project a span:last-child { color: var(--forest); transition: transform .2s var(--ease); }
@@ -366,6 +418,9 @@ p { text-wrap: pretty; }
     .capability { border-bottom: 1px solid var(--line); }
     .learning-grid { grid-template-columns: 1fr; }
     .pcb-stage { grid-template-columns: 1fr; }
+    .criteria-strip { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+    .criteria-strip article:nth-child(2) { border-right: 0; }
+    .criteria-strip article:nth-child(-n+2) { padding-bottom: 1.5rem; border-bottom: 1px solid var(--line); }
     .configuration-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
     .part-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
     .meta { grid-template-columns: 1fr 1fr; }
@@ -391,6 +446,13 @@ p { text-wrap: pretty; }
     .gallery-media.wide { aspect-ratio: 4 / 3; }
     .configuration-grid,
     .part-grid { grid-template-columns: 1fr; }
+    .criteria-strip,
+    .pcb-layer-grid { grid-template-columns: 1fr; }
+    .criteria-strip article { padding: 1.25rem 0; border-right: 0; border-bottom: 1px solid var(--line); }
+    .criteria-strip article + article { padding-left: 0; }
+    .criteria-strip article:last-child { border-bottom: 0; }
+    .technical-media.portrait-tech { aspect-ratio: 4 / 5; }
+    .resource-actions .button { width: 100%; }
     .timeline-row { grid-template-columns: 1fr; gap: .5rem; }
     .footer-row { flex-direction: column; gap: .5rem; }
 }

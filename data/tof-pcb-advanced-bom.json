@@ -1,0 +1,212 @@
+[
+    {
+        "references":  "C1,C3-C6,C8,C12-C14",
+        "value":  "100nF",
+        "footprint":  "Capacitor_SMD:C_0603_1608Metric",
+        "quantity":  9
+    },
+    {
+        "references":  "C2",
+        "value":  "10uF/16V",
+        "footprint":  "Capacitor_Tantalum_SMD:CP_EIA-3216-10_Kemet-I",
+        "quantity":  1
+    },
+    {
+        "references":  "C7",
+        "value":  "10uF",
+        "footprint":  "Capacitor_THT:C_Disc_D5.0mm_W2.5mm_P5.00mm",
+        "quantity":  1
+    },
+    {
+        "references":  "C9,C15",
+        "value":  "10uF",
+        "footprint":  "Capacitor_Tantalum_SMD:CP_EIA-3216-10_Kemet-I",
+        "quantity":  2
+    },
+    {
+        "references":  "C10",
+        "value":  "100uF",
+        "footprint":  "Capacitor_SMD:CP_Elec_6.3x7.7",
+        "quantity":  1
+    },
+    {
+        "references":  "C11",
+        "value":  "470uF",
+        "footprint":  "Capacitor_THT:CP_Radial_D10.0mm_P5.00mm",
+        "quantity":  1
+    },
+    {
+        "references":  "D1",
+        "value":  "B5819W",
+        "footprint":  "Diode_SMD:D_SOD-123",
+        "quantity":  1
+    },
+    {
+        "references":  "D2",
+        "value":  "RED",
+        "footprint":  "LED_SMD:LED_0603_1608Metric",
+        "quantity":  1
+    },
+    {
+        "references":  "D3",
+        "value":  "BLUE",
+        "footprint":  "LED_SMD:LED_0603_1608Metric",
+        "quantity":  1
+    },
+    {
+        "references":  "D4-D7",
+        "value":  "LED",
+        "footprint":  "LED_THT:LED_D3.0mm_Clear",
+        "quantity":  4
+    },
+    {
+        "references":  "J1",
+        "value":  "USB_C_Receptacle_USB2.0_16P",
+        "footprint":  "Connector_USB:USB_C_Receptacle_HRO_TYPE-C-31-M-12",
+        "quantity":  1
+    },
+    {
+        "references":  "J2",
+        "value":  "LEFT MOTOR",
+        "footprint":  "footprints:JST_B6B-XH-A_LF__SN_",
+        "quantity":  1
+    },
+    {
+        "references":  "J3",
+        "value":  "RIGHT MOTOR",
+        "footprint":  "footprints:JST_B6B-XH-A_LF__SN_",
+        "quantity":  1
+    },
+    {
+        "references":  "J4-J6",
+        "value":  "B4B-XH-A",
+        "footprint":  "footprints:JST_B4B-XH-A",
+        "quantity":  3
+    },
+    {
+        "references":  "J7",
+        "value":  "Power JST",
+        "footprint":  "Footprints:JST_B2B-XH-A_LF__SN_",
+        "quantity":  1
+    },
+    {
+        "references":  "J8",
+        "value":  "B3B-XH-A_LF__SN_",
+        "footprint":  "footprints:JST_B3B-XH-A_LF__SN_",
+        "quantity":  1
+    },
+    {
+        "references":  "J12",
+        "value":  "USB_C Charger",
+        "footprint":  "",
+        "quantity":  1
+    },
+    {
+        "references":  "J13",
+        "value":  "B5B-XH-A",
+        "footprint":  "Footprints:JST_B5B-XH-A",
+        "quantity":  1
+    },
+    {
+        "references":  "J14",
+        "value":  "HOMING SENSOR",
+        "footprint":  "Footprints:JST_B3B-XH-A_LF__SN_",
+        "quantity":  1
+    },
+    {
+        "references":  "J15",
+        "value":  "Conn_01x02_Socket",
+        "footprint":  "Connector_JST:JST_EH_B2B-EH-A_1x02_P2.50mm_Vertical",
+        "quantity":  1
+    },
+    {
+        "references":  "Q1,Q2",
+        "value":  "SS8050",
+        "footprint":  "Package_TO_SOT_SMD:SOT-23",
+        "quantity":  2
+    },
+    {
+        "references":  "R1,R2",
+        "value":  "5K1",
+        "footprint":  "Resistor_SMD:R_0603_1608Metric",
+        "quantity":  2
+    },
+    {
+        "references":  "R3",
+        "value":  "1K",
+        "footprint":  "Resistor_SMD:R_0603_1608Metric",
+        "quantity":  1
+    },
+    {
+        "references":  "R4-R6",
+        "value":  "10K",
+        "footprint":  "Resistor_SMD:R_0603_1608Metric",
+        "quantity":  3
+    },
+    {
+        "references":  "R7",
+        "value":  "220R",
+        "footprint":  "Resistor_SMD:R_0603_1608Metric",
+        "quantity":  1
+    },
+    {
+        "references":  "R8-R11",
+        "value":  "470",
+        "footprint":  "Resistor_THT:R_Axial_DIN0204_L3.6mm_D1.6mm_P5.08mm_Horizontal",
+        "quantity":  4
+    },
+    {
+        "references":  "R12-R15",
+        "value":  "10k",
+        "footprint":  "Resistor_SMD:R_0603_1608Metric",
+        "quantity":  4
+    },
+    {
+        "references":  "SW1,SW2",
+        "value":  "SW_Push",
+        "footprint":  "Button_Switch_SMD:SW_Push_SPST_NO_Alps_SKRK",
+        "quantity":  2
+    },
+    {
+        "references":  "SW3",
+        "value":  "Kill Switch",
+        "footprint":  "",
+        "quantity":  1
+    },
+    {
+        "references":  "U1",
+        "value":  "ESP32-WROOM-32",
+        "footprint":  "RF_Module:ESP32-WROOM-32",
+        "quantity":  1
+    },
+    {
+        "references":  "U2",
+        "value":  "CH340C",
+        "footprint":  "Package_SO:SOIC-16_3.9x9.9mm_P1.27mm",
+        "quantity":  1
+    },
+    {
+        "references":  "U3",
+        "value":  "AMS1117",
+        "footprint":  "Package_TO_SOT_SMD:SOT-223-3_TabPin2",
+        "quantity":  1
+    },
+    {
+        "references":  "U4",
+        "value":  "LM2596S",
+        "footprint":  "Footprints:LM2596S_F",
+        "quantity":  1
+    },
+    {
+        "references":  "U5",
+        "value":  "ULN2003A",
+        "footprint":  "Footprints:DIL16",
+        "quantity":  1
+    },
+    {
+        "references":  "U6",
+        "value":  "TB6612FNG",
+        "footprint":  "Package_SO:SSOP-24_5.3x8.2mm_P0.65mm",
+        "quantity":  1
+    }
+]
