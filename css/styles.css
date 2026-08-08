@@ -282,6 +282,8 @@ p { text-wrap: pretty; }
 .gallery-media.wide { aspect-ratio: 16 / 8; }
 .gallery-media img { height: 100%; object-fit: cover; }
 .gallery-media.contain img { object-fit: contain; padding: 1.5rem; }
+.iron-gallery .gallery-media { background: #eef0ee; }
+.iron-gallery .gallery-media img { object-fit: contain; padding: clamp(.5rem, 2vw, 1.25rem); }
 .gallery-media.cad-stage { background: #eef0ee; }
 .gallery-media.cad-stage img { object-fit: contain; padding: clamp(1rem, 3vw, 2rem); }
 .caption { margin-top: .65rem; color: var(--muted); text-transform: none; }
