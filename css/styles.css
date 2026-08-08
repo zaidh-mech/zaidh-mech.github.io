@@ -163,6 +163,8 @@ p { text-wrap: pretty; }
     background: #d8d9ea;
 }
 .hero-visual img { height: 100%; object-fit: cover; object-position: center; }
+.hero-visual.robot-hero { background: #eef0ee; }
+.hero-visual.robot-hero img { object-fit: contain; padding: clamp(1rem, 4vw, 3.5rem); }
 
 .section { padding: clamp(4.5rem, 9vw, 8rem) 0; border-top: 1px solid var(--line); }
 .section-head {
@@ -201,6 +203,8 @@ p { text-wrap: pretty; }
 .project-image img { height: 100%; object-fit: cover; transition: transform .55s var(--ease); }
 .project-card:hover .project-image img { transform: scale(1.025); }
 .project-card[data-project='oil'] .project-image img { object-position: center 45%; }
+.project-card[data-project='tof'] .project-image { background: #eef0ee; }
+.project-card[data-project='tof'] .project-image img { object-fit: contain; padding: 1rem; }
 .project-content { display: grid; grid-template-columns: 1fr auto; gap: 1rem; padding: 1.25rem; }
 .project-content h3 { margin: .45rem 0 .55rem; font-size: clamp(1.35rem, 2.7vw, 2rem); line-height: 1.1; font-weight: 500; }
 .project-content p { margin: 0; color: var(--muted); }
@@ -254,6 +258,8 @@ p { text-wrap: pretty; }
 .case-main-image { height: clamp(320px, 58vw, 760px); overflow: hidden; background: var(--wash); }
 .case-main-image img { height: 100%; object-fit: cover; }
 .case-main-image.contain img { object-fit: contain; padding: clamp(1rem, 4vw, 3rem); }
+.case-main-image.robot-main { background: #eef0ee; }
+.case-main-image.robot-main img { object-fit: contain; padding: clamp(1rem, 5vw, 4rem); }
 
 .case-section { padding: clamp(4rem, 8vw, 7rem) 0; border-bottom: 1px solid var(--line); }
 .case-layout { display: grid; grid-template-columns: minmax(10rem, .6fr) 1.7fr; gap: clamp(2rem, 6vw, 6rem); }
@@ -276,7 +282,24 @@ p { text-wrap: pretty; }
 .gallery-media.wide { aspect-ratio: 16 / 8; }
 .gallery-media img { height: 100%; object-fit: cover; }
 .gallery-media.contain img { object-fit: contain; padding: 1.5rem; }
+.gallery-media.cad-stage { background: #eef0ee; }
+.gallery-media.cad-stage img { object-fit: contain; padding: clamp(1rem, 3vw, 2rem); }
 .caption { margin-top: .65rem; color: var(--muted); text-transform: none; }
+.drawing-link { display: block; }
+.drawing-sheet { background: white; border: 1px solid var(--line); }
+.drawing-sheet img { object-fit: contain; padding: .5rem; }
+.drawing-sheet.portrait { aspect-ratio: 4 / 5; }
+.drawing-link .caption { display: flex; justify-content: space-between; gap: 1rem; }
+.drawing-link .caption span { color: var(--forest); white-space: nowrap; }
+.drawing-link:hover .drawing-sheet { border-color: var(--forest); }
+
+.pcb-progression { border-top: 1px solid var(--ink); }
+.pcb-stage { display: grid; grid-template-columns: minmax(16rem, .8fr) 1.4fr; gap: clamp(2rem, 6vw, 6rem); padding: clamp(2.5rem, 5vw, 4.5rem) 0; border-bottom: 1px solid var(--line); align-items: center; }
+.pcb-stage h3 { margin: .7rem 0 1rem; font-size: clamp(1.7rem, 3vw, 2.8rem); line-height: 1.08; font-weight: 500; }
+.pcb-stage p { margin: 0; color: var(--muted); }
+.pcb-image { min-height: 340px; display: grid; place-items: center; padding: clamp(1rem, 3vw, 2.5rem); border-radius: 5px; background: #eef0ee; }
+.pcb-image img { max-height: 560px; object-fit: contain; }
+.pcb-stage.advanced .pcb-image { background: #d9d9e7; }
 
 .next-project { padding: 3rem 0; }
 .next-project a { display: flex; justify-content: space-between; gap: 2rem; align-items: center; font-size: clamp(1.4rem, 3vw, 2.5rem); }
@@ -318,6 +341,7 @@ p { text-wrap: pretty; }
     .capability:nth-child(2) { border-right: 0; }
     .capability { border-bottom: 1px solid var(--line); }
     .learning-grid { grid-template-columns: 1fr; }
+    .pcb-stage { grid-template-columns: 1fr; }
     .meta { grid-template-columns: 1fr 1fr; }
 }
 
