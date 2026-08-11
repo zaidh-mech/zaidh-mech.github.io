@@ -57,13 +57,13 @@ p { text-wrap: pretty; }
     margin-inline: auto;
 }
 .nav-shell {
-    width: min(calc(100% - 2rem), 880px);
+    width: min(calc(100% - 2rem), 720px);
     min-height: 3.75rem;
     display: grid;
-    grid-template-columns: minmax(0, 1fr) auto minmax(0, 1fr);
+    grid-template-columns: 2.5rem minmax(0, 1fr) 2.5rem;
     align-items: center;
-    gap: 1.5rem;
-    padding: .4rem .45rem .4rem 1rem;
+    gap: .7rem;
+    padding: .35rem;
     border: 1px solid rgba(21, 32, 28, .14);
     border-radius: 999px;
     background: rgba(255, 255, 255, .9);
@@ -77,20 +77,25 @@ p { text-wrap: pretty; }
 .home-page .site-header + main { padding-top: 0; }
 .brand {
     justify-self: start;
+    width: 2.5rem;
+    height: 2.5rem;
+    display: grid;
+    place-items: center;
+    border: 1px solid var(--ink);
+    border-radius: 50%;
+    font-size: 0;
     font-weight: 600;
     line-height: 1;
 }
+.brand::before { content: 'ZR'; font: 500 .72rem/1 'IBM Plex Mono', monospace; }
 .brand span {
-    display: block;
-    margin-top: .35rem;
-    color: var(--muted);
-    font: .63rem/1 'IBM Plex Mono', monospace;
-    font-weight: 400;
-    text-transform: uppercase;
+    display: none;
 }
-.main-nav { display: flex; align-items: center; justify-content: center; gap: 1.5rem; }
+.main-nav { min-width: 0; display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); align-items: center; justify-content: center; gap: .35rem; }
 .main-nav a {
     position: relative;
+    padding: .65rem .35rem;
+    text-align: center;
     font-size: .88rem;
 }
 .main-nav a::after {
@@ -134,7 +139,8 @@ p { text-wrap: pretty; }
 .button.secondary { background: transparent; color: var(--ink); }
 .button.secondary:hover { background: var(--surface); }
 .button.small { min-height: 2.35rem; padding: .5rem .8rem; }
-.nav-cv { justify-self: end; border-radius: 999px; }
+.button.nav-cv { width: 2.5rem; height: 2.5rem; min-height: 0; justify-self: end; padding: 0; border-radius: 50%; font: 500 .68rem/1 'IBM Plex Mono', monospace; }
+.nav-cv .arrow { display: none; }
 .button .arrow { transition: transform .22s var(--ease); }
 .button:hover .arrow { transform: translateX(3px); }
 
@@ -324,10 +330,22 @@ p { text-wrap: pretty; }
 .stage-copy .project-type { padding-top: .45rem; color: var(--forest); }
 .stage-copy h2 { max-width: 780px; margin: 0 0 .8rem; font-size: 2.9rem; line-height: 1.03; font-weight: 600; }
 .stage-copy p { max-width: 680px; margin: 0; color: var(--muted); font-size: 1.05rem; }
+.stage-disciplines { display: flex; flex-wrap: wrap; gap: .4rem; margin: 1rem 0 0; padding: 0; list-style: none; color: #53605b; font: .67rem/1.4 'IBM Plex Mono', monospace; text-transform: uppercase; }
+.stage-disciplines li + li::before { content: '/'; margin-right: .4rem; color: #9ca5a1; }
 .case-link { display: inline-flex; align-items: center; gap: .7rem; margin-top: 1.25rem; padding-bottom: .2rem; border-bottom: 1px solid currentColor; color: var(--forest); font-size: .88rem; font-weight: 500; }
 .case-link span { transition: transform .22s var(--ease); }
 .case-link:hover span { transform: translateX(5px); }
 .home-capabilities { padding: 8rem 0; scroll-snap-align: start; }
+.home-contact { padding: 8rem 0; background: var(--ink); color: white; scroll-snap-align: start; }
+.home-contact-layout { display: grid; grid-template-columns: minmax(10rem, .55fr) 1.8fr; gap: 2rem; align-items: start; }
+.home-contact .section-label { color: #91c6b1; }
+.home-contact h2 { max-width: 860px; margin: 0; font-size: 3.8rem; line-height: 1.02; font-weight: 500; }
+.home-contact p { max-width: 680px; margin: 1.25rem 0 0; color: #bdc7c2; font-size: 1.05rem; }
+.home-contact-actions { display: flex; flex-wrap: wrap; gap: .75rem; margin-top: 2rem; }
+.contact-button { border-color: white; background: white; color: var(--ink); }
+.contact-button:hover { border-color: #91c6b1; background: #91c6b1; color: var(--ink); }
+.contact-button.secondary { border-color: #708079; color: white; }
+.contact-button.secondary:hover { border-color: white; background: transparent; color: white; }
 
 .capability-grid { display: grid; grid-template-columns: repeat(4, 1fr); border-top: 1px solid var(--ink); }
 .capability { padding: 1.5rem 1rem 1rem 0; border-right: 1px solid var(--line); }
@@ -530,17 +548,19 @@ p { text-wrap: pretty; }
 .home-project.reveal.is-visible { opacity: 1; transform: none; }
 
 @media (max-width: 820px) {
-    .nav-shell { grid-template-columns: auto 1fr; gap: .9rem; }
-    .brand span { display: none; }
-    .main-nav { justify-self: end; gap: .9rem; }
-    .nav-cv { display: none; }
+    .nav-shell { grid-template-columns: 2.35rem minmax(0, 1fr) 2.35rem; gap: .5rem; }
+    .brand { width: 2.35rem; height: 2.35rem; }
+    .main-nav { justify-self: stretch; gap: 0; }
+    .main-nav a { font-size: .78rem; }
+    .button.nav-cv { width: 2.35rem; height: 2.35rem; }
     .home-hero h1 { font-size: 4.5rem; }
     .stage-copy { grid-template-columns: 1fr; gap: .7rem; }
     .stage-copy .project-type { padding-top: 0; }
     .stage-copy h2 { font-size: 2.55rem; }
     .section-head,
     .case-layout,
-    .about-grid { grid-template-columns: 1fr; }
+    .about-grid,
+    .home-contact-layout { grid-template-columns: 1fr; }
     .project-grid { grid-template-columns: 1fr; }
     .capability-grid { grid-template-columns: 1fr 1fr; }
     .capability:nth-child(2) { border-right: 0; }
@@ -561,10 +581,10 @@ p { text-wrap: pretty; }
 
 @media (max-width: 560px) {
     .site-header { top: .55rem; }
-    .nav-shell { width: calc(100% - 1rem); min-height: 3.45rem; gap: .65rem; padding: .3rem .65rem; }
-    .brand { font-size: .84rem; }
-    .main-nav { gap: .65rem; }
-    .main-nav a { font-size: .7rem; }
+    .nav-shell { width: calc(100% - 1rem); min-height: 3.45rem; grid-template-columns: 2.2rem minmax(0, 1fr) 2.2rem; gap: .2rem; padding: .3rem; }
+    .brand { width: 2.2rem; height: 2.2rem; }
+    .main-nav a { padding-inline: .15rem; font-size: .67rem; }
+    .button.nav-cv { width: 2.2rem; height: 2.2rem; font-size: .62rem; }
     .home-hero { padding: 6.5rem 0 3rem; }
     .home-hero::before { top: 5.5rem; bottom: 1.5rem; }
     .home-hero::after { bottom: 1.5rem; width: 3rem; }
@@ -581,6 +601,8 @@ p { text-wrap: pretty; }
     .stage-copy h2 { font-size: 2.15rem; }
     .stage-copy p { font-size: .96rem; }
     .home-capabilities { padding: 5.5rem 0; }
+    .home-contact { padding: 5.5rem 0; }
+    .home-contact h2 { font-size: 2.45rem; }
     .hero-visual { height: 260px; margin-top: 1.25rem; }
     .project-content { grid-template-columns: 1fr; }
     .project-link { display: none; }
