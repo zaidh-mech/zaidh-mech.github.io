@@ -1,5 +1,5 @@
 <!doctype html>
-<html lang="en">
+<html lang="en" class="home-document">
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -7,10 +7,10 @@
     <meta name="theme-color" content="#f7f8f6">
     <title>Zaidh Rizme | Mechatronics & Robotics Engineer</title>
     <link rel="icon" href="favicon.ico">
-    <link rel="stylesheet" href="css/styles.css?v=20260808">
-    <script src="js/main.js?v=20260806" defer></script>
+    <link rel="stylesheet" href="css/styles.css?v=20260812-2">
+    <script src="js/main.js?v=20260812-2" defer></script>
 </head>
-<body>
+<body class="home-page">
     <a class="skip-link" href="#main">Skip to content</a>
     <header class="site-header">
         <div class="nav-shell">
@@ -26,65 +26,43 @@
     </header>
 
     <main id="main">
-        <section class="home-hero">
-            <div class="shell">
-                <p class="eyebrow">Colombo, Sri Lanka / Open to engineering roles</p>
-                <h1>Building useful systems across <em>mechanics, electronics and code.</em></h1>
-                <p class="hero-copy">I am a mechatronics and robotics graduate with hands-on experience in PCB design, SolidWorks, embedded systems and industrial automation. I learn best by building, testing and improving real machines.</p>
-                <div class="hero-actions">
-                    <a class="button" href="work.html">View projects <span class="arrow">&rarr;</span></a>
-                    <a class="button secondary" href="Zaidh-Rizme-CV.pdf" target="_blank" rel="noopener">Open CV <span class="arrow">&nearr;</span></a>
-                </div>
-                <figure class="hero-visual robot-hero reveal">
-                    <img src="images/projects/tof/robot-cad-main.webp" alt="SolidWorks CAD model of the enclosed ToF SLAM mobile robot" width="722" height="375">
-                </figure>
+        <section class="home-hero" aria-labelledby="home-title">
+            <div class="shell home-hero-inner">
+                <h1 id="home-title"><span>Mechatronics &amp;</span><span>Robotics Engineer</span></h1>
+                <p class="hero-copy">I am Zaidh Rizme, a recent engineering graduate who develops practical systems across mechanical design, electronics and embedded software. My work is grounded in building, testing and learning through real applications.</p>
             </div>
         </section>
 
-        <section class="section" aria-labelledby="selected-work">
-            <div class="shell">
-                <div class="section-head">
-                    <p class="section-label">Selected work</p>
-                    <div><h2 id="selected-work">Four projects, each showing how I approach an engineering problem.</h2></div>
-                </div>
-                <div class="project-grid">
-                    <a class="project-card reveal" data-project="tof" href="tof-slam.html">
-                        <div class="project-image"><img src="images/projects/tof/robot-cad-main.webp" alt="SolidWorks CAD model of the ToF SLAM mobile robot" loading="lazy"></div>
-                        <div class="project-content"><div><span class="project-type">Robotics / Final year project</span><h3>ToF SLAM Mobile Robot</h3><p>Embedded sensing, mapping, motion control and a custom four-layer PCB for indoor autonomous navigation.</p><div class="project-tags"><span>ESP32</span><span>MATLAB</span><span>KiCad</span></div></div><span class="project-link" aria-hidden="true">&rarr;</span></div>
-                    </a>
-                    <a class="project-card reveal" data-project="oil" href="sense-oil.html">
-                        <div class="project-image"><img src="images/projects/oil/oil-installed.webp" alt="Sense-Oil LevelGuard prototype installed on an industrial sewing machine" loading="lazy"></div>
-                        <div class="project-content"><div><span class="project-type">Embedded systems / Product development</span><h3>Sense-Oil LevelGuard</h3><p>A retrofit pressure-based oil monitoring system with a custom PCB, enclosure and operator alerts.</p><div class="project-tags"><span>ATmega328P</span><span>Sensors</span><span>PCB</span></div></div><span class="project-link" aria-hidden="true">&rarr;</span></div>
-                    </a>
-                    <a class="project-card reveal" href="modified-iron.html">
-                        <div class="project-image"><img src="images/projects/iron/iron-prototype.webp" alt="Pneumatic linkage prototype for the modified industrial iron" loading="lazy"></div>
-                        <div class="project-content"><div><span class="project-type">Industrial automation / Internship</span><h3>Modified Industrial Iron</h3><p>A pneumatic pre-heating station developed through CAD, fabrication, controls integration and production testing.</p><div class="project-tags"><span>SolidWorks</span><span>Pneumatics</span><span>Controls</span></div></div><span class="project-link" aria-hidden="true">&rarr;</span></div>
-                    </a>
-                    <a class="project-card reveal" data-project="hopper" href="flod-hopper.html">
-                        <div class="project-image"><img src="images/projects/hopper/hopper-cad.webp?v=20260808-3" alt="SolidWorks assembly of the FLOD hopper" loading="lazy"></div>
-                        <div class="project-content"><div><span class="project-type">Mechanical design / Internship</span><h3>FLOD Hopper</h3><p>A compact material-feeding hopper developed from mechanism design through a working fabricated assembly.</p><div class="project-tags"><span>CAD</span><span>3D print</span><span>DC motor</span></div></div><span class="project-link" aria-hidden="true">&rarr;</span></div>
-                    </a>
-                </div>
+        <section class="home-project project-tof reveal" aria-labelledby="home-tof">
+            <div class="shell project-stage">
+                <figure class="stage-media"><img src="images/projects/tof/robot-cad-main.webp" alt="SolidWorks CAD model of the purpose-built ToF SLAM robot" loading="lazy"></figure>
+                <div class="stage-copy"><p class="project-type">Final year project / Robotics systems</p><div><h2 id="home-tof">ToF SLAM Mobile Robot</h2><p>A robot developed from the component level, combining a custom chassis, embedded sensing, Python control, MATLAB mapping and two generations of PCB design.</p><a class="case-link" href="tof-slam.html">Read the case study <span>&rarr;</span></a></div></div>
             </div>
         </section>
 
-        <section class="section" aria-labelledby="capabilities">
-            <div class="shell">
-                <div class="section-head"><p class="section-label">Engineering strengths</p><div><h2 id="capabilities">A practical foundation across the whole system.</h2><p>These are areas I have applied in university and industrial projects, and continue to strengthen through hands-on work.</p></div></div>
-                <div class="capability-grid">
-                    <article class="capability"><span class="card-index">Hardware</span><h3>PCB & embedded systems</h3><p>Schematic capture, PCB layout, sensor interfaces, ESP32, ATmega328P and C/C++ firmware.</p></article>
-                    <article class="capability"><span class="card-index">Mechanical</span><h3>3D CAD & mechanisms</h3><p>SolidWorks parts, assemblies, drawings, BOMs, pneumatic systems and design for fabrication.</p></article>
-                    <article class="capability"><span class="card-index">Automation</span><h3>Industrial integration</h3><p>PLCs, sensors, relay logic, vision-system exposure, wiring, commissioning and troubleshooting.</p></article>
-                    <article class="capability"><span class="card-index">Evidence</span><h3>Testing & documentation</h3><p>Calibration, validation, measured results, technical reports and structured engineering records.</p></article>
-                </div>
+        <section class="home-project project-oil reveal" aria-labelledby="home-oil">
+            <div class="shell project-stage">
+                <figure class="stage-media"><img src="images/projects/oil/oil-installed.webp" alt="Sense-Oil LevelGuard installed on an industrial sewing machine" loading="lazy"></figure>
+                <div class="stage-copy"><p class="project-type">Product development / Embedded systems</p><div><h2 id="home-oil">Sense-Oil LevelGuard</h2><p>A retrofit oil-monitoring prototype developed around pressure sensing, a custom control PCB, embedded alert logic and a serviceable installation.</p><a class="case-link" href="sense-oil.html">Read the case study <span>&rarr;</span></a></div></div>
             </div>
         </section>
 
-        <section class="section learning-band">
-            <div class="shell learning-grid">
-                <img src="images/projects/tof/hobby-pcb.webp" alt="Early ESP32 tutorial PCB created while learning PCB design" loading="lazy">
-                <div><p class="section-label">Learning progression</p><h2>From a tutorial board to a four-layer robot PCB.</h2><p>This early ESP32 board was a step-by-step learning exercise during industrial training. It built the confidence and fundamentals that later supported the more advanced PCB designed for the ToF SLAM final-year project.</p><a class="button secondary" href="tof-slam.html#pcb-progression">See the progression <span class="arrow">&rarr;</span></a></div>
+        <section class="home-project project-iron reveal" aria-labelledby="home-iron">
+            <div class="shell project-stage">
+                <figure class="stage-media"><img src="images/projects/iron/iron-prototype.webp" alt="Pneumatic mechanism of the modified industrial iron prototype" loading="lazy"></figure>
+                <div class="stage-copy"><p class="project-type">Industrial training / Automation</p><div><h2 id="home-iron">Modified Industrial Iron</h2><p>A pneumatic pre-heating station developed through mechanism design, CAD, fabrication, control integration and practical production trials.</p><a class="case-link" href="modified-iron.html">Read the case study <span>&rarr;</span></a></div></div>
             </div>
+        </section>
+
+        <section class="home-project project-hopper reveal" aria-labelledby="home-hopper">
+            <div class="shell project-stage">
+                <figure class="stage-media"><img src="images/projects/hopper/hopper-cad.webp?v=20260808-3" alt="SolidWorks assembly of the configurable FLOD hopper" loading="lazy"></figure>
+                <div class="stage-copy"><p class="project-type">Industrial training / Mechanical design</p><div><h2 id="home-hopper">FLOD Hopper</h2><p>A reverse-engineered glue-pellet hopper developed as configurable SolidWorks parts, then translated into a fabricated and serviceable assembly.</p><a class="case-link" href="flod-hopper.html">Read the case study <span>&rarr;</span></a></div></div>
+            </div>
+        </section>
+
+        <section class="home-capabilities" aria-labelledby="capabilities">
+            <div class="shell"><div class="section-head"><p class="section-label">Engineering strengths</p><div><h2 id="capabilities">Mechanical thinking, electronics and code developed together.</h2><p>I have applied these skills through university and industrial projects, with the practical foundation to keep learning through real engineering work.</p></div></div><div class="capability-grid"><article class="capability"><span class="card-index">Hardware</span><h3>PCB &amp; embedded systems</h3><p>Schematic capture, PCB layout, sensor interfaces, ESP32, ATmega328P and C/C++ firmware.</p></article><article class="capability"><span class="card-index">Mechanical</span><h3>CAD &amp; mechanisms</h3><p>SolidWorks parts, assemblies, drawings, configurations, BOMs and design for fabrication.</p></article><article class="capability"><span class="card-index">Automation</span><h3>Industrial integration</h3><p>Pneumatics, PLC exposure, sensors, wiring, commissioning and practical troubleshooting.</p></article><article class="capability"><span class="card-index">Software</span><h3>Engineering computation</h3><p>MATLAB mapping, Python interfaces, simulation workflows and structured technical documentation.</p></article></div></div>
         </section>
     </main>
 
