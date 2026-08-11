@@ -3,10 +3,10 @@
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <meta name="description" content="Case study: purpose-built ToF SLAM robot, part-level SolidWorks design, assemblies, engineering drawings and PCB development by Zaidh Rizme.">
+    <meta name="description" content="Case study: purpose-built ToF SLAM robot integrating SolidWorks mechanical design, custom PCBs, a Python control GUI and MATLAB mapping software by Zaidh Rizme.">
     <title>ToF SLAM Robot | Zaidh Rizme</title>
     <link rel="icon" href="favicon.ico">
-    <link rel="stylesheet" href="css/styles.css?v=20260808-4">
+    <link rel="stylesheet" href="css/styles.css?v=20260812-1">
     <script src="js/main.js?v=20260806" defer></script>
 </head>
 <body>
@@ -17,8 +17,8 @@
         <a class="back-link" href="work.html">&larr; All projects</a>
         <p class="kicker">Robotics / Final year project</p>
         <h1>ToF SLAM &amp; Autonomous Mobile Robot</h1>
-        <p class="case-deck">A purpose-built differential-drive robot developed around the sensing, motion and electronics requirements of a low-cost indoor Time-of-Flight SLAM system.</p>
-        <dl class="meta"><div><dt>Context</dt><dd>BEng final year project</dd></div><div><dt>Period</dt><dd>Dec 2025 - Jul 2026</dd></div><div><dt>Role</dt><dd>Individual system design &amp; build</dd></div><div><dt>Tools</dt><dd>SolidWorks, ESP32, KiCad</dd></div></dl>
+        <p class="case-deck">A purpose-built differential-drive robot developed around the mechanical, sensing, electronics and host-software requirements of a low-cost indoor Time-of-Flight SLAM system.</p>
+        <dl class="meta"><div><dt>Context</dt><dd>BEng final year project</dd></div><div><dt>Period</dt><dd>Dec 2025 - Jul 2026</dd></div><div><dt>Role</dt><dd>Individual system design &amp; build</dd></div><div><dt>Tools</dt><dd>SolidWorks, KiCad, ESP32, MATLAB, Python</dd></div></dl>
     </header>
 
     <figure class="case-main-image robot-main"><img src="images/projects/tof/robot-cad-main.webp" alt="SolidWorks CAD model of the purpose-built ToF SLAM mobile robot"></figure>
@@ -49,6 +49,25 @@
         <figure><a class="drawing-link" href="documents/tof/wheels-imu.pdf" target="_blank" rel="noopener"><div class="gallery-media drawing-sheet portrait"><img src="images/projects/tof/drawing-wheels-imu.webp" alt="Wheel, motor and IMU engineering drawing" loading="lazy"></div><figcaption class="caption">Drive wheel, N20 motor, encoder and IMU arrangement. <span>Open PDF &nearr;</span></figcaption></a></figure>
         <figure><a class="drawing-link" href="documents/tof/tof-sensor.pdf" target="_blank" rel="noopener"><div class="gallery-media drawing-sheet portrait"><img src="images/projects/tof/drawing-tof-sensor.webp" alt="Exploded VL53L8CX sensor housing drawing" loading="lazy"></div><figcaption class="caption">VL53L8CX housing, mount and lid assembly. <span>Open PDF &nearr;</span></figcaption></a></figure>
     </div></div></section>
+
+    <section class="case-section" id="software-integration"><div class="shell">
+        <div class="section-head"><p class="section-label">Software integration</p><div><h2>One workflow from operator command to mapped environment.</h2><p>The robot was developed as a distributed system. The ESP32 handles time-critical hardware tasks, a Python GUI provides the operator interface, and MATLAB converts timestamped motion and range data into the live SLAM map.</p></div></div>
+        <figure class="software-figure"><div class="software-media software-diagram"><img src="images/projects/tof/software/software-architecture.webp" alt="Architecture diagram linking the ESP32 robot, Python operator interface and MATLAB SLAM process" loading="lazy"></div><figcaption class="caption">Distributed architecture: embedded control on the robot, operator control in Python and host-side mapping in MATLAB.</figcaption></figure>
+
+        <div class="case-layout software-case"><h2>How the software fits the robot</h2><div class="case-copy"><p>The software was separated by responsibility so that motor safety and sensor timing remain on the robot while heavier mapping and simulation tasks run on the computer.</p><p>The ESP32 reads wheel encoders, the MPU6050 and the scanning VL53L8CX, then forms timestamped odometry and range packets. The Python interface selects either the physical robot or the MATLAB simulation, sends motion and scan commands, and exposes encoder, IMU and ToF diagnostics during development.</p><p>For physical operation, MATLAB receives the robot telemetry, reconstructs motion from cumulative encoder ticks and IMU yaw, aligns each ToF measurement with its acquisition pose, and updates the occupancy map and SLAM estimate. The same control vocabulary is accepted by the MATLAB software-in-the-loop simulator, allowing the command and mapping workflow to be checked before operating the hardware.</p></div></div>
+
+        <div class="software-flow" aria-label="Software communication routes">
+            <article><span>Control / TCP 8081</span><h3>Python GUI to ESP32</h3><p>Drive, stop, reset, scan and diagnostic commands for the physical robot.</p></article>
+            <article><span>Telemetry / TCP 8080</span><h3>ESP32 to MATLAB</h3><p>Timestamped encoder, yaw, scan angle and ToF distance records.</p></article>
+            <article><span>Simulation / TCP 8091</span><h3>Python GUI to MATLAB</h3><p>The same operator controls target the simulated robot through localhost.</p></article>
+        </div>
+
+        <div class="gallery software-gallery">
+            <figure class="wide"><div class="gallery-media wide software-gui"><img src="images/projects/tof/software/python-control-gui.webp" alt="Python GUI for ToF SLAM robot control, diagnostics and simulation selection" loading="lazy"></div><figcaption class="caption">Python control GUI: hardware connection, actual/simulation target selection, teleoperation, encoder and IMU checks, scan control and live status.</figcaption></figure>
+            <figure><div class="gallery-media software-diagram"><img src="images/projects/tof/software/processing-pipeline.webp" alt="MATLAB processing pipeline from telemetry parsing to corrected SLAM map" loading="lazy"></div><figcaption class="caption">MATLAB pipeline: telemetry parsing, pose reconstruction, motion deskew, occupancy updates and scan matching.</figcaption></figure>
+            <figure><div class="gallery-media software-diagram"><img src="images/projects/tof/software/gui-safety-state.webp" alt="State diagram for safe teleoperation in the Python GUI" loading="lazy"></div><figcaption class="caption">Teleoperation safety: motion is enabled deliberately, commands repeat only while a key is held, and release sends an immediate stop.</figcaption></figure>
+        </div>
+    </div></section>
 
     <section class="case-section" id="pcb-progression"><div class="shell"><div class="section-head"><p class="section-label">PCB progression</p><div><h2>Two boards, each documenting a step in the system.</h2><p>The implemented two-layer PCB consolidated the working robot hardware. The later four-layer design explored a more integrated ESP32 architecture with dedicated power and ground planes.</p></div></div><div class="pcb-progression">
         <a class="pcb-stage-link" href="tof-pcb-first.html"><article class="pcb-stage"><div class="stage-copy"><span class="card-index">Stage 01 / Implemented PCB</span><h3>First robot control board</h3><p>ESP32 development module, power conversion, motor and stepper control, sensor headers, indicators and test points on a 100 x 100 mm two-layer board.</p><span class="stage-cta">Open layouts, components &amp; BOM <b>&rarr;</b></span></div><div class="pcb-image"><img src="images/projects/tof/pcb-first.webp" alt="First two-layer PCB designed for the ToF robot" loading="lazy"></div></article></a>

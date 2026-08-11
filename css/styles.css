@@ -317,6 +317,23 @@ p { text-wrap: pretty; }
 .drawing-link .caption span { color: var(--forest); white-space: nowrap; }
 .drawing-link:hover .drawing-sheet { border-color: var(--forest); }
 
+.software-figure { margin: 0 0 clamp(4rem, 8vw, 7rem); }
+.software-media { overflow: hidden; border-radius: 5px; }
+.software-diagram { background: #fff; border: 1px solid var(--line); }
+.software-diagram img { width: 100%; height: 100%; object-fit: contain; padding: clamp(.6rem, 2vw, 1.25rem); }
+.software-figure .software-media { aspect-ratio: 12 / 7; }
+.software-case { margin-bottom: clamp(3rem, 6vw, 5rem); }
+.software-flow { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); margin-bottom: clamp(3rem, 6vw, 5rem); border-top: 1px solid var(--ink); border-bottom: 1px solid var(--line); }
+.software-flow article { min-width: 0; padding: 1.4rem 1.25rem 1.5rem 0; border-right: 1px solid var(--line); }
+.software-flow article + article { padding-left: 1.25rem; }
+.software-flow article:last-child { border-right: 0; }
+.software-flow span { color: var(--forest); font: .68rem/1.4 'IBM Plex Mono', monospace; }
+.software-flow h3 { margin: 1.1rem 0 .55rem; font-size: 1rem; font-weight: 500; }
+.software-flow p { margin: 0; color: var(--muted); font-size: .9rem; }
+.software-gallery .software-gui { aspect-ratio: 1492 / 1226; background: #171717; }
+.software-gallery .software-gui img { object-fit: contain; }
+.software-gallery .software-diagram { aspect-ratio: 18 / 10; }
+
 .pcb-progression { border-top: 1px solid var(--ink); }
 .pcb-stage { display: grid; grid-template-columns: minmax(16rem, .8fr) 1.4fr; gap: clamp(2rem, 6vw, 6rem); padding: clamp(2.5rem, 5vw, 4.5rem) 0; border-bottom: 1px solid var(--line); align-items: center; }
 .pcb-stage h3 { margin: .7rem 0 1rem; font-size: clamp(1.7rem, 3vw, 2.8rem); line-height: 1.08; font-weight: 500; }
@@ -423,6 +440,10 @@ p { text-wrap: pretty; }
     .criteria-strip article:nth-child(-n+2) { padding-bottom: 1.5rem; border-bottom: 1px solid var(--line); }
     .configuration-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
     .part-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+    .software-flow { grid-template-columns: 1fr; }
+    .software-flow article { padding: 1.25rem 0; border-right: 0; border-bottom: 1px solid var(--line); }
+    .software-flow article + article { padding-left: 0; }
+    .software-flow article:last-child { border-bottom: 0; }
     .meta { grid-template-columns: 1fr 1fr; }
 }
 
