@@ -7,13 +7,13 @@
     <meta name="theme-color" content="#FAF9F5">
     <title>Zaidh Rizme | Mechatronics &amp; Robotics Engineer</title>
     <link rel="icon" href="favicon.ico">
-    <link rel="stylesheet" href="css/styles.css?v=20261019-1">
-    <script src="js/main.js?v=20261019-1" defer></script>
+    <link rel="stylesheet" href="css/styles.css?v=20261019-2">
+    <script src="js/main.js?v=20261019-2" defer></script>
 </head>
 <body class="home-page">
     <a class="skip-link" href="#main">Skip to content</a>
 
-    <!-- Claude Translucent Floating Navigation -->
+    <!-- Mathematically Centered Claude Translucent Navigation -->
     <header class="site-header">
         <div class="nav-shell">
             <a class="brand" href="index.html" aria-label="Zaidh Rizme Homepage">
@@ -58,12 +58,12 @@
                 </p>
 
                 <div class="hero-actions">
-                    <a class="button" href="#featured-work">Explore Case Studies <span class="arrow">&darr;</span></a>
+                    <a class="button" href="#featured-articles">Explore Project Articles <span class="arrow">&darr;</span></a>
                     <a class="button secondary" href="contact.html">Get in touch <span class="arrow">&rarr;</span></a>
                     <a class="button secondary" href="Zaidh-Rizme-CV.pdf" target="_blank" rel="noopener">Download CV <span class="arrow">&nearr;</span></a>
                 </div>
 
-                <!-- Engineering Telemetry / Highlights Strip -->
+                <!-- Engineering Telemetry Strip -->
                 <div class="hero-metrics" aria-label="Key engineering achievements">
                     <div class="metric-item">
                         <div class="metric-number">04<span>+</span></div>
@@ -85,7 +85,7 @@
             </div>
         </section>
 
-        <!-- Claude Artifact: Interactive System Architecture Explorer -->
+        <!-- Interactive Claude Artifact: System Architecture Inspector -->
         <section class="system-explorer-section" aria-labelledby="system-explorer-title">
             <div class="shell">
                 <div class="section-head">
@@ -139,128 +139,358 @@
             </div>
         </section>
 
-        <!-- Project Showcase Header with Filter Pills -->
-        <section id="featured-work" class="section" style="padding-bottom: 2rem;">
+        <!-- Project Articles Section: Block Format -->
+        <section id="featured-articles" class="section">
             <div class="shell">
                 <div class="section-head">
-                    <p class="section-label">Selected Portfolio</p>
+                    <p class="section-label">Engineering Monograph</p>
                     <div>
-                        <h2>Engineered from requirements to hardware.</h2>
-                        <p>Each case study documents the design decisions, component selection, mechanical drawings, circuit layouts, and physical testing.</p>
+                        <h2>Selected Project Articles</h2>
+                        <p>Detailed technical breakdowns documenting kinematics, circuit schematics, embedded firmware, and physical deployment.</p>
                     </div>
                 </div>
 
-                <div class="filter-bar" role="toolbar" aria-label="Filter projects by discipline">
-                    <button type="button" class="filter-btn active" data-filter="all">All Projects (04)</button>
+                <div class="filter-bar" role="toolbar" aria-label="Filter project articles by discipline">
+                    <button type="button" class="filter-btn active" data-filter="all">All Articles (04)</button>
                     <button type="button" class="filter-btn" data-filter="robotics">Robotics &amp; SLAM</button>
                     <button type="button" class="filter-btn" data-filter="embedded">Embedded &amp; PCB</button>
                     <button type="button" class="filter-btn" data-filter="automation">Industrial Automation</button>
                     <button type="button" class="filter-btn" data-filter="cad">Mechanical &amp; CAD</button>
                 </div>
-            </div>
-        </section>
 
-        <!-- Featured Projects in Stage View -->
-        <section class="home-project project-tof reveal" data-category="robotics embedded cad" aria-labelledby="home-tof">
-            <div class="shell project-stage">
-                <figure class="stage-media">
-                    <img src="images/projects/tof/robot-cad-main.webp" alt="SolidWorks CAD model of the purpose-built ToF SLAM robot" loading="lazy">
-                </figure>
-                <div class="stage-copy">
-                    <p class="project-type">01 / 04 &middot; BEng Final Year Capstone</p>
-                    <div>
-                        <h2 id="home-tof">ToF SLAM Mobile Robot</h2>
-                        <p>A mobile robot developed from component level up, combining custom differential chassis design, VL53L8CX multizone ToF scanning, ESP32 embedded control, Python diagnostics, MATLAB occupancy grid mapping, and two generations of purpose-built PCBs.</p>
-                        <ul class="stage-disciplines" aria-label="Project disciplines">
-                            <li>SolidWorks</li>
-                            <li>ESP32 Dual-Core</li>
-                            <li>KiCad 4-Layer</li>
-                            <li>MATLAB SLAM</li>
-                            <li>Python GUI</li>
-                        </ul>
-                        <div style="margin-top: 1.25rem;">
-                            <a class="case-link" href="tof-slam.html">Read full case study <span>&rarr;</span></a>
+                <div class="article-blocks-stack">
+                    <!-- Article 01: ToF SLAM Robot -->
+                    <article class="article-block reveal" data-category="robotics embedded cad">
+                        <div class="article-top-meta">
+                            <div class="article-issue">
+                                <span class="issue-number">CASE 01</span>
+                                <span class="issue-sep">&middot;</span>
+                                <span class="issue-topic">Autonomous Robotics &amp; SLAM</span>
+                            </div>
+                            <div class="article-timing">
+                                <span>BEng Final Year Capstone</span>
+                                <span class="issue-sep">&middot;</span>
+                                <span>6 min read</span>
+                            </div>
                         </div>
-                    </div>
+
+                        <div class="article-main-grid">
+                            <div class="article-copy-col">
+                                <h2 class="article-title">
+                                    <a href="tof-slam.html">ToF SLAM Autonomous Mobile Robot</a>
+                                </h2>
+                                <p class="article-dek">
+                                    A purpose-built differential-drive robot designed from component kinematics to custom 4-layer electronics, combining multizone Time-of-Flight lidar scanning with real-time occupancy grid mapping.
+                                </p>
+
+                                <blockquote class="article-quote">
+                                    &ldquo;Designing the chassis from scratch allowed the sensor field of view, drive geometry, and PCB envelope to be resolved together rather than adapted around a generic platform.&rdquo;
+                                </blockquote>
+
+                                <div class="article-specs-block">
+                                    <div class="spec-cell">
+                                        <span class="spec-label">Sensing Turret</span>
+                                        <span class="spec-val">VL53L8CX 8x8 ToF (64 Zones)</span>
+                                    </div>
+                                    <div class="spec-cell">
+                                        <span class="spec-label">Embedded Core</span>
+                                        <span class="spec-val">ESP32 Dual-Core + MPU6050</span>
+                                    </div>
+                                    <div class="spec-cell">
+                                        <span class="spec-label">Drive System</span>
+                                        <span class="spec-val">Dual N20 Encoders + Caster</span>
+                                    </div>
+                                    <div class="spec-cell">
+                                        <span class="spec-label">Mapping Pipeline</span>
+                                        <span class="spec-val">Python Teleop + MATLAB SLAM</span>
+                                    </div>
+                                </div>
+
+                                <div class="article-tags-row">
+                                    <span class="article-tag">SolidWorks CAD</span>
+                                    <span class="article-tag">KiCad 4-Layer PCB</span>
+                                    <span class="article-tag">ESP32 Firmware</span>
+                                    <span class="article-tag">MATLAB SLAM</span>
+                                    <span class="article-tag">Python PyQt</span>
+                                </div>
+
+                                <div class="article-cta-row">
+                                    <a class="button" href="tof-slam.html">Read Case Study <span class="arrow">&rarr;</span></a>
+                                    <a class="button secondary small" href="tof-pcb-advanced.html">4-Layer PCB Study &nearr;</a>
+                                    <a class="button secondary small" href="documents/tof/assembly.pdf" target="_blank" rel="noopener">Assembly Drawing &nearr;</a>
+                                </div>
+                            </div>
+
+                            <div class="article-media-col">
+                                <div class="article-media-frame">
+                                    <div class="media-badge-top">
+                                        <span class="fig-label">FIG 1.1</span>
+                                        <span class="fig-title">SolidWorks Coordinated Assembly</span>
+                                    </div>
+                                    <div class="article-img-wrap">
+                                        <img src="images/projects/tof/robot-cad-main.webp" alt="SolidWorks CAD model of the purpose-built ToF SLAM robot" loading="lazy">
+                                    </div>
+                                    <div class="media-specs-bottom">
+                                        <span>140 mm Wheelbase</span>
+                                        <span>&bull;</span>
+                                        <span>2-Layer &amp; 4-Layer Boards</span>
+                                        <span>&bull;</span>
+                                        <span>Click to Zoom</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </article>
+
+                    <!-- Article 02: Sense-Oil LevelGuard -->
+                    <article class="article-block reveal" data-category="embedded">
+                        <div class="article-top-meta">
+                            <div class="article-issue">
+                                <span class="issue-number">CASE 02</span>
+                                <span class="issue-sep">&middot;</span>
+                                <span class="issue-topic">Embedded Systems &amp; Product Prototype</span>
+                            </div>
+                            <div class="article-timing">
+                                <span>University Engineering Project</span>
+                                <span class="issue-sep">&middot;</span>
+                                <span>5 min read</span>
+                            </div>
+                        </div>
+
+                        <div class="article-main-grid reverse">
+                            <div class="article-copy-col">
+                                <h2 class="article-title">
+                                    <a href="sense-oil.html">Sense-Oil LevelGuard</a>
+                                </h2>
+                                <p class="article-dek">
+                                    A non-invasive retrofit oil-level monitoring system engineered for industrial sewing machines, combining MS5837 hydrostatic pressure measurement, a custom ATmega328P control board, dynamic threshold alerts, and an industrial-grade enclosure.
+                                </p>
+
+                                <blockquote class="article-quote">
+                                    &ldquo;Manual oil checks in textile factories are intermittent and prone to human error. Sense-Oil continuous monitoring protects multi-thousand dollar machinery without requiring machine redesign.&rdquo;
+                                </blockquote>
+
+                                <div class="article-specs-block">
+                                    <div class="spec-cell">
+                                        <span class="spec-label">Transducer</span>
+                                        <span class="spec-val">MS5837 Hydrostatic Pressure</span>
+                                    </div>
+                                    <div class="spec-cell">
+                                        <span class="spec-label">Processor</span>
+                                        <span class="spec-val">ATmega328P Custom Control PCB</span>
+                                    </div>
+                                    <div class="spec-cell">
+                                        <span class="spec-label">Operator UI</span>
+                                        <span class="spec-val">0.96&quot; I2C OLED + Tri-Color Alert</span>
+                                    </div>
+                                    <div class="spec-cell">
+                                        <span class="spec-label">Interface</span>
+                                        <span class="spec-val">Oil Drain Plug Mechanical Tap</span>
+                                    </div>
+                                </div>
+
+                                <div class="article-tags-row">
+                                    <span class="article-tag">Hydrostatic Sensing</span>
+                                    <span class="article-tag">ATmega328P</span>
+                                    <span class="article-tag">Custom PCB Layout</span>
+                                    <span class="article-tag">Calibration Workflow</span>
+                                </div>
+
+                                <div class="article-cta-row">
+                                    <a class="button" href="sense-oil.html">Read Case Study <span class="arrow">&rarr;</span></a>
+                                    <a class="button secondary small" href="images/projects/oil/oil-installed.webp" target="_blank">Installed View &nearr;</a>
+                                </div>
+                            </div>
+
+                            <div class="article-media-col">
+                                <div class="article-media-frame">
+                                    <div class="media-badge-top">
+                                        <span class="fig-label">FIG 2.1</span>
+                                        <span class="fig-title">Sewing Machine Retrofit Integration</span>
+                                    </div>
+                                    <div class="article-img-wrap">
+                                        <img src="images/projects/oil/oil-installed.webp" alt="Sense-Oil LevelGuard installed on an industrial sewing machine" loading="lazy">
+                                    </div>
+                                    <div class="media-specs-bottom">
+                                        <span>Hydrostatic Calibration</span>
+                                        <span>&bull;</span>
+                                        <span>OLED + Buzzer Alerts</span>
+                                        <span>&bull;</span>
+                                        <span>Click to Zoom</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </article>
+
+                    <!-- Article 03: Modified Industrial Iron -->
+                    <article class="article-block reveal" data-category="automation cad">
+                        <div class="article-top-meta">
+                            <div class="article-issue">
+                                <span class="issue-number">CASE 03</span>
+                                <span class="issue-sep">&middot;</span>
+                                <span class="issue-topic">Industrial Automation &middot; MAS Capital</span>
+                            </div>
+                            <div class="article-timing">
+                                <span>Industrial Internship</span>
+                                <span class="issue-sep">&middot;</span>
+                                <span>7 min read</span>
+                            </div>
+                        </div>
+
+                        <div class="article-main-grid">
+                            <div class="article-copy-col">
+                                <h2 class="article-title">
+                                    <a href="modified-iron.html">Modified Industrial Iron Workstation</a>
+                                </h2>
+                                <p class="article-dek">
+                                    An automated pneumatic pre-heating workstation designed to ensure uniform heat application in garment manufacturing, resolved as a 23-part SolidWorks assembly with four-bar linkage kinematics, independent digital PID temperature controls, and factory air regulation.
+                                </p>
+
+                                <blockquote class="article-quote">
+                                    &ldquo;Converting manual pressing into a guided pneumatic stroke controlled the three hardest variables to repeat by hand: travel kinematics, heating temperature, and dwell time.&rdquo;
+                                </blockquote>
+
+                                <div class="article-specs-block">
+                                    <div class="spec-cell">
+                                        <span class="spec-label">Actuation</span>
+                                        <span class="spec-val">Double-Acting Pneumatic Cylinder</span>
+                                    </div>
+                                    <div class="spec-cell">
+                                        <span class="spec-label">Kinematics</span>
+                                        <span class="spec-val">Guided 4-Bar Multi-Link Arm</span>
+                                    </div>
+                                    <div class="spec-cell">
+                                        <span class="spec-label">Thermal Loop</span>
+                                        <span class="spec-val">Digital PID Controller + Sourced Iron</span>
+                                    </div>
+                                    <div class="spec-cell">
+                                        <span class="spec-label">Documentation</span>
+                                        <span class="spec-val">23-Part Complete Production BOM</span>
+                                    </div>
+                                </div>
+
+                                <div class="article-tags-row">
+                                    <span class="article-tag">Pneumatics</span>
+                                    <span class="article-tag">SolidWorks 23-BOM</span>
+                                    <span class="article-tag">Linkage Kinematics</span>
+                                    <span class="article-tag">CNC &amp; Lathe DFM</span>
+                                    <span class="article-tag">Factory Trials</span>
+                                </div>
+
+                                <div class="article-cta-row">
+                                    <a class="button" href="modified-iron.html">Read Case Study <span class="arrow">&rarr;</span></a>
+                                    <a class="button secondary small" href="documents/iron/modified-iron-assembly.pdf" target="_blank" rel="noopener">Complete Assembly PDF &nearr;</a>
+                                    <a class="button secondary small" href="documents/iron/heating-head.pdf" target="_blank" rel="noopener">Heating Head Drawing &nearr;</a>
+                                </div>
+                            </div>
+
+                            <div class="article-media-col">
+                                <div class="article-media-frame">
+                                    <div class="media-badge-top">
+                                        <span class="fig-label">FIG 3.1</span>
+                                        <span class="fig-title">Fabricated Pneumatic Linkage Arm</span>
+                                    </div>
+                                    <div class="article-img-wrap">
+                                        <img src="images/projects/iron/iron-prototype.webp" alt="Pneumatic mechanism of the modified industrial iron prototype" loading="lazy">
+                                    </div>
+                                    <div class="media-specs-bottom">
+                                        <span>CNC 1060 Alloy Base</span>
+                                        <span>&bull;</span>
+                                        <span>Repeatable Dwell</span>
+                                        <span>&bull;</span>
+                                        <span>Click to Zoom</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </article>
+
+                    <!-- Article 04: FLOD Hopper -->
+                    <article class="article-block reveal" data-category="automation cad">
+                        <div class="article-top-meta">
+                            <div class="article-issue">
+                                <span class="issue-number">CASE 04</span>
+                                <span class="issue-sep">&middot;</span>
+                                <span class="issue-topic">Reverse Engineering &middot; DFM</span>
+                            </div>
+                            <div class="article-timing">
+                                <span>MAS Intimates Line Upgrade</span>
+                                <span class="issue-sep">&middot;</span>
+                                <span>5 min read</span>
+                            </div>
+                        </div>
+
+                        <div class="article-main-grid reverse">
+                            <div class="article-copy-col">
+                                <h2 class="article-title">
+                                    <a href="flod-hopper.html">FLOD Configurable Glue-Pellet Hopper</a>
+                                </h2>
+                                <p class="article-dek">
+                                    A reverse-engineered replacement hopper developed for an automated adhesive extrusion line, incorporating parametric SolidWorks parts with design configurations, laser-cut inspection windows, and an integrated motor-driven clearing mechanism to prevent material bridging.
+                                </p>
+
+                                <blockquote class="article-quote">
+                                    &ldquo;Production stoppages due to pellet bridging cost valuable line throughput. The replacement hopper introduced smooth internal funnels and active mechanical agitation within the exact original envelope.&rdquo;
+                                </blockquote>
+
+                                <div class="article-specs-block">
+                                    <div class="spec-cell">
+                                        <span class="spec-label">CAD Architecture</span>
+                                        <span class="spec-val">Parametric Design Configurations</span>
+                                    </div>
+                                    <div class="spec-cell">
+                                        <span class="spec-label">Active Clearing</span>
+                                        <span class="spec-val">DC Geared Motor Internal Agitator</span>
+                                    </div>
+                                    <div class="spec-cell">
+                                        <span class="spec-label">Visual Level</span>
+                                        <span class="spec-val">Laser-Cut Acrylic Gauge Window</span>
+                                    </div>
+                                    <div class="spec-cell">
+                                        <span class="spec-label">Target Machine</span>
+                                        <span class="spec-val">Flat Line On Demand (FLOD)</span>
+                                    </div>
+                                </div>
+
+                                <div class="article-tags-row">
+                                    <span class="article-tag">Reverse Engineering</span>
+                                    <span class="article-tag">Configurations</span>
+                                    <span class="article-tag">Clearing Motor</span>
+                                    <span class="article-tag">DFM &amp; Fabrication</span>
+                                </div>
+
+                                <div class="article-cta-row">
+                                    <a class="button" href="flod-hopper.html">Read Case Study <span class="arrow">&rarr;</span></a>
+                                    <a class="button secondary small" href="images/projects/hopper/photo-side-window.webp" target="_blank">Fabricated Window View &nearr;</a>
+                                </div>
+                            </div>
+
+                            <div class="article-media-col">
+                                <div class="article-media-frame">
+                                    <div class="media-badge-top">
+                                        <span class="fig-label">FIG 4.1</span>
+                                        <span class="fig-title">Parametric SolidWorks Assembly</span>
+                                    </div>
+                                    <div class="article-img-wrap">
+                                        <img src="images/projects/hopper/hopper-cad.webp?v=20260808-3" alt="SolidWorks assembly of the configurable FLOD hopper" loading="lazy">
+                                    </div>
+                                    <div class="media-specs-bottom">
+                                        <span>Internal Agitation</span>
+                                        <span>&bull;</span>
+                                        <span>Preserved Footprint</span>
+                                        <span>&bull;</span>
+                                        <span>Click to Zoom</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </article>
                 </div>
             </div>
         </section>
 
-        <section class="home-project project-oil reveal" data-category="embedded" aria-labelledby="home-oil">
-            <div class="shell project-stage">
-                <figure class="stage-media">
-                    <img src="images/projects/oil/oil-installed.webp" alt="Sense-Oil LevelGuard installed on an industrial sewing machine" loading="lazy">
-                </figure>
-                <div class="stage-copy">
-                    <p class="project-type">02 / 04 &middot; Industrial Product Prototype</p>
-                    <div>
-                        <h2 id="home-oil">Sense-Oil LevelGuard</h2>
-                        <p>A non-invasive retrofit oil monitoring system engineered for industrial sewing machines. Combines MS5837 high-precision hydrostatic pressure sensing, a custom ATmega328P control board, dynamic threshold alerts, and an industrial-grade enclosure.</p>
-                        <ul class="stage-disciplines" aria-label="Project disciplines">
-                            <li>Hydrostatic Sensing</li>
-                            <li>ATmega328P</li>
-                            <li>Custom PCB</li>
-                            <li>OLED UI</li>
-                            <li>Calibration</li>
-                        </ul>
-                        <div style="margin-top: 1.25rem;">
-                            <a class="case-link" href="sense-oil.html">Read full case study <span>&rarr;</span></a>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <section class="home-project project-iron reveal" data-category="automation cad" aria-labelledby="home-iron">
-            <div class="shell project-stage">
-                <figure class="stage-media">
-                    <img src="images/projects/iron/iron-prototype.webp" alt="Pneumatic mechanism of the modified industrial iron prototype" loading="lazy">
-                </figure>
-                <div class="stage-copy">
-                    <p class="project-type">03 / 04 &middot; MAS Capital Industrial Training</p>
-                    <div>
-                        <h2 id="home-iron">Modified Industrial Iron Workstation</h2>
-                        <p>An automated pneumatic pre-heating workstation designed to ensure uniform heat application in garment manufacturing. Resolved as a 23-part SolidWorks assembly with four-bar linkage kinematics, independent digital PID temperature controls, and factory air regulation.</p>
-                        <ul class="stage-disciplines" aria-label="Project disciplines">
-                            <li>Pneumatic Actuation</li>
-                            <li>SolidWorks BOM</li>
-                            <li>Kinematic Linkage</li>
-                            <li>PID Heat Control</li>
-                            <li>Production Trials</li>
-                        </ul>
-                        <div style="margin-top: 1.25rem;">
-                            <a class="case-link" href="modified-iron.html">Read full case study <span>&rarr;</span></a>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <section class="home-project project-hopper reveal" data-category="automation cad" aria-labelledby="home-hopper">
-            <div class="shell project-stage">
-                <figure class="stage-media">
-                    <img src="images/projects/hopper/hopper-cad.webp?v=20260808-3" alt="SolidWorks assembly of the configurable FLOD hopper" loading="lazy">
-                </figure>
-                <div class="stage-copy">
-                    <p class="project-type">04 / 04 &middot; Industrial Reverse Engineering</p>
-                    <div>
-                        <h2 id="home-hopper">FLOD Glue-Pellet Hopper</h2>
-                        <p>A reverse-engineered replacement hopper developed for an automated adhesive extrusion line. Implemented parametric SolidWorks parts with design configurations, laser-cut inspection windows, and an integrated motor-driven clearing mechanism to prevent material bridging.</p>
-                        <ul class="stage-disciplines" aria-label="Project disciplines">
-                            <li>Reverse Engineering</li>
-                            <li>Parametric Configurations</li>
-                            <li>Agitation Mechanism</li>
-                            <li>DFM &amp; Fabrication</li>
-                        </ul>
-                        <div style="margin-top: 1.25rem;">
-                            <a class="case-link" href="flod-hopper.html">Read full case study <span>&rarr;</span></a>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <!-- Engineering Disciplines / Capabilities -->
+        <!-- Engineering Disciplines -->
         <section class="home-capabilities" aria-labelledby="capabilities">
             <div class="shell">
                 <div class="section-head">
