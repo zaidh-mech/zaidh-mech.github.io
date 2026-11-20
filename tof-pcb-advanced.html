@@ -3,159 +3,147 @@
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <meta name="description" content="PCB case study: advanced four-layer ESP32 SLAM robot control board designed by Zaidh Rizme.">
-    <meta name="theme-color" content="#FAF9F5">
     <title>Advanced ESP32 SLAM PCB | Zaidh Rizme</title>
-    <link rel="icon" href="favicon.ico">
-    <link rel="stylesheet" href="css/styles.css?v=20261019-2">
-    <script src="js/main.js?v=20261019-2" defer></script>
+    <meta name="description" content="PCB case study: advanced four-layer ESP32 SLAM robot control board designed by Zaidh Rizme.">
+    <meta name="theme-color" content="#ffffff">
+    <meta property="og:type" content="article">
+    <meta property="og:title" content="Advanced ESP32 SLAM PCB | Zaidh Rizme">
+    <meta property="og:description" content="A production-oriented four-layer robot controller with an onboard ESP32-WROOM-32, USB-C programming and dedicated ground and power planes.">
+    <meta property="og:url" content="https://zaidh-mech.github.io/tof-pcb-advanced.html">
+    <meta property="og:image" content="https://zaidh-mech.github.io/images/projects/tof/pcb-advanced/board-top.webp">
+    <link rel="icon" href="favicon.ico" sizes="any">
+    <link rel="icon" type="image/png" sizes="32x32" href="favicon-32x32.png">
+    <link rel="apple-touch-icon" href="apple-touch-icon.png">
+    <link rel="manifest" href="site.webmanifest">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Archivo:wdth,wght@62..125,100..900&amp;display=swap">
+    <link rel="stylesheet" href="css/styles.css?v=20261120">
+    <script>(function(d){d.classList.add('js');try{var t=localStorage.getItem('zr-theme');if(t==='dark'||t==='light')d.setAttribute('data-theme',t);}catch(e){}addEventListener('pagereveal',function(e){var v=e.viewTransition;if(v){v.ready.catch(function(){});v.updateCallbackDone.catch(function(){});}});})(document.documentElement);</script>
+    <script src="js/main.js?v=20261120" defer></script>
 </head>
-<body>
-<a class="skip-link" href="#main">Skip to content</a>
+<body class="page-case">
+    <a class="skip-link" href="#main">Skip to content</a>
 
-<!-- Mathematically Centered Claude Translucent Navigation -->
-<header class="site-header">
-    <div class="nav-shell">
-        <a class="brand" href="index.html" aria-label="Zaidh Rizme Homepage">
-            <span class="status-dot" title="Available for engineering opportunities"></span>
-            <div class="brand-info">
-                <span class="brand-title">Zaidh Rizme</span>
-                <span class="brand-tag">Mechatronics &amp; Robotics</span>
+    <header class="site-header">
+        <div class="wrap header-inner">
+            <a class="wordmark" href="index.html">Zaidh Rizme</a>
+            <nav class="site-nav" aria-label="Primary">
+                <a href="work.html" aria-current="true">Work</a>
+                <a href="about.html">About</a>
+                <a href="contact.html">Contact</a>
+                <a href="Zaidh-Rizme-CV.pdf" target="_blank" rel="noopener">CV</a>
+            </nav>
+            <div class="header-tools">
+                <button class="theme-toggle" type="button" aria-label="Switch colour theme">
+                    <svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="8.25" fill="none" stroke="currentColor" stroke-width="1.5"/><path d="M12 3.75a8.25 8.25 0 0 1 0 16.5z" fill="currentColor"/></svg>
+                </button>
+                <button class="menu-toggle" type="button" aria-expanded="false" aria-controls="mobile-menu">Menu</button>
             </div>
-        </a>
-        <nav class="main-nav" aria-label="Primary navigation">
-            <a href="index.html">Home</a>
-            <a href="work.html" aria-current="page">Projects</a>
-            <a href="about.html">About</a>
-            <a href="contact.html">Contact</a>
-        </nav>
-        <div class="nav-actions">
-            <button type="button" class="theme-toggle-btn" aria-label="Toggle light and dark mode" title="Toggle theme (shortcut: t)">
-                <svg class="icon-sun" viewBox="0 0 24 24"><circle cx="12" cy="12" r="5"></circle><line x1="12" y1="1" x2="12" y2="3"></line><line x1="12" y1="21" x2="12" y2="23"></line><line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line><line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line><line x1="1" y1="12" x2="3" y2="12"></line><line x1="21" y1="12" x2="23" y2="12"></line><line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line><line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line></svg>
-                <svg class="icon-moon" viewBox="0 0 24 24"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path></svg>
-            </button>
-            <a class="button small nav-cv" href="Zaidh-Rizme-CV.pdf" target="_blank" rel="noopener">CV <span class="arrow">&nearr;</span></a>
         </div>
-    </div>
-</header>
-
-<main id="main">
-    <header class="case-intro shell">
-        <a class="back-link" href="tof-slam.html#pcb-progression">&larr; Back to ToF robot case study</a>
-        <p class="kicker">PCB Development &middot; Stage 02</p>
-        <h1>Advanced 4-Layer ESP32 SLAM PCB</h1>
-        <p class="case-deck">A production-oriented 4-layer design proposal that carries the first board's field lessons into a compact controller featuring an onboard ESP32-WROOM-32, USB-C programming, and dedicated ground/power planes.</p>
-        <dl class="meta">
-            <div><dt>Status</dt><dd>Validated DFM Design Proposal</dd></div>
-            <div><dt>Dimensions</dt><dd>100.8 &times; 65.0 mm Compact</dd></div>
-            <div><dt>Stack-Up</dt><dd>4-Layer JLC04161H-7628 FR-4</dd></div>
-            <div><dt>Tools</dt><dd>KiCad 8, DFM Checks, iBOM</dd></div>
-        </dl>
     </header>
 
-    <figure class="case-main-image pcb-hero advanced-pcb-hero">
-        <img src="images/projects/tof/pcb-advanced/board-top.webp" alt="Top three-dimensional render of the advanced ESP32 SLAM PCB">
-    </figure>
+    <main id="main">
+        <header class="case-head wrap">
+            <a class="back-link intro" href="tof-slam.html#pcb-progression">ToF robot case study</a>
+            <p class="case-kicker intro" style="--i:1">PCB development, stage 2</p>
+            <h1 class="intro" style="--i:2">Advanced 4-layer ESP32 SLAM PCB</h1>
+            <p class="lede intro" style="--i:3">A production-oriented 4-layer design proposal that carries the first board&rsquo;s field lessons into a compact controller featuring an onboard ESP32-WROOM-32, USB-C programming, and dedicated ground/power planes.</p>
+            <dl class="facts intro" style="--i:4">
+                <div><dt>Status</dt><dd>Validated DFM design proposal</dd></div>
+                <div><dt>Dimensions</dt><dd>100.8 &times; 65.0 mm compact</dd></div>
+                <div><dt>Stack-up</dt><dd>4-layer JLC04161H-7628 FR-4</dd></div>
+                <div><dt>Tools</dt><dd>KiCad 8, DFM checks, iBOM</dd></div>
+            </dl>
+        </header>
 
-    <section class="case-section">
-        <div class="shell case-layout">
-            <h2>What changed from the first PCB</h2>
-            <div class="case-copy">
-                <p class="dropcap">
-                    The implemented 2-layer board proved the system architecture, but it still depended on a bulky ESP32 devkit and discrete breakout boards. This second design explored how the robot controller could become significantly more compact, electrically robust, and production-ready.
-                </p>
-                <p>
-                    I transitioned directly to the bare ESP32-WROOM-32 surface-mount module, integrated an onboard USB-C interface with CH340C UART bridge and automatic bootloader switching, implemented onboard low-noise LDO regulators, and segregated signal routes onto external layers while dedicating internal layers 2 and 3 to solid ground and power planes.
-                </p>
-                <blockquote class="article-quote" style="margin: 2rem 0;">
-                    &ldquo;Moving from 2 to 4 layers with dedicated internal planes cut electromagnetic interference from the high-current DC motor drives and reduced board surface area by over 35%.&rdquo;
-                </blockquote>
-                <div class="detail-grid">
-                    <article><h3>Integrated control</h3><p>ESP32-WROOM-32 module replaces the full breakout board.</p></article>
-                    <article><h3>Onboard programming</h3><p>USB-C with CH340C and automatic reset/boot circuits for direct firmware flashing.</p></article>
-                    <article><h3>Layer discipline</h3><p>High-speed signals isolated from internal solid power and ground planes.</p></article>
-                    <article><h3>Reduced envelope</h3><p>Smaller form factor frees up internal chassis volume for larger battery packs.</p></article>
+        <figure class="case-cover wrap">
+            <div class="plate ratio-wide" data-vt="pcb-advanced">
+                <img src="images/projects/tof/pcb-advanced/board-top.webp" alt="Top three-dimensional render of the advanced ESP32 SLAM PCB" width="1800" height="1123" fetchpriority="high" decoding="async">
+            </div>
+        </figure>
+
+        <section class="case-section" aria-labelledby="changes-title">
+            <div class="wrap split">
+                <div class="split-head"><h2 id="changes-title">What changed from the first PCB</h2></div>
+                <div class="prose">
+                    <p class="lede">The implemented 2-layer board proved the system architecture, but it still depended on a bulky ESP32 devkit and discrete breakout boards. This second design explored how the robot controller could become significantly more compact, electrically robust, and production-ready.</p>
+                    <p>I transitioned directly to the bare ESP32-WROOM-32 surface-mount module, integrated an onboard USB-C interface with CH340C UART bridge and automatic bootloader switching, implemented onboard low-noise LDO regulators, and segregated signal routes onto external layers while dedicating internal layers 2 and 3 to solid ground and power planes.</p>
+                    <blockquote class="pullquote">&ldquo;Moving from 2 to 4 layers with dedicated internal planes cut electromagnetic interference from the high-current DC motor drives and reduced board surface area by over 35%.&rdquo;</blockquote>
+                    <div class="notes">
+                        <article><h3>Integrated control</h3><p>ESP32-WROOM-32 module replaces the full breakout board.</p></article>
+                        <article><h3>Onboard programming</h3><p>USB-C with CH340C and automatic reset/boot circuits for direct firmware flashing.</p></article>
+                        <article><h3>Layer discipline</h3><p>High-speed signals isolated from internal solid power and ground planes.</p></article>
+                        <article><h3>Reduced envelope</h3><p>Smaller form factor frees up internal chassis volume for larger battery packs.</p></article>
+                    </div>
                 </div>
             </div>
-        </div>
-    </section>
+        </section>
 
-    <!-- 4-Layer Stack-Up Gallery -->
-    <section class="case-section">
-        <div class="shell">
-            <div class="section-head">
-                <p class="section-label">Multilayer Architecture</p>
-                <div>
-                    <h2>Complete 4-layer copper stack-up breakdown.</h2>
-                    <p>Designed to comply with standard manufacturer 4-layer stackups (Signal / GND / PWR / Signal). Click any layer to open high-resolution view.</p>
+        <section class="case-section" aria-labelledby="layers-title">
+            <div class="wrap">
+                <div class="section-intro">
+                    <h2 id="layers-title">Complete 4-layer copper stack-up breakdown.</h2>
+                    <p>Designed to comply with standard manufacturer 4-layer stack-ups (Signal / GND / PWR / Signal). Select any layer to enlarge it.</p>
+                </div>
+                <div class="gallery">
+                    <figure class="figure part">
+                        <div class="plate plate--render plate--fit ratio-sheet"><img src="images/projects/tof/pcb-advanced/layout-front.svg" alt="Top copper signal layer" width="1008" height="650" loading="lazy" decoding="async"></div>
+                        <figcaption><h3>Layer 1: Front copper (F.Cu)</h3><p>High-density component pads, ESP32 RF antenna keep-out, and high-frequency digital traces.</p></figcaption>
+                    </figure>
+                    <figure class="figure part">
+                        <div class="plate plate--render plate--fit ratio-sheet"><img src="images/projects/tof/pcb-advanced/layout-in2-ground.svg" alt="Internal ground plane" width="1008" height="650" loading="lazy" decoding="async"></div>
+                        <figcaption><h3>Layer 2: Internal ground plane (In2.Cu)</h3><p>Continuous uninterrupted copper return plane providing low-impedance paths for all high-speed signals.</p></figcaption>
+                    </figure>
+                    <figure class="figure part">
+                        <div class="plate plate--render plate--fit ratio-sheet"><img src="images/projects/tof/pcb-advanced/layout-in1-power.svg" alt="Internal power plane" width="1008" height="650" loading="lazy" decoding="async"></div>
+                        <figcaption><h3>Layer 3: Internal power plane (In1.Cu)</h3><p>Split copper pour distributing clean +3.3 V logic power and regulated +5 V sensor rails.</p></figcaption>
+                    </figure>
+                    <figure class="figure part">
+                        <div class="plate plate--render plate--fit ratio-sheet"><img src="images/projects/tof/pcb-advanced/layout-back.svg" alt="Bottom copper signal layer" width="1008" height="650" loading="lazy" decoding="async"></div>
+                        <figcaption><h3>Layer 4: Bottom copper (B.Cu)</h3><p>Secondary signal connections, test point access, and thermal relief copper pours.</p></figcaption>
+                    </figure>
                 </div>
             </div>
-            <div class="pcb-layer-grid">
-                <figure>
-                    <div class="layer-media"><img src="images/projects/tof/pcb-advanced/layout-front.svg" alt="Top copper signal layer" loading="lazy"></div>
-                    <figcaption>
-                        <h3>Layer 1: Front Copper (F.Cu)</h3>
-                        <p>High-density component pads, ESP32 RF antenna keep-out, and high-frequency digital traces.</p>
-                    </figcaption>
-                </figure>
-                <figure>
-                    <div class="layer-media"><img src="images/projects/tof/pcb-advanced/layout-in2-ground.svg" alt="Internal ground plane" loading="lazy"></div>
-                    <figcaption>
-                        <h3>Layer 2: Internal Ground Plane (In2.Cu)</h3>
-                        <p>Continuous uninterrupted copper return plane providing low-impedance paths for all high-speed signals.</p>
-                    </figcaption>
-                </figure>
-                <figure>
-                    <div class="layer-media"><img src="images/projects/tof/pcb-advanced/layout-in1-power.svg" alt="Internal power plane" loading="lazy"></div>
-                    <figcaption>
-                        <h3>Layer 3: Internal Power Plane (In1.Cu)</h3>
-                        <p>Split copper pour distributing clean +3.3 V logic power and regulated +5 V sensor rails.</p>
-                    </figcaption>
-                </figure>
-                <figure>
-                    <div class="layer-media"><img src="images/projects/tof/pcb-advanced/layout-back.svg" alt="Bottom copper signal layer" loading="lazy"></div>
-                    <figcaption>
-                        <h3>Layer 4: Bottom Copper (B.Cu)</h3>
-                        <p>Secondary signal connections, test point access, and thermal relief copper pours.</p>
-                    </figcaption>
-                </figure>
-            </div>
-        </div>
-    </section>
+        </section>
 
-    <!-- Interactive Bill of Materials -->
-    <section class="case-section" id="bom">
-        <div class="shell">
-            <div class="section-head">
-                <p class="section-label">Interactive Bill of Materials</p>
-                <div>
-                    <h2>4-layer assembly components &amp; package footprints.</h2>
+        <section class="case-section" id="bom" aria-labelledby="bom-title">
+            <div class="wrap">
+                <div class="section-intro">
+                    <h2 id="bom-title">4-layer assembly components and package footprints.</h2>
                     <p>KiCad interactive BOM cross-referencing SMD passives, ICs, USB-C receptacle, and keyed connectors.</p>
                 </div>
+                <div class="ibom">
+                    <iframe src="documents/tof/pcb-advanced-interactive-bom.html" title="Interactive bill of materials for advanced four-layer PCB" loading="lazy"></iframe>
+                </div>
+                <div class="actions">
+                    <a class="btn is-ext" href="documents/tof/pcb-advanced-interactive-bom.html" target="_blank" rel="noopener">Open interactive BOM in a new tab</a>
+                    <a class="btn btn--ghost" href="documents/tof/pcb-advanced-bom.csv" download>Download BOM CSV</a>
+                    <a class="btn btn--ghost is-ext" href="documents/tof/pcb-advanced-schematic.pdf" target="_blank" rel="noopener">Open schematic PDF</a>
+                </div>
             </div>
-            <div class="ibom-shell">
-                <iframe class="ibom-frame" src="documents/tof/pcb-advanced-interactive-bom.html" title="Interactive bill of materials for advanced four-layer PCB" loading="lazy"></iframe>
-            </div>
-            <div class="resource-actions">
-                <a class="button" href="documents/tof/pcb-advanced-interactive-bom.html" target="_blank" rel="noopener">Open Interactive BOM in New Tab <span class="arrow">&nearr;</span></a>
-                <a class="button secondary" href="documents/tof/pcb-advanced-bom.csv" download>Download BOM CSV <span class="arrow">&darr;</span></a>
-                <a class="button secondary" href="documents/tof/pcb-advanced-schematic.pdf" target="_blank" rel="noopener">Open Schematic PDF <span class="arrow">&nearr;</span></a>
-            </div>
-        </div>
-    </section>
+        </section>
 
-    <nav class="next-project">
-        <div class="shell">
-            <a href="sense-oil.html"><span>Next: Sense-Oil LevelGuard</span><span>&rarr;</span></a>
-        </div>
-    </nav>
-</main>
+        <nav class="next-case" aria-label="Next project">
+            <div class="wrap">
+                <a href="sense-oil.html">
+                    <span><span class="next-label">Next project</span><span class="next-title">Sense-Oil LevelGuard</span></span>
+                    <svg class="next-arrow" viewBox="0 0 64 24" aria-hidden="true"><path d="M0 12h61M50 1l11 11-11 11" fill="none" stroke="currentColor" stroke-width="2"/></svg>
+                </a>
+            </div>
+        </nav>
+    </main>
 
-<footer class="site-footer">
-    <div class="shell footer-row">
-        <p>&copy; <span data-year>2026</span> Zaidh Rizme &middot; Mechatronics &amp; Robotics Engineer</p>
-        <p><a href="tof-slam.html">ToF Robot Main Case Study</a></p>
-    </div>
-</footer>
+    <footer class="site-footer">
+        <div class="wrap footer-inner">
+            <p>&copy; <span data-year>2026</span> Zaidh Rizme. Mechatronics engineer, Colombo.</p>
+            <ul class="footer-links">
+                <li><a href="mailto:rizme.zaidh@gmail.com">Email</a></li>
+                <li><a href="https://www.linkedin.com/in/zaidhriz/" target="_blank" rel="noopener">LinkedIn</a></li>
+                <li><a href="https://github.com/zaidh-mech" target="_blank" rel="noopener">GitHub</a></li>
+                <li><a href="Zaidh-Rizme-CV.pdf" target="_blank" rel="noopener">CV</a></li>
+            </ul>
+        </div>
+    </footer>
 </body>
 </html>

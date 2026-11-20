@@ -3,164 +3,162 @@
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <meta name="description" content="PCB case study: the implemented two-layer control and interface board for Zaidh Rizme's ToF SLAM robot.">
-    <meta name="theme-color" content="#FAF9F5">
-    <title>First ToF Robot PCB | Zaidh Rizme</title>
-    <link rel="icon" href="favicon.ico">
-    <link rel="stylesheet" href="css/styles.css?v=20261019-2">
-    <script src="js/main.js?v=20261019-2" defer></script>
+    <title>First ToF robot PCB | Zaidh Rizme</title>
+    <meta name="description" content="PCB case study: the implemented two-layer control and interface board for Zaidh Rizme&rsquo;s ToF SLAM robot.">
+    <meta name="theme-color" content="#ffffff">
+    <meta property="og:type" content="article">
+    <meta property="og:title" content="First ToF robot PCB | Zaidh Rizme">
+    <meta property="og:description" content="The implemented two-layer control and interface board for the ToF SLAM robot.">
+    <meta property="og:url" content="https://zaidh-mech.github.io/tof-pcb-first.html">
+    <meta property="og:image" content="https://zaidh-mech.github.io/images/projects/tof/pcb-first.webp">
+    <link rel="icon" href="favicon.ico" sizes="any">
+    <link rel="icon" type="image/png" sizes="32x32" href="favicon-32x32.png">
+    <link rel="apple-touch-icon" href="apple-touch-icon.png">
+    <link rel="manifest" href="site.webmanifest">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Archivo:wdth,wght@62..125,100..900&amp;display=swap">
+    <link rel="stylesheet" href="css/styles.css?v=20261120">
+    <script>(function(d){d.classList.add('js');try{var t=localStorage.getItem('zr-theme');if(t==='dark'||t==='light')d.setAttribute('data-theme',t);}catch(e){}addEventListener('pagereveal',function(e){var v=e.viewTransition;if(v){v.ready.catch(function(){});v.updateCallbackDone.catch(function(){});}});})(document.documentElement);</script>
+    <script src="js/main.js?v=20261120" defer></script>
 </head>
-<body>
-<a class="skip-link" href="#main">Skip to content</a>
+<body class="page-case">
+    <a class="skip-link" href="#main">Skip to content</a>
 
-<!-- Mathematically Centered Claude Translucent Navigation -->
-<header class="site-header">
-    <div class="nav-shell">
-        <a class="brand" href="index.html" aria-label="Zaidh Rizme Homepage">
-            <span class="status-dot" title="Available for engineering opportunities"></span>
-            <div class="brand-info">
-                <span class="brand-title">Zaidh Rizme</span>
-                <span class="brand-tag">Mechatronics &amp; Robotics</span>
+    <header class="site-header">
+        <div class="wrap header-inner">
+            <a class="wordmark" href="index.html">Zaidh Rizme</a>
+            <nav class="site-nav" aria-label="Primary">
+                <a href="work.html" aria-current="true">Work</a>
+                <a href="about.html">About</a>
+                <a href="contact.html">Contact</a>
+                <a href="Zaidh-Rizme-CV.pdf" target="_blank" rel="noopener">CV</a>
+            </nav>
+            <div class="header-tools">
+                <button class="theme-toggle" type="button" aria-label="Switch colour theme">
+                    <svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="8.25" fill="none" stroke="currentColor" stroke-width="1.5"/><path d="M12 3.75a8.25 8.25 0 0 1 0 16.5z" fill="currentColor"/></svg>
+                </button>
+                <button class="menu-toggle" type="button" aria-expanded="false" aria-controls="mobile-menu">Menu</button>
             </div>
-        </a>
-        <nav class="main-nav" aria-label="Primary navigation">
-            <a href="index.html">Home</a>
-            <a href="work.html" aria-current="page">Projects</a>
-            <a href="about.html">About</a>
-            <a href="contact.html">Contact</a>
-        </nav>
-        <div class="nav-actions">
-            <button type="button" class="theme-toggle-btn" aria-label="Toggle light and dark mode" title="Toggle theme (shortcut: t)">
-                <svg class="icon-sun" viewBox="0 0 24 24"><circle cx="12" cy="12" r="5"></circle><line x1="12" y1="1" x2="12" y2="3"></line><line x1="12" y1="21" x2="12" y2="23"></line><line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line><line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line><line x1="1" y1="12" x2="3" y2="12"></line><line x1="21" y1="12" x2="23" y2="12"></line><line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line><line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line></svg>
-                <svg class="icon-moon" viewBox="0 0 24 24"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path></svg>
-            </button>
-            <a class="button small nav-cv" href="Zaidh-Rizme-CV.pdf" target="_blank" rel="noopener">CV <span class="arrow">&nearr;</span></a>
         </div>
-    </div>
-</header>
-
-<main id="main">
-    <header class="case-intro shell">
-        <a class="back-link" href="tof-slam.html#pcb-progression">&larr; Back to ToF robot case study</a>
-        <p class="kicker">PCB Development &middot; Stage 01</p>
-        <h1>First ToF Robot Control PCB</h1>
-        <p class="case-deck">The implemented two-layer board that replaced loose prototype wiring and consolidated the robot's power conversion, motion drivers, and multizone sensor interfaces.</p>
-        <dl class="meta">
-            <div><dt>Status</dt><dd>Designed, Fabricated &amp; Tested</dd></div>
-            <div><dt>Dimensions</dt><dd>100 &times; 100 mm Standard Eurocard</dd></div>
-            <div><dt>Stack-Up</dt><dd>2-Layer, 1.6 mm FR-4 (1 oz Cu)</dd></div>
-            <div><dt>Tools</dt><dd>KiCad 8, ESP32, DFM Verification</dd></div>
-        </dl>
     </header>
 
-    <figure class="case-main-image pcb-hero">
-        <img src="images/projects/tof/pcb-first.webp" alt="Three-dimensional render of the first ToF robot PCB">
-    </figure>
+    <main id="main">
+        <header class="case-head wrap">
+            <a class="back-link intro" href="tof-slam.html#pcb-progression">ToF robot case study</a>
+            <p class="case-kicker intro" style="--i:1">PCB development, stage 1</p>
+            <h1 class="intro" style="--i:2">First ToF robot control PCB</h1>
+            <p class="lede intro" style="--i:3">The implemented two-layer board that replaced loose prototype wiring and consolidated the robot&rsquo;s power conversion, motion drivers, and multizone sensor interfaces.</p>
+            <dl class="facts intro" style="--i:4">
+                <div><dt>Status</dt><dd>Designed, fabricated and tested</dd></div>
+                <div><dt>Dimensions</dt><dd>100 &times; 100 mm standard Eurocard</dd></div>
+                <div><dt>Stack-up</dt><dd>2-layer, 1.6 mm FR-4 (1 oz Cu)</dd></div>
+                <div><dt>Tools</dt><dd>KiCad 8, ESP32, DFM verification</dd></div>
+            </dl>
+        </header>
 
-    <section class="case-section">
-        <div class="shell case-layout">
-            <h2>Why this board was needed</h2>
-            <div class="case-copy">
-                <p class="dropcap">
-                    The early robot used temporary point-to-point jumper connections while the hardware architecture was still changing. While useful for benchtop testing, chassis vibration, motor electrical noise, and loose connectors made it impossible to maintain a dependable mobile SLAM platform.
-                </p>
-                <p>
-                    I designed this PCB to give every subsystem a defined physical location and keyed header. It consolidated power conversion, dual H-bridge motor control, stepper drive, the ESP32 development module, and dedicated sensor headers onto one rigid board mounted directly to the chassis deck.
-                </p>
-                <blockquote class="article-quote" style="margin: 2rem 0;">
-                    &ldquo;Transitioning from bench wiring to a custom PCB turned an unstable test rig into an autonomous mobile platform with repeatable electrical characteristics.&rdquo;
-                </blockquote>
-                <div class="detail-grid">
-                    <article><h3>Reliable interconnects</h3><p>Dedicated headers replaced repeated manual wiring between the robot subsystems.</p></article>
-                    <article><h3>Functional zoning</h3><p>Power, drive, logic, sensing and stepper sections were grouped by role.</p></article>
-                    <article><h3>Service points</h3><p>Indicators and labelled test points support assembly checks and debugging.</p></article>
-                    <article><h3>Mechanical fit</h3><p>The board outline and connectors were developed against the chassis envelope.</p></article>
+        <figure class="case-cover wrap">
+            <div class="plate plate--fit" data-vt="pcb-first">
+                <img src="images/projects/tof/pcb-first.webp" alt="Three-dimensional render of the first ToF robot PCB" width="687" height="681" fetchpriority="high" decoding="async">
+            </div>
+        </figure>
+
+        <section class="case-section" aria-labelledby="why-title">
+            <div class="wrap split">
+                <div class="split-head"><h2 id="why-title">Why this board was needed</h2></div>
+                <div class="prose">
+                    <p class="lede">The early robot used temporary point-to-point jumper connections while the hardware architecture was still changing. While useful for benchtop testing, chassis vibration, motor electrical noise, and loose connectors made it impossible to maintain a dependable mobile SLAM platform.</p>
+                    <p>I designed this PCB to give every subsystem a defined physical location and keyed header. It consolidated power conversion, dual H-bridge motor control, stepper drive, the ESP32 development module, and dedicated sensor headers onto one rigid board mounted directly to the chassis deck.</p>
+                    <blockquote class="pullquote">&ldquo;Transitioning from bench wiring to a custom PCB turned an unstable test rig into an autonomous mobile platform with repeatable electrical characteristics.&rdquo;</blockquote>
+                    <div class="notes">
+                        <article><h3>Reliable interconnects</h3><p>Dedicated headers replaced repeated manual wiring between the robot subsystems.</p></article>
+                        <article><h3>Functional zoning</h3><p>Power, drive, logic, sensing and stepper sections were grouped by role.</p></article>
+                        <article><h3>Service points</h3><p>Indicators and labelled test points support assembly checks and debugging.</p></article>
+                        <article><h3>Mechanical fit</h3><p>The board outline and connectors were developed against the chassis envelope.</p></article>
+                    </div>
                 </div>
             </div>
-        </div>
-    </section>
+        </section>
 
-    <!-- Layout Development Gallery -->
-    <section class="case-section">
-        <div class="shell">
-            <div class="section-head">
-                <p class="section-label">Layout Development</p>
-                <div>
-                    <h2>Routing and placement across both copper layers.</h2>
+        <section class="case-section" aria-labelledby="layout-title">
+            <div class="wrap">
+                <div class="section-intro">
+                    <h2 id="layout-title">Routing and placement across both copper layers.</h2>
                     <p>All surface-mount and through-hole components are placed on the front layer. The copper layers and functional zoning maps below show how signal integrity and current returns were managed.</p>
                 </div>
-            </div>
-            <div class="gallery technical-gallery">
-                <figure>
-                    <div class="gallery-media technical-media portrait-tech"><img src="images/projects/tof/pcb-small/front-copper.webp" alt="Front copper routing of the first ToF robot PCB" loading="lazy"></div>
-                    <figcaption class="caption">Front copper: primary power rails, signal routing, and component pads.</figcaption>
-                </figure>
-                <figure>
-                    <div class="gallery-media technical-media portrait-tech"><img src="images/projects/tof/pcb-small/bottom-copper.webp" alt="Mirrored bottom copper routing of the first ToF robot PCB" loading="lazy"></div>
-                    <figcaption class="caption">Bottom copper: ground return paths and high-current motor traces.</figcaption>
-                </figure>
-                <figure>
-                    <div class="gallery-media technical-media portrait-tech"><img src="images/projects/tof/pcb-small/functional-zoning.webp" alt="Functional zoning of the first ToF robot PCB" loading="lazy"></div>
-                    <figcaption class="caption">Functional zoning for power, motor drive, encoders, ESP32, and sensor buses.</figcaption>
-                </figure>
-                <figure>
-                    <div class="gallery-media technical-media portrait-tech"><img src="images/projects/tof/pcb-small/connector-map.webp" alt="Connector map for the first ToF robot PCB" loading="lazy"></div>
-                    <figcaption class="caption">Connector placement aligned with internal chassis wire harness routing.</figcaption>
-                </figure>
-            </div>
-        </div>
-    </section>
-
-    <!-- Schematic PDF Preview -->
-    <section class="case-section">
-        <div class="shell">
-            <div class="section-head">
-                <p class="section-label">Circuit Schematic</p>
-                <div>
-                    <h2>Complete system schematic on one sheet.</h2>
-                    <p>The schematic groups the 7.4 V power regulation, ESP32 headers, ULN2003A stepper drive, dual motor H-bridges, and I2C sensor bus. Click to view high-resolution schematic PDF.</p>
+                <div class="gallery gallery--4">
+                    <figure class="figure">
+                        <div class="plate plate--render ratio-square"><img src="images/projects/tof/pcb-small/front-copper.webp" alt="Front copper routing of the first ToF robot PCB" width="1800" height="1800" loading="lazy" decoding="async"></div>
+                        <figcaption>Front copper: primary power rails, signal routing, and component pads.</figcaption>
+                    </figure>
+                    <figure class="figure">
+                        <div class="plate plate--render ratio-square"><img src="images/projects/tof/pcb-small/bottom-copper.webp" alt="Mirrored bottom copper routing of the first ToF robot PCB" width="1800" height="1800" loading="lazy" decoding="async"></div>
+                        <figcaption>Bottom copper: ground return paths and high-current motor traces.</figcaption>
+                    </figure>
+                    <figure class="figure">
+                        <div class="plate plate--render ratio-square"><img src="images/projects/tof/pcb-small/functional-zoning.webp" alt="Functional zoning of the first ToF robot PCB" width="1800" height="1800" loading="lazy" decoding="async"></div>
+                        <figcaption>Functional zoning for power, motor drive, encoders, ESP32, and sensor buses.</figcaption>
+                    </figure>
+                    <figure class="figure">
+                        <div class="plate plate--render ratio-square"><img src="images/projects/tof/pcb-small/connector-map.webp" alt="Connector map for the first ToF robot PCB" width="1800" height="1345" loading="lazy" decoding="async"></div>
+                        <figcaption>Connector placement aligned with internal chassis wire harness routing.</figcaption>
+                    </figure>
                 </div>
             </div>
-            <a class="document-preview" href="documents/tof/pcb-first-schematic.pdf" target="_blank" rel="noopener">
-                <img src="images/projects/tof/pcb-small/schematic.webp" alt="Schematic for the first ToF robot PCB" loading="lazy">
-                <span>Open full schematic PDF &nearr;</span>
-            </a>
-        </div>
-    </section>
+        </section>
 
-    <!-- Interactive Bill of Materials -->
-    <section class="case-section" id="bom">
-        <div class="shell">
-            <div class="section-head">
-                <p class="section-label">Interactive Bill of Materials</p>
-                <div>
-                    <h2>Every component mapped to physical board locations.</h2>
+        <section class="case-section" aria-labelledby="schematic-title">
+            <div class="wrap">
+                <div class="section-intro">
+                    <h2 id="schematic-title">Complete system schematic on one sheet.</h2>
+                    <p>The schematic groups the 7.4 V power regulation, ESP32 headers, ULN2003A stepper drive, dual motor H-bridges, and I2C sensor bus. The preview opens the high-resolution schematic PDF.</p>
+                </div>
+                <figure class="figure">
+                    <a class="doc-link" href="documents/tof/pcb-first-schematic.pdf" target="_blank" rel="noopener">
+                        <div class="plate plate--render ratio-sheet"><img src="images/projects/tof/pcb-small/schematic.webp" alt="Schematic for the first ToF robot PCB" width="1170" height="827" loading="lazy" decoding="async"></div>
+                        <span class="doc-link-label"><span>Schematic for the first ToF robot PCB.</span><span class="open is-ext">Open full schematic PDF</span></span>
+                    </a>
+                </figure>
+            </div>
+        </section>
+
+        <section class="case-section" id="bom" aria-labelledby="bom-title">
+            <div class="wrap">
+                <div class="section-intro">
+                    <h2 id="bom-title">Every component mapped to physical board locations.</h2>
                     <p>This interactive KiCad iBOM export cross-references component references, package footprints, and values directly to their board coordinates.</p>
                 </div>
+                <div class="ibom">
+                    <iframe src="documents/tof/pcb-first-interactive-bom.html" title="Interactive bill of materials for the first ToF robot PCB" loading="lazy"></iframe>
+                </div>
+                <div class="actions">
+                    <a class="btn is-ext" href="documents/tof/pcb-first-interactive-bom.html" target="_blank" rel="noopener">Open interactive BOM in a new tab</a>
+                    <a class="btn btn--ghost" href="documents/tof/pcb-first-bom.csv" download>Download BOM CSV</a>
+                    <a class="btn btn--ghost is-ext" href="documents/tof/pcb-first-layout.pdf" target="_blank" rel="noopener">Open board drawing PDF</a>
+                </div>
             </div>
-            <div class="ibom-shell">
-                <iframe class="ibom-frame" src="documents/tof/pcb-first-interactive-bom.html" title="Interactive bill of materials for the first ToF robot PCB" loading="lazy"></iframe>
-            </div>
-            <div class="resource-actions">
-                <a class="button" href="documents/tof/pcb-first-interactive-bom.html" target="_blank" rel="noopener">Open Interactive BOM in New Tab <span class="arrow">&nearr;</span></a>
-                <a class="button secondary" href="documents/tof/pcb-first-bom.csv" download>Download BOM CSV <span class="arrow">&darr;</span></a>
-                <a class="button secondary" href="documents/tof/pcb-first-layout.pdf" target="_blank" rel="noopener">Open Board Drawing PDF <span class="arrow">&nearr;</span></a>
-            </div>
-        </div>
-    </section>
+        </section>
 
-    <nav class="next-project">
-        <div class="shell">
-            <a href="tof-pcb-advanced.html"><span>Next: Advanced 4-Layer PCB Proposal</span><span>&rarr;</span></a>
-        </div>
-    </nav>
-</main>
+        <nav class="next-case" aria-label="Next project">
+            <div class="wrap">
+                <a href="tof-pcb-advanced.html">
+                    <span><span class="next-label">Next project</span><span class="next-title">Advanced four-layer PCB</span></span>
+                    <svg class="next-arrow" viewBox="0 0 64 24" aria-hidden="true"><path d="M0 12h61M50 1l11 11-11 11" fill="none" stroke="currentColor" stroke-width="2"/></svg>
+                </a>
+            </div>
+        </nav>
+    </main>
 
-<footer class="site-footer">
-    <div class="shell footer-row">
-        <p>&copy; <span data-year>2026</span> Zaidh Rizme &middot; Mechatronics &amp; Robotics Engineer</p>
-        <p><a href="tof-slam.html">ToF Robot Main Case Study</a></p>
-    </div>
-</footer>
+    <footer class="site-footer">
+        <div class="wrap footer-inner">
+            <p>&copy; <span data-year>2026</span> Zaidh Rizme. Mechatronics engineer, Colombo.</p>
+            <ul class="footer-links">
+                <li><a href="mailto:rizme.zaidh@gmail.com">Email</a></li>
+                <li><a href="https://www.linkedin.com/in/zaidhriz/" target="_blank" rel="noopener">LinkedIn</a></li>
+                <li><a href="https://github.com/zaidh-mech" target="_blank" rel="noopener">GitHub</a></li>
+                <li><a href="Zaidh-Rizme-CV.pdf" target="_blank" rel="noopener">CV</a></li>
+            </ul>
+        </div>
+    </footer>
 </body>
 </html>

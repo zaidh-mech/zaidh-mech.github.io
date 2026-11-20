@@ -3,214 +3,234 @@
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Modified industrial iron | Zaidh Rizme</title>
     <meta name="description" content="Case study: modified industrial iron automation project completed during industrial training at MAS Capital by Zaidh Rizme.">
-    <meta name="theme-color" content="#FAF9F5">
-    <title>Modified Industrial Iron | Zaidh Rizme</title>
-    <link rel="icon" href="favicon.ico">
-    <link rel="stylesheet" href="css/styles.css?v=20261019-2">
-    <script src="js/main.js?v=20261019-2" defer></script>
+    <meta name="theme-color" content="#ffffff">
+    <meta property="og:type" content="article">
+    <meta property="og:title" content="Modified industrial iron | Zaidh Rizme">
+    <meta property="og:description" content="A pneumatic pre-heating workstation developed to make a garment-production step more consistent and eliminate repetitive manual handling.">
+    <meta property="og:url" content="https://zaidh-mech.github.io/modified-iron.html">
+    <meta property="og:image" content="https://zaidh-mech.github.io/images/projects/iron/iron-cad.webp">
+    <link rel="icon" href="favicon.ico" sizes="any">
+    <link rel="icon" type="image/png" sizes="32x32" href="favicon-32x32.png">
+    <link rel="apple-touch-icon" href="apple-touch-icon.png">
+    <link rel="manifest" href="site.webmanifest">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Archivo:wdth,wght@62..125,100..900&amp;display=swap">
+    <link rel="stylesheet" href="css/styles.css?v=20261120">
+    <script>(function(d){d.classList.add('js');try{var t=localStorage.getItem('zr-theme');if(t==='dark'||t==='light')d.setAttribute('data-theme',t);}catch(e){}addEventListener('pagereveal',function(e){var v=e.viewTransition;if(v){v.ready.catch(function(){});v.updateCallbackDone.catch(function(){});}});})(document.documentElement);</script>
+    <script src="js/main.js?v=20261120" defer></script>
 </head>
-<body>
-<a class="skip-link" href="#main">Skip to content</a>
+<body class="page-case">
+    <a class="skip-link" href="#main">Skip to content</a>
 
-<!-- Mathematically Centered Claude Translucent Navigation -->
-<header class="site-header">
-    <div class="nav-shell">
-        <a class="brand" href="index.html" aria-label="Zaidh Rizme Homepage">
-            <span class="status-dot" title="Available for engineering opportunities"></span>
-            <div class="brand-info">
-                <span class="brand-title">Zaidh Rizme</span>
-                <span class="brand-tag">Mechatronics &amp; Robotics</span>
+    <header class="site-header">
+        <div class="wrap header-inner">
+            <a class="wordmark" href="index.html">Zaidh Rizme</a>
+            <nav class="site-nav" aria-label="Primary">
+                <a href="work.html" aria-current="true">Work</a>
+                <a href="about.html">About</a>
+                <a href="contact.html">Contact</a>
+                <a href="Zaidh-Rizme-CV.pdf" target="_blank" rel="noopener">CV</a>
+            </nav>
+            <div class="header-tools">
+                <button class="theme-toggle" type="button" aria-label="Switch colour theme">
+                    <svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="8.25" fill="none" stroke="currentColor" stroke-width="1.5"/><path d="M12 3.75a8.25 8.25 0 0 1 0 16.5z" fill="currentColor"/></svg>
+                </button>
+                <button class="menu-toggle" type="button" aria-expanded="false" aria-controls="mobile-menu">Menu</button>
             </div>
-        </a>
-        <nav class="main-nav" aria-label="Primary navigation">
-            <a href="index.html">Home</a>
-            <a href="work.html" aria-current="page">Projects</a>
-            <a href="about.html">About</a>
-            <a href="contact.html">Contact</a>
-        </nav>
-        <div class="nav-actions">
-            <button type="button" class="theme-toggle-btn" aria-label="Toggle light and dark mode" title="Toggle theme (shortcut: t)">
-                <svg class="icon-sun" viewBox="0 0 24 24"><circle cx="12" cy="12" r="5"></circle><line x1="12" y1="1" x2="12" y2="3"></line><line x1="12" y1="21" x2="12" y2="23"></line><line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line><line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line><line x1="1" y1="12" x2="3" y2="12"></line><line x1="21" y1="12" x2="23" y2="12"></line><line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line><line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line></svg>
-                <svg class="icon-moon" viewBox="0 0 24 24"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path></svg>
-            </button>
-            <a class="button small nav-cv" href="Zaidh-Rizme-CV.pdf" target="_blank" rel="noopener">CV <span class="arrow">&nearr;</span></a>
         </div>
-    </div>
-</header>
-
-<main id="main">
-    <header class="case-intro shell">
-        <a class="back-link" href="work.html">&larr; All projects</a>
-        <p class="kicker">Industrial Automation &middot; MAS Capital Internship</p>
-        <h1>Modified Industrial Iron Workstation</h1>
-        <p class="case-deck">A pneumatic pre-heating workstation developed to make a garment-production step more consistent and eliminate repetitive manual handling.</p>
-        <dl class="meta">
-            <div><dt>Context</dt><dd>MAS Capital, Intimates Division</dd></div>
-            <div><dt>Period</dt><dd>Jul &ndash; Dec 2025</dd></div>
-            <div><dt>Role</dt><dd>Design, build &amp; testing support</dd></div>
-            <div><dt>Tools</dt><dd>SolidWorks, 23-BOM, pneumatics</dd></div>
-        </dl>
     </header>
 
-    <figure class="case-main-image contain">
-        <img src="images/projects/iron/drawings/assembly-bom.webp" alt="Modified industrial iron workstation assembly and top-level bill of materials">
-    </figure>
+    <main id="main">
+        <header class="case-head wrap">
+            <a class="back-link intro" href="work.html">All projects</a>
+            <p class="case-kicker intro" style="--i:1">Industrial automation, MAS Capital internship</p>
+            <h1 class="intro" style="--i:2">Modified industrial iron workstation</h1>
+            <p class="lede intro" style="--i:3">A pneumatic pre-heating workstation developed to make a garment-production step more consistent and eliminate repetitive manual handling.</p>
+            <dl class="facts intro" style="--i:4">
+                <div><dt>Context</dt><dd>MAS Capital, Intimates Division</dd></div>
+                <div><dt>Period</dt><dd>Jul &ndash; Dec 2025</dd></div>
+                <div><dt>Role</dt><dd>Design, build &amp; testing support</dd></div>
+                <div><dt>Tools</dt><dd>SolidWorks, 23-item BOM, pneumatics</dd></div>
+            </dl>
+        </header>
 
-    <section class="case-section">
-        <div class="shell case-layout">
-            <h2>The challenge</h2>
-            <div class="case-copy">
-                <p class="dropcap">
-                    Create a practical workstation that could pre-heat garment components consistently before pressing, while fitting the factory production line and remaining straightforward for operators to handle.
-                </p>
-                <p>
-                    The solution combined a guided linkage arm, pneumatic cylinder actuation, digital temperature and timing PID controls, a heat-resistant working surface, and accessible operator controls.
-                </p>
-                <blockquote class="article-quote" style="margin: 2rem 0;">
-                    &ldquo;Converting manual pressing into a guided pneumatic stroke controlled the three hardest variables to repeat by hand: travel kinematics, heating temperature, and dwell time.&rdquo;
-                </blockquote>
-                <div class="detail-grid">
-                    <article><h3>Mechanical system</h3><p>A multi-link arm translates cylinder motion into controlled movement of the heated head.</p></article>
-                    <article><h3>Pneumatic actuation</h3><p>A compact cylinder and air-control hardware provide repeatable motion for the pressing cycle.</p></article>
-                    <article><h3>Heating controls</h3><p>Temperature and timing controls coordinate the thermal process and cycle behavior.</p></article>
-                    <article><h3>Operator interface</h3><p>Push buttons, emergency stop and visible controllers support day-to-day operation and adjustment.</p></article>
+        <figure class="case-cover figure wrap">
+            <div class="plate plate--render" data-vt="iron">
+                <img src="images/projects/iron/iron-cad.webp" alt="Complete CAD assembly of the modified iron" width="1080" height="1471" fetchpriority="high" decoding="async">
+            </div>
+            <figcaption>Assembly model used to coordinate the mechanism and workstation.</figcaption>
+        </figure>
+
+        <section class="case-section" aria-labelledby="challenge-title">
+            <div class="wrap split">
+                <div class="split-head"><h2 id="challenge-title">The challenge</h2></div>
+                <div class="prose">
+                    <p class="lede">Create a practical workstation that could pre-heat garment components consistently before pressing, while fitting the factory production line and remaining straightforward for operators to handle.</p>
+                    <p>The solution combined a guided linkage arm, pneumatic cylinder actuation, digital temperature and timing PID controls, a heat-resistant working surface, and accessible operator controls.</p>
+                    <blockquote class="pullquote">&ldquo;Converting manual pressing into a guided pneumatic stroke controlled the three hardest variables to repeat by hand: travel kinematics, heating temperature, and dwell time.&rdquo;</blockquote>
+                    <div class="notes">
+                        <article><h3>Mechanical system</h3><p>A multi-link arm translates cylinder motion into controlled movement of the heated head.</p></article>
+                        <article><h3>Pneumatic actuation</h3><p>A compact cylinder and air-control hardware provide repeatable motion for the pressing cycle.</p></article>
+                        <article><h3>Heating controls</h3><p>Temperature and timing controls coordinate the thermal process and cycle behavior.</p></article>
+                        <article><h3>Operator interface</h3><p>Push buttons, emergency stop and visible controllers support day-to-day operation and adjustment.</p></article>
+                    </div>
                 </div>
             </div>
-        </div>
-    </section>
+        </section>
 
-    <section class="case-section">
-        <div class="shell case-layout">
-            <h2>Approach &amp; reasoning</h2>
-            <div class="case-copy">
-                <p>The design focused on controlling the three variables that were difficult to repeat manually: the iron's movement, heating temperature and contact time.</p>
-                <p>A pneumatic linkage was selected because it could provide a compact, repeatable stroke using the factory air supply. The linked arm guided the heated head toward the working surface while keeping the actuator away from the hot zone. Separate temperature and timer controls allowed the process settings to be adjusted without changing the mechanism, while the emergency stop and accessible push buttons kept operation direct.</p>
-                <div class="detail-grid">
-                    <article><h3>Why a linkage?</h3><p>The mechanism converts the cylinder stroke into guided movement of the iron and supports the heated head at several pivot points.</p></article>
-                    <article><h3>Why pneumatics?</h3><p>Pneumatic actuation suited the available industrial environment and provided adjustable, repeatable movement with a compact cylinder.</p></article>
-                    <article><h3>Why separate controls?</h3><p>Independent time and temperature adjustment made the thermal cycle easier to tune for practical production trials.</p></article>
-                    <article><h3>Why model it first?</h3><p>The SolidWorks assembly helped establish the travel envelope, pivot locations, component clearances and workstation layout before fabrication.</p></article>
+        <section class="case-section" aria-labelledby="approach-title">
+            <div class="wrap split">
+                <div class="split-head"><h2 id="approach-title">Approach and reasoning</h2></div>
+                <div class="prose">
+                    <p>The design focused on controlling the three variables that were difficult to repeat manually: the iron&rsquo;s movement, heating temperature and contact time.</p>
+                    <p>A pneumatic linkage was selected because it could provide a compact, repeatable stroke using the factory air supply. The linked arm guided the heated head toward the working surface while keeping the actuator away from the hot zone. Separate temperature and timer controls allowed the process settings to be adjusted without changing the mechanism, while the emergency stop and accessible push buttons kept operation direct.</p>
+                    <div class="notes">
+                        <article><h3>Why a linkage?</h3><p>The mechanism converts the cylinder stroke into guided movement of the iron and supports the heated head at several pivot points.</p></article>
+                        <article><h3>Why pneumatics?</h3><p>Pneumatic actuation suited the available industrial environment and provided adjustable, repeatable movement with a compact cylinder.</p></article>
+                        <article><h3>Why separate controls?</h3><p>Independent time and temperature adjustment made the thermal cycle easier to tune for practical production trials.</p></article>
+                        <article><h3>Why model it first?</h3><p>The SolidWorks assembly helped establish the travel envelope, pivot locations, component clearances and workstation layout before fabrication.</p></article>
+                    </div>
+                    <ol class="steps">
+                        <li>Defined the heated area, iron travel and available workstation envelope.</li>
+                        <li>Developed the linkage geometry and component arrangement in SolidWorks.</li>
+                        <li>Integrated the pneumatic cylinder, heated head, controllers and operator controls.</li>
+                        <li>Fabricated and assembled the mechanism, then checked alignment and clearances.</li>
+                        <li>Ran repeated cycles and adjusted motion, timing and temperature during practical trials.</li>
+                    </ol>
                 </div>
-                <ul class="evidence-list">
-                    <li><span>01</span>Defined the heated area, iron travel and available workstation envelope.</li>
-                    <li><span>02</span>Developed the linkage geometry and component arrangement in SolidWorks.</li>
-                    <li><span>03</span>Integrated the pneumatic cylinder, heated head, controllers and operator controls.</li>
-                    <li><span>04</span>Fabricated and assembled the mechanism, then checked alignment and clearances.</li>
-                    <li><span>05</span>Ran repeated cycles and adjusted motion, timing and temperature during practical trials.</li>
-                </ul>
             </div>
-        </div>
-    </section>
+        </section>
 
-    <section class="case-section">
-        <div class="shell">
-            <div class="section-head">
-                <p class="section-label">System architecture</p>
-                <div>
-                    <h2>A 23-item top-level assembly, resolved as practical subsystems.</h2>
+        <section class="case-section" aria-labelledby="subsystems-title">
+            <div class="wrap">
+                <div class="section-intro">
+                    <h2 id="subsystems-title">A 23-item top-level assembly, resolved as practical subsystems.</h2>
                     <p>The updated SolidWorks package separates the mechanism, heated tooling, workstation, controls and pneumatic hardware. This made component ownership, fabrication routes and final assembly relationships easier to communicate.</p>
                 </div>
-            </div>
-            <div class="criteria-strip">
-                <article><span>01</span><h3>Motion structure</h3><p>CNC-machined base and linkage arms, guided by shafts, supports and bearings.</p></article>
-                <article><span>02</span><h3>Heating system</h3><p>A machined heating head is integrated with sourced cast-iron covers and holder.</p></article>
-                <article><span>03</span><h3>Control &amp; safety</h3><p>Timer, temperature controller, push buttons and emergency stop are packaged for direct access.</p></article>
-                <article><span>04</span><h3>Workstation &amp; air</h3><p>The table, pneumatic cylinders, regulator and gauge complete the operating station.</p></article>
-            </div>
-        </div>
-    </section>
-
-    <section class="case-section">
-        <div class="shell case-layout">
-            <h2>Design for manufacture</h2>
-            <div class="case-copy">
-                <p>The BOM was used as a manufacturing plan, not only a parts list.</p>
-                <p>Custom load-bearing and motion parts were assigned to machining, while enclosure and interface parts used faster polymer processes. Standard controls, bearings and pneumatic hardware were sourced so development effort stayed focused on the geometry unique to the workstation.</p>
-                <div class="detail-grid">
-                    <article><h3>CNC machining</h3><p>1060 alloy base, linkage arms and heating head.</p></article>
-                    <article><h3>Lathe machining</h3><p>8 mm and 10 mm shafts plus the longer bearing rods.</p></article>
-                    <article><h3>3D printing</h3><p>ABS front, rear and top sections of the control housing.</p></article>
-                    <article><h3>Laser cutting</h3><p>ABS-PC holders for the operator controls and pressure regulator.</p></article>
-                    <article><h3>Sourced hardware</h3><p>Cylinders, bearings, rail supports, buttons, regulator, gauge and controllers.</p></article>
-                    <article><h3>Subassembly planning</h3><p>Head, housing, controls, regulator and table were documented independently before top-level integration.</p></article>
+                <div class="notes notes--4">
+                    <article><h3>Motion structure</h3><p>CNC-machined base and linkage arms, guided by shafts, supports and bearings.</p></article>
+                    <article><h3>Heating system</h3><p>A machined heating head is integrated with sourced cast-iron covers and holder.</p></article>
+                    <article><h3>Control and safety</h3><p>Timer, temperature controller, push buttons and emergency stop are packaged for direct access.</p></article>
+                    <article><h3>Workstation and air</h3><p>The table, pneumatic cylinders, regulator and gauge complete the operating station.</p></article>
                 </div>
             </div>
-        </div>
-    </section>
+        </section>
 
-    <section class="case-section">
-        <div class="shell">
-            <div class="section-head">
-                <p class="section-label">Assembly documentation</p>
-                <div>
-                    <h2>The complete station and its bill of materials.</h2>
+        <section class="case-section" aria-labelledby="dfm-title">
+            <div class="wrap split">
+                <div class="split-head"><h2 id="dfm-title">Design for manufacture</h2></div>
+                <div class="prose">
+                    <p>The BOM was used as a manufacturing plan, not only a parts list.</p>
+                    <p>Custom load-bearing and motion parts were assigned to machining, while enclosure and interface parts used faster polymer processes. Standard controls, bearings and pneumatic hardware were sourced so development effort stayed focused on the geometry unique to the workstation.</p>
+                    <div class="notes">
+                        <article><h3>CNC machining</h3><p>1060 alloy base, linkage arms and heating head.</p></article>
+                        <article><h3>Lathe machining</h3><p>8 mm and 10 mm shafts plus the longer bearing rods.</p></article>
+                        <article><h3>3D printing</h3><p>ABS front, rear and top sections of the control housing.</p></article>
+                        <article><h3>Laser cutting</h3><p>ABS-PC holders for the operator controls and pressure regulator.</p></article>
+                        <article><h3>Sourced hardware</h3><p>Cylinders, bearings, rail supports, buttons, regulator, gauge and controllers.</p></article>
+                        <article><h3>Subassembly planning</h3><p>Head, housing, controls, regulator and table were documented independently before top-level integration.</p></article>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="case-section" aria-labelledby="assembly-title">
+            <div class="wrap">
+                <div class="section-intro">
+                    <h2 id="assembly-title">The complete station and its bill of materials.</h2>
                     <p>The top-level sheet records all 23 assembly items alongside the coordinated workstation model. Open the PDF to inspect the full-resolution BOM and assembly view.</p>
                 </div>
+                <figure class="figure">
+                    <a class="doc-link" href="documents/iron/modified-iron-assembly.pdf" target="_blank" rel="noopener">
+                        <div class="plate plate--render ratio-sheet"><img src="images/projects/iron/drawings/assembly-bom.webp" alt="Top-level modified iron assembly and 23-item bill of materials" width="2400" height="1698" loading="lazy" decoding="async"></div>
+                        <span class="doc-link-label"><span>Top-level assembly and 23-item bill of materials.</span><span class="open is-ext">Open complete assembly PDF</span></span>
+                    </a>
+                </figure>
             </div>
-            <a class="document-preview iron-assembly-preview" href="documents/iron/modified-iron-assembly.pdf" target="_blank" rel="noopener">
-                <img src="images/projects/iron/drawings/assembly-bom.webp" alt="Top-level modified iron assembly and 23-item bill of materials" loading="lazy">
-                <span>Open complete assembly PDF &nearr;</span>
-            </a>
-        </div>
-    </section>
+        </section>
 
-    <section class="case-section">
-        <div class="shell">
-            <div class="section-head">
-                <p class="section-label">Subassembly breakdown</p>
-                <div>
-                    <h2>Exploded views, materials and build routes.</h2>
+        <section class="case-section" aria-labelledby="subassemblies-title">
+            <div class="wrap">
+                <div class="section-intro">
+                    <h2 id="subassemblies-title">Exploded views, materials and build routes.</h2>
                     <p>Each sheet isolates a functional part of the workstation and links its visual assembly to a concise BOM.</p>
                 </div>
-            </div>
-            <div class="iron-document-grid">
-                <a class="document-preview" href="documents/iron/heating-head.pdf" target="_blank" rel="noopener"><img src="images/projects/iron/drawings/heating-head.webp" alt="Exploded heating head assembly and bill of materials" loading="lazy"><span>Heating head &nearr;</span></a>
-                <a class="document-preview" href="documents/iron/control-housing.pdf" target="_blank" rel="noopener"><img src="images/projects/iron/drawings/control-housing.webp" alt="Exploded control housing assembly and bill of materials" loading="lazy"><span>Control housing &nearr;</span></a>
-                <a class="document-preview" href="documents/iron/operator-controls.pdf" target="_blank" rel="noopener"><img src="images/projects/iron/drawings/operator-controls.webp" alt="Exploded emergency stop and push-button assembly" loading="lazy"><span>Operator controls &nearr;</span></a>
-                <a class="document-preview" href="documents/iron/pressure-regulator.pdf" target="_blank" rel="noopener"><img src="images/projects/iron/drawings/pressure-regulator.webp" alt="Exploded pressure regulator, gauge and holder assembly" loading="lazy"><span>Pressure regulator &nearr;</span></a>
-                <a class="document-preview" href="documents/iron/workstation-table.pdf" target="_blank" rel="noopener"><img src="images/projects/iron/drawings/workstation-table.webp" alt="Exploded workstation table and bill of materials" loading="lazy"><span>Workstation table &nearr;</span></a>
-            </div>
-        </div>
-    </section>
-
-    <section class="case-section">
-        <div class="shell">
-            <div class="section-head">
-                <p class="section-label">Build evidence</p>
-                <div>
-                    <h2>CAD, mechanism and working station.</h2>
+                <div class="gallery gallery--3">
+                    <figure class="figure">
+                        <a class="doc-link" href="documents/iron/heating-head.pdf" target="_blank" rel="noopener">
+                            <div class="plate plate--render ratio-sheet"><img src="images/projects/iron/drawings/heating-head.webp" alt="Exploded heating head assembly and bill of materials" width="1800" height="1273" loading="lazy" decoding="async"></div>
+                            <span class="doc-link-label"><span>Heating head</span><span class="open is-ext">PDF</span></span>
+                        </a>
+                    </figure>
+                    <figure class="figure">
+                        <a class="doc-link" href="documents/iron/control-housing.pdf" target="_blank" rel="noopener">
+                            <div class="plate plate--render ratio-sheet"><img src="images/projects/iron/drawings/control-housing.webp" alt="Exploded control housing assembly and bill of materials" width="1800" height="1273" loading="lazy" decoding="async"></div>
+                            <span class="doc-link-label"><span>Control housing</span><span class="open is-ext">PDF</span></span>
+                        </a>
+                    </figure>
+                    <figure class="figure">
+                        <a class="doc-link" href="documents/iron/operator-controls.pdf" target="_blank" rel="noopener">
+                            <div class="plate plate--render ratio-sheet"><img src="images/projects/iron/drawings/operator-controls.webp" alt="Exploded emergency stop and push-button assembly" width="1800" height="1273" loading="lazy" decoding="async"></div>
+                            <span class="doc-link-label"><span>Operator controls</span><span class="open is-ext">PDF</span></span>
+                        </a>
+                    </figure>
+                    <figure class="figure">
+                        <a class="doc-link" href="documents/iron/pressure-regulator.pdf" target="_blank" rel="noopener">
+                            <div class="plate plate--render ratio-sheet"><img src="images/projects/iron/drawings/pressure-regulator.webp" alt="Exploded pressure regulator, gauge and holder assembly" width="1800" height="1273" loading="lazy" decoding="async"></div>
+                            <span class="doc-link-label"><span>Pressure regulator</span><span class="open is-ext">PDF</span></span>
+                        </a>
+                    </figure>
+                    <figure class="figure">
+                        <a class="doc-link" href="documents/iron/workstation-table.pdf" target="_blank" rel="noopener">
+                            <div class="plate plate--render ratio-sheet"><img src="images/projects/iron/drawings/workstation-table.webp" alt="Exploded workstation table and bill of materials" width="1800" height="1273" loading="lazy" decoding="async"></div>
+                            <span class="doc-link-label"><span>Workstation table</span><span class="open is-ext">PDF</span></span>
+                        </a>
+                    </figure>
                 </div>
             </div>
-            <div class="gallery iron-gallery">
-                <figure>
-                    <div class="gallery-media contain"><img src="images/projects/iron/iron-cad.webp" alt="Complete CAD assembly of the modified iron" loading="lazy"></div>
-                    <figcaption class="caption">Assembly model used to coordinate the mechanism and workstation.</figcaption>
-                </figure>
-                <figure>
-                    <div class="gallery-media"><img src="images/projects/iron/iron-prototype.webp" alt="Fabricated pneumatic linkage mechanism" loading="lazy"></div>
-                    <figcaption class="caption">Fabricated linkage and pneumatic cylinder during integration.</figcaption>
-                </figure>
-                <figure class="wide">
-                    <div class="gallery-media wide"><img src="images/projects/iron/iron-station.webp" alt="Completed modified iron workstation with controls" loading="lazy"></div>
-                    <figcaption class="caption">Working development station with temperature, timer and safety controls.</figcaption>
-                </figure>
+        </section>
+
+        <section class="case-section" aria-labelledby="build-title">
+            <div class="wrap">
+                <div class="section-intro">
+                    <h2 id="build-title">CAD, mechanism and working station.</h2>
+                </div>
+                <div class="gallery">
+                    <figure class="figure">
+                        <div class="plate ratio-portrait"><img src="images/projects/iron/iron-prototype.webp" alt="Fabricated pneumatic linkage mechanism" width="960" height="1280" loading="lazy" decoding="async"></div>
+                        <figcaption>Fabricated linkage and pneumatic cylinder during integration.</figcaption>
+                    </figure>
+                    <figure class="figure">
+                        <div class="plate ratio-portrait"><img src="images/projects/iron/iron-station.webp" alt="Completed modified iron workstation with controls" width="960" height="1280" loading="lazy" decoding="async"></div>
+                        <figcaption>Working development station with temperature, timer and safety controls.</figcaption>
+                    </figure>
+                </div>
             </div>
-        </div>
-    </section>
+        </section>
 
-    <nav class="next-project">
-        <div class="shell">
-            <a href="flod-hopper.html"><span>Next: FLOD Hopper</span><span>&rarr;</span></a>
-        </div>
-    </nav>
-</main>
+        <nav class="next-case" aria-label="Next project">
+            <div class="wrap">
+                <a href="flod-hopper.html">
+                    <span><span class="next-label">Next project</span><span class="next-title">FLOD glue-pellet hopper</span></span>
+                    <svg class="next-arrow" viewBox="0 0 64 24" aria-hidden="true"><path d="M0 12h61M50 1l11 11-11 11" fill="none" stroke="currentColor" stroke-width="2"/></svg>
+                </a>
+            </div>
+        </nav>
+    </main>
 
-<footer class="site-footer">
-    <div class="shell footer-row">
-        <p>&copy; <span data-year>2026</span> Zaidh Rizme &middot; Mechatronics &amp; Robotics Engineer</p>
-        <p><a href="work.html">All Case Studies</a></p>
-    </div>
-</footer>
+    <footer class="site-footer">
+        <div class="wrap footer-inner">
+            <p>&copy; <span data-year>2026</span> Zaidh Rizme. Mechatronics engineer, Colombo.</p>
+            <ul class="footer-links">
+                <li><a href="mailto:rizme.zaidh@gmail.com">Email</a></li>
+                <li><a href="https://www.linkedin.com/in/zaidhriz/" target="_blank" rel="noopener">LinkedIn</a></li>
+                <li><a href="https://github.com/zaidh-mech" target="_blank" rel="noopener">GitHub</a></li>
+                <li><a href="Zaidh-Rizme-CV.pdf" target="_blank" rel="noopener">CV</a></li>
+            </ul>
+        </div>
+    </footer>
 </body>
 </html>

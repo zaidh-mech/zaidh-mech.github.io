@@ -3,169 +3,160 @@
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>FLOD hopper | Zaidh Rizme</title>
     <meta name="description" content="Case study: reverse-engineered FLOD glue-pellet hopper designed during industrial training at MAS Intimates by Zaidh Rizme.">
-    <meta name="theme-color" content="#FAF9F5">
-    <title>FLOD Hopper | Zaidh Rizme</title>
-    <link rel="icon" href="favicon.ico">
-    <link rel="stylesheet" href="css/styles.css?v=20261019-2">
-    <script src="js/main.js?v=20261019-2" defer></script>
+    <meta name="theme-color" content="#ffffff">
+    <meta property="og:type" content="article">
+    <meta property="og:title" content="FLOD hopper | Zaidh Rizme">
+    <meta property="og:description" content="A configurable replacement hopper developed around an existing Flat Line On Demand machine to improve adhesive pellet flow, eliminate bridging, and add active motorized clearing.">
+    <meta property="og:url" content="https://zaidh-mech.github.io/flod-hopper.html">
+    <meta property="og:image" content="https://zaidh-mech.github.io/images/projects/hopper/hopper-cad.webp?v=20260808-3">
+    <link rel="icon" href="favicon.ico" sizes="any">
+    <link rel="icon" type="image/png" sizes="32x32" href="favicon-32x32.png">
+    <link rel="apple-touch-icon" href="apple-touch-icon.png">
+    <link rel="manifest" href="site.webmanifest">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Archivo:wdth,wght@62..125,100..900&amp;display=swap">
+    <link rel="stylesheet" href="css/styles.css?v=20261120">
+    <script>(function(d){d.classList.add('js');try{var t=localStorage.getItem('zr-theme');if(t==='dark'||t==='light')d.setAttribute('data-theme',t);}catch(e){}addEventListener('pagereveal',function(e){var v=e.viewTransition;if(v){v.ready.catch(function(){});v.updateCallbackDone.catch(function(){});}});})(document.documentElement);</script>
+    <script src="js/main.js?v=20261120" defer></script>
 </head>
-<body>
-<a class="skip-link" href="#main">Skip to content</a>
+<body class="page-case">
+    <a class="skip-link" href="#main">Skip to content</a>
 
-<!-- Mathematically Centered Claude Translucent Navigation -->
-<header class="site-header">
-    <div class="nav-shell">
-        <a class="brand" href="index.html" aria-label="Zaidh Rizme Homepage">
-            <span class="status-dot" title="Available for engineering opportunities"></span>
-            <div class="brand-info">
-                <span class="brand-title">Zaidh Rizme</span>
-                <span class="brand-tag">Mechatronics &amp; Robotics</span>
+    <header class="site-header">
+        <div class="wrap header-inner">
+            <a class="wordmark" href="index.html">Zaidh Rizme</a>
+            <nav class="site-nav" aria-label="Primary">
+                <a href="work.html" aria-current="true">Work</a>
+                <a href="about.html">About</a>
+                <a href="contact.html">Contact</a>
+                <a href="Zaidh-Rizme-CV.pdf" target="_blank" rel="noopener">CV</a>
+            </nav>
+            <div class="header-tools">
+                <button class="theme-toggle" type="button" aria-label="Switch colour theme">
+                    <svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="8.25" fill="none" stroke="currentColor" stroke-width="1.5"/><path d="M12 3.75a8.25 8.25 0 0 1 0 16.5z" fill="currentColor"/></svg>
+                </button>
+                <button class="menu-toggle" type="button" aria-expanded="false" aria-controls="mobile-menu">Menu</button>
             </div>
-        </a>
-        <nav class="main-nav" aria-label="Primary navigation">
-            <a href="index.html">Home</a>
-            <a href="work.html" aria-current="page">Projects</a>
-            <a href="about.html">About</a>
-            <a href="contact.html">Contact</a>
-        </nav>
-        <div class="nav-actions">
-            <button type="button" class="theme-toggle-btn" aria-label="Toggle light and dark mode" title="Toggle theme (shortcut: t)">
-                <svg class="icon-sun" viewBox="0 0 24 24"><circle cx="12" cy="12" r="5"></circle><line x1="12" y1="1" x2="12" y2="3"></line><line x1="12" y1="21" x2="12" y2="23"></line><line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line><line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line><line x1="1" y1="12" x2="3" y2="12"></line><line x1="21" y1="12" x2="23" y2="12"></line><line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line><line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line></svg>
-                <svg class="icon-moon" viewBox="0 0 24 24"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path></svg>
-            </button>
-            <a class="button small nav-cv" href="Zaidh-Rizme-CV.pdf" target="_blank" rel="noopener">CV <span class="arrow">&nearr;</span></a>
         </div>
-    </div>
-</header>
-
-<main id="main">
-    <header class="case-intro shell">
-        <a class="back-link" href="work.html">&larr; All projects</a>
-        <p class="kicker">Reverse Engineering &middot; Industrial Automation</p>
-        <h1>FLOD Glue-Pellet Hopper</h1>
-        <p class="case-deck">A configurable replacement hopper developed around an existing Flat Line On Demand machine to improve adhesive pellet flow, eliminate bridging, and add active motorized clearing.</p>
-        <dl class="meta">
-            <div><dt>Context</dt><dd>MAS Intimates / Unichela</dd></div>
-            <div><dt>Period</dt><dd>2025</dd></div>
-            <div><dt>Role</dt><dd>Reverse engineering, CAD &amp; integration</dd></div>
-            <div><dt>Tools</dt><dd>SolidWorks Configurations, 3D printing, controls</dd></div>
-        </dl>
     </header>
 
-    <figure class="case-main-image hopper-main">
-        <img src="images/projects/hopper/hopper-cad.webp?v=20260808-3" alt="SolidWorks assembly of the FLOD glue-pellet hopper">
-    </figure>
+    <main id="main">
+        <header class="case-head wrap">
+            <a class="back-link intro" href="work.html">All projects</a>
+            <p class="case-kicker intro" style="--i:1">Reverse engineering, industrial automation</p>
+            <h1 class="intro" style="--i:2">FLOD glue-pellet hopper</h1>
+            <p class="lede intro" style="--i:3">A configurable replacement hopper developed around an existing Flat Line On Demand machine to improve adhesive pellet flow, eliminate bridging, and add active motorized clearing.</p>
+            <dl class="facts intro" style="--i:4">
+                <div><dt>Context</dt><dd>MAS Intimates / Unichela</dd></div>
+                <div><dt>Period</dt><dd>2025</dd></div>
+                <div><dt>Role</dt><dd>Reverse engineering, CAD &amp; integration</dd></div>
+                <div><dt>Tools</dt><dd>SolidWorks Configurations, 3D printing, controls</dd></div>
+            </dl>
+        </header>
 
-    <section class="case-section">
-        <div class="shell case-layout">
-            <h2>Why it was designed</h2>
-            <div class="case-copy">
-                <p class="dropcap">
-                    The existing FLOD machine needed a more dependable way to deliver hot-melt adhesive pellets into its screw and extrusion feeding system.
-                </p>
-                <p>
-                    Production trials showed that inconsistent flow and pellet blockage could interrupt feeding. The replacement had to fit the existing machine without altering the supplier's core equipment, remain light enough for practical operator handling, and be straightforward to fabricate, commission and maintain.
-                </p>
-                <blockquote class="article-quote" style="margin: 2rem 0;">
-                    &ldquo;Production stoppages due to pellet bridging cost valuable line throughput. The replacement hopper introduced smooth internal funnels and active mechanical agitation within the exact original envelope.&rdquo;
-                </blockquote>
-                <div class="detail-grid">
-                    <article><h3>Consistent feeding</h3><p>Guide pellets toward the screw inlet with fewer stagnant areas and a smoother outlet transition.</p></article>
-                    <article><h3>Machine compatibility</h3><p>Preserve the existing mounting envelope and interfaces instead of redesigning the FLOD machine.</p></article>
-                    <article><h3>Visual monitoring</h3><p>Allow operators to check pellet levels quickly without opening the hopper lid during production.</p></article>
-                    <article><h3>Active clearing</h3><p>Integrate a compact agitator to clear bridging automatically without adding bulk or high power demands.</p></article>
+        <figure class="case-cover wrap">
+            <div class="plate plate--render" data-vt="hopper">
+                <img src="images/projects/hopper/hopper-cad.webp?v=20260808-3" alt="SolidWorks assembly of the FLOD glue-pellet hopper" width="1600" height="1086" fetchpriority="high" decoding="async">
+            </div>
+        </figure>
+
+        <section class="case-section" aria-labelledby="why-title">
+            <div class="wrap split">
+                <div class="split-head"><h2 id="why-title">Why it was designed</h2></div>
+                <div class="prose">
+                    <p class="lede">The existing FLOD machine needed a more dependable way to deliver hot-melt adhesive pellets into its screw and extrusion feeding system.</p>
+                    <p>Production trials showed that inconsistent flow and pellet blockage could interrupt feeding. The replacement had to fit the existing machine without altering the supplier&rsquo;s core equipment, remain light enough for practical operator handling, and be straightforward to fabricate, commission and maintain.</p>
+                    <blockquote class="pullquote">&ldquo;Production stoppages due to pellet bridging cost valuable line throughput. The replacement hopper introduced smooth internal funnels and active mechanical agitation within the exact original envelope.&rdquo;</blockquote>
+                    <div class="notes">
+                        <article><h3>Consistent feeding</h3><p>Guide pellets toward the screw inlet with fewer stagnant areas and a smoother outlet transition.</p></article>
+                        <article><h3>Machine compatibility</h3><p>Preserve the existing mounting envelope and interfaces instead of redesigning the FLOD machine.</p></article>
+                        <article><h3>Visual monitoring</h3><p>Allow operators to check pellet levels quickly without opening the hopper lid during production.</p></article>
+                        <article><h3>Active clearing</h3><p>Integrate a compact agitator to clear bridging automatically without adding bulk or high power demands.</p></article>
+                    </div>
                 </div>
             </div>
-        </div>
-    </section>
+        </section>
 
-    <section class="case-section">
-        <div class="shell case-layout">
-            <h2>Design requirements</h2>
-            <div class="case-copy">
-                <p>The hopper was developed against functional constraints derived directly from factory floor operation.</p>
-                <ul class="evidence-list">
-                    <li><span>01</span>Maintain the physical mounting footprint, screw clearance and feed height.</li>
-                    <li><span>02</span>Provide smooth internal funnel transitions to prevent pellet stagnation.</li>
-                    <li><span>03</span>Integrate transparent inspection windows for fast optical level checks.</li>
-                    <li><span>04</span>Fit an internal motor-driven agitator mechanism to break bridging.</li>
-                    <li><span>05</span>Ensure tool-less access to internal components for rapid routine cleaning.</li>
-                </ul>
+        <section class="case-section" aria-labelledby="requirements-title">
+            <div class="wrap split">
+                <div class="split-head"><h2 id="requirements-title">Design requirements</h2></div>
+                <div class="prose">
+                    <p>The hopper was developed against functional constraints derived directly from factory floor operation.</p>
+                    <ul class="list">
+                        <li>Maintain the physical mounting footprint, screw clearance and feed height.</li>
+                        <li>Provide smooth internal funnel transitions to prevent pellet stagnation.</li>
+                        <li>Integrate transparent inspection windows for fast optical level checks.</li>
+                        <li>Fit an internal motor-driven agitator mechanism to break bridging.</li>
+                        <li>Ensure tool-less access to internal components for rapid routine cleaning.</li>
+                    </ul>
+                </div>
             </div>
-        </div>
-    </section>
+        </section>
 
-    <!-- Parametric Configurations Section -->
-    <section class="case-section">
-        <div class="shell">
-            <div class="section-head">
-                <p class="section-label">SolidWorks Modeling</p>
-                <div>
-                    <h2>Parametric configurations for adaptable capacity.</h2>
+        <section class="case-section" id="configurations" aria-labelledby="configurations-title">
+            <div class="wrap">
+                <div class="section-intro">
+                    <h2 id="configurations-title">Parametric configurations for adaptable capacity.</h2>
                     <p>The hopper body was built using SolidWorks configurations to support varying machine heights and production volume demands while retaining common mounting features.</p>
                 </div>
-            </div>
-            <div class="configuration-grid">
-                <figure>
-                    <div class="configuration-media"><img src="images/projects/hopper/config-body-80.webp" alt="80mm compact hopper configuration" loading="lazy"></div>
-                    <figcaption>
-                        <h3>80 mm Compact Body</h3>
-                        <p>Reduced height configuration for low-overhead clearance applications.</p>
-                    </figcaption>
-                </figure>
-                <figure>
-                    <div class="configuration-media"><img src="images/projects/hopper/config-body-100.webp" alt="100mm baseline hopper configuration" loading="lazy"></div>
-                    <figcaption>
-                        <h3>100 mm Standard Body</h3>
-                        <p>Baseline capacity matching existing machine footprint.</p>
-                    </figcaption>
-                </figure>
-                <figure>
-                    <div class="configuration-media"><img src="images/projects/hopper/config-body-150.webp" alt="150mm high-capacity hopper configuration" loading="lazy"></div>
-                    <figcaption>
-                        <h3>150 mm Extended Body</h3>
-                        <p>High-volume reservoir for continuous adhesive bonding shifts.</p>
-                    </figcaption>
-                </figure>
-            </div>
-        </div>
-    </section>
-
-    <!-- Fabrication Evidence Gallery -->
-    <section class="case-section">
-        <div class="shell">
-            <div class="section-head">
-                <p class="section-label">Build evidence</p>
-                <div>
-                    <h2>From 3D CAD to fabricated machine assembly.</h2>
+                <div class="gallery gallery--3">
+                    <figure class="figure part">
+                        <div class="plate plate--render ratio-photo"><img src="images/projects/hopper/config-body-80.webp" alt="80mm compact hopper configuration" width="1600" height="1059" loading="lazy" decoding="async"></div>
+                        <figcaption><h3>80 mm compact body</h3><p>Reduced height configuration for low-overhead clearance applications.</p></figcaption>
+                    </figure>
+                    <figure class="figure part">
+                        <div class="plate plate--render ratio-photo"><img src="images/projects/hopper/config-body-100.webp" alt="100mm baseline hopper configuration" width="1600" height="1059" loading="lazy" decoding="async"></div>
+                        <figcaption><h3>100 mm standard body</h3><p>Baseline capacity matching existing machine footprint.</p></figcaption>
+                    </figure>
+                    <figure class="figure part">
+                        <div class="plate plate--render ratio-photo"><img src="images/projects/hopper/config-body-150.webp" alt="150mm high-capacity hopper configuration" width="1600" height="1059" loading="lazy" decoding="async"></div>
+                        <figcaption><h3>150 mm extended body</h3><p>High-volume reservoir for continuous adhesive bonding shifts.</p></figcaption>
+                    </figure>
                 </div>
             </div>
-            <div class="gallery hopper-photo-gallery">
-                <figure>
-                    <div class="gallery-media"><img src="images/projects/hopper/photo-side-window.webp" alt="Transparent acrylic pellet-level window" loading="lazy"></div>
-                    <figcaption class="caption">Laser-cut acrylic window for non-intrusive pellet level monitoring.</figcaption>
-                </figure>
-                <figure>
-                    <div class="gallery-media"><img src="images/projects/hopper/hopper-cad.webp?v=20260808-3" alt="Complete SolidWorks assembly model" loading="lazy"></div>
-                    <figcaption class="caption">Coordinated assembly model showing agitator motor and mounting flanges.</figcaption>
-                </figure>
+        </section>
+
+        <section class="case-section" id="build" aria-labelledby="build-title">
+            <div class="wrap">
+                <div class="section-intro">
+                    <h2 id="build-title">From 3D CAD to fabricated machine assembly.</h2>
+                </div>
+                <div class="gallery">
+                    <figure class="figure">
+                        <div class="plate ratio-photo"><img src="images/projects/hopper/photo-side-window.webp" alt="Transparent acrylic pellet-level window" width="1600" height="1200" loading="lazy" decoding="async"></div>
+                        <figcaption>Laser-cut acrylic window for non-intrusive pellet level monitoring.</figcaption>
+                    </figure>
+                    <figure class="figure">
+                        <div class="plate plate--render ratio-photo"><img src="images/projects/hopper/hopper-cad.webp?v=20260808-3" alt="Complete SolidWorks assembly model" width="1600" height="1086" loading="lazy" decoding="async"></div>
+                        <figcaption>Coordinated assembly model showing agitator motor and mounting flanges.</figcaption>
+                    </figure>
+                </div>
             </div>
-        </div>
-    </section>
+        </section>
 
-    <nav class="next-project">
-        <div class="shell">
-            <a href="tof-slam.html"><span>Next: ToF SLAM Robot</span><span>&rarr;</span></a>
-        </div>
-    </nav>
-</main>
+        <nav class="next-case" aria-label="Next project">
+            <div class="wrap">
+                <a href="tof-slam.html">
+                    <span><span class="next-label">Next project</span><span class="next-title">ToF SLAM mobile robot</span></span>
+                    <svg class="next-arrow" viewBox="0 0 64 24" aria-hidden="true"><path d="M0 12h61M50 1l11 11-11 11" fill="none" stroke="currentColor" stroke-width="2"/></svg>
+                </a>
+            </div>
+        </nav>
+    </main>
 
-<footer class="site-footer">
-    <div class="shell footer-row">
-        <p>&copy; <span data-year>2026</span> Zaidh Rizme &middot; Mechatronics &amp; Robotics Engineer</p>
-        <p><a href="work.html">All Case Studies</a></p>
-    </div>
-</footer>
+    <footer class="site-footer">
+        <div class="wrap footer-inner">
+            <p>&copy; <span data-year>2026</span> Zaidh Rizme. Mechatronics engineer, Colombo.</p>
+            <ul class="footer-links">
+                <li><a href="mailto:rizme.zaidh@gmail.com">Email</a></li>
+                <li><a href="https://www.linkedin.com/in/zaidhriz/" target="_blank" rel="noopener">LinkedIn</a></li>
+                <li><a href="https://github.com/zaidh-mech" target="_blank" rel="noopener">GitHub</a></li>
+                <li><a href="Zaidh-Rizme-CV.pdf" target="_blank" rel="noopener">CV</a></li>
+            </ul>
+        </div>
+    </footer>
 </body>
 </html>

@@ -3,218 +3,181 @@
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <meta name="description" content="About Zaidh Rizme, a mechatronics and robotics engineering graduate in Colombo, Sri Lanka with experience across PCB design, SolidWorks CAD, embedded firmware, and industrial automation.">
-    <meta name="theme-color" content="#FAF9F5">
     <title>About | Zaidh Rizme</title>
-    <link rel="icon" href="favicon.ico">
-    <link rel="stylesheet" href="css/styles.css?v=20261019-2">
-    <script src="js/main.js?v=20261019-2" defer></script>
+    <meta name="description" content="About Zaidh Rizme, a mechatronics and robotics engineering graduate in Colombo, Sri Lanka with experience across PCB design, SolidWorks CAD, embedded firmware, and industrial automation.">
+    <meta name="theme-color" content="#ffffff">
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="About | Zaidh Rizme">
+    <meta property="og:description" content="A mechatronics and robotics engineering graduate in Colombo, Sri Lanka working across PCB design, SolidWorks CAD, embedded firmware and industrial automation.">
+    <meta property="og:url" content="https://zaidh-mech.github.io/about.html">
+    <meta property="og:image" content="https://zaidh-mech.github.io/images/projects/tof/robot-cad-main.webp">
+    <link rel="icon" href="favicon.ico" sizes="any">
+    <link rel="icon" type="image/png" sizes="32x32" href="favicon-32x32.png">
+    <link rel="apple-touch-icon" href="apple-touch-icon.png">
+    <link rel="manifest" href="site.webmanifest">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Archivo:wdth,wght@62..125,100..900&amp;display=swap">
+    <link rel="stylesheet" href="css/styles.css?v=20261120">
+    <script>(function(d){d.classList.add('js');try{var t=localStorage.getItem('zr-theme');if(t==='dark'||t==='light')d.setAttribute('data-theme',t);}catch(e){}addEventListener('pagereveal',function(e){var v=e.viewTransition;if(v){v.ready.catch(function(){});v.updateCallbackDone.catch(function(){});}});})(document.documentElement);</script>
+    <script src="js/main.js?v=20261120" defer></script>
 </head>
-<body>
+<body class="page-about">
     <a class="skip-link" href="#main">Skip to content</a>
 
-    <!-- Mathematically Centered Claude Translucent Navigation -->
     <header class="site-header">
-        <div class="nav-shell">
-            <a class="brand" href="index.html" aria-label="Zaidh Rizme Homepage">
-                <span class="status-dot" title="Available for engineering opportunities"></span>
-                <div class="brand-info">
-                    <span class="brand-title">Zaidh Rizme</span>
-                    <span class="brand-tag">Mechatronics &amp; Robotics</span>
-                </div>
-            </a>
-            <nav class="main-nav" aria-label="Primary navigation">
-                <a href="index.html">Home</a>
-                <a href="work.html">Projects</a>
+        <div class="wrap header-inner">
+            <a class="wordmark" href="index.html">Zaidh Rizme</a>
+            <nav class="site-nav" aria-label="Primary">
+                <a href="work.html">Work</a>
                 <a href="about.html" aria-current="page">About</a>
                 <a href="contact.html">Contact</a>
+                <a href="Zaidh-Rizme-CV.pdf" target="_blank" rel="noopener">CV</a>
             </nav>
-            <div class="nav-actions">
-                <button type="button" class="theme-toggle-btn" aria-label="Toggle light and dark mode" title="Toggle theme (shortcut: t)">
-                    <svg class="icon-sun" viewBox="0 0 24 24"><circle cx="12" cy="12" r="5"></circle><line x1="12" y1="1" x2="12" y2="3"></line><line x1="12" y1="21" x2="12" y2="23"></line><line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line><line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line><line x1="1" y1="12" x2="3" y2="12"></line><line x1="21" y1="12" x2="23" y2="12"></line><line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line><line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line></svg>
-                    <svg class="icon-moon" viewBox="0 0 24 24"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path></svg>
+            <div class="header-tools">
+                <button class="theme-toggle" type="button" aria-label="Switch colour theme">
+                    <svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="8.25" fill="none" stroke="currentColor" stroke-width="1.5"/><path d="M12 3.75a8.25 8.25 0 0 1 0 16.5z" fill="currentColor"/></svg>
                 </button>
-                <a class="button small nav-cv" href="Zaidh-Rizme-CV.pdf" target="_blank" rel="noopener">CV <span class="arrow">&nearr;</span></a>
+                <button class="menu-toggle" type="button" aria-expanded="false" aria-controls="mobile-menu">Menu</button>
             </div>
         </div>
     </header>
 
     <main id="main">
-        <header class="page-hero shell">
-            <p class="eyebrow">Biographical Monograph &middot; Engineering Profile</p>
-            <h1>Engineering at the physical boundary.</h1>
-            <p>
-                I thrive at the point where mechanical CAD tolerances, custom PCB layouts, and embedded C/C++ firmware must harmonize under real-world operating conditions.
-            </p>
+        <header class="page-head wrap">
+            <h1 class="intro">Engineering at the physical boundary.</h1>
+            <p class="lede intro" style="--i:1">I thrive at the point where mechanical CAD tolerances, custom PCB layouts, and embedded C/C++ firmware must harmonize under real-world operating conditions.</p>
+            <dl class="facts intro" style="--i:2">
+                <div><dt>Engineering degree</dt><dd>BEng (Hons) Mechatronics Engineering</dd></div>
+                <div><dt>Industrial internship</dt><dd>MAS Capital, Intimates automation</dd></div>
+                <div><dt>Based in</dt><dd>Colombo, Sri Lanka (UTC+05:30)</dd></div>
+                <div><dt>Availability</dt><dd>Open for graduate roles (on-site or remote)</dd></div>
+            </dl>
         </header>
 
-        <!-- Monograph Quick Facts Bar -->
-        <section class="section" style="padding-top: 1rem; border-top: 0;">
-            <div class="shell">
-                <div class="about-summary-card">
-                    <div class="summary-stat">
-                        <span class="summary-stat-label">Engineering Degree</span>
-                        <span class="summary-stat-val">BEng (Hons) Mechatronics Engineering</span>
-                    </div>
-                    <div class="summary-stat">
-                        <span class="summary-stat-label">Industrial Internship</span>
-                        <span class="summary-stat-val">MAS Capital &middot; Intimates Automation</span>
-                    </div>
-                    <div class="summary-stat">
-                        <span class="summary-stat-label">Base Location</span>
-                        <span class="summary-stat-val">Colombo, Sri Lanka (UTC+05:30)</span>
-                    </div>
-                    <div class="summary-stat">
-                        <span class="summary-stat-label">Current Availability</span>
-                        <span class="summary-stat-val">Open for Graduate Roles (Onsite/Remote)</span>
+        <section class="section section--ruled" aria-labelledby="philosophy-title">
+            <div class="wrap split">
+                <div class="split-head"><h2 id="philosophy-title">Engineering philosophy</h2></div>
+                <div class="prose">
+                    <p class="lede">My practical background connects multi-layer PCB design in KiCad, parametric CAD modeling in SolidWorks, embedded firmware in C/C++, and industrial automation experience gained at MAS Capital.</p>
+                    <p>Rather than treating hardware as disconnected silos, I develop platforms from the component level up. When building the ToF SLAM autonomous mobile robot, the chassis geometry was designed in tandem with the sensor field of view, the wheel center of gravity, and the 4-layer control PCB envelope.</p>
+                    <p>During my industrial training at MAS Capital, I learned firsthand that engineering excellence requires more than functional breadboards&mdash;it requires structured production BOMs, design for manufacture (DFM), strict safety interlocks, and rigorous factory floor commissioning alongside technicians and operators.</p>
+                    <div class="actions">
+                        <a class="btn is-ext" href="Zaidh-Rizme-CV.pdf" target="_blank" rel="noopener">Download complete CV</a>
+                        <a class="btn btn--ghost" href="contact.html">Get in touch</a>
                     </div>
                 </div>
             </div>
         </section>
 
-        <!-- Narrative Profile Section -->
-        <section class="section">
-            <div class="shell about-grid">
-                <p class="section-label">Engineering Philosophy</p>
+        <section class="section section--ruled" aria-labelledby="experience-title">
+            <div class="wrap split">
+                <div class="split-head"><h2 id="experience-title">Experience</h2></div>
                 <div>
-                    <p class="about-lead dropcap">
-                        My practical background connects multi-layer PCB design in KiCad, parametric CAD modeling in SolidWorks, embedded firmware in C/C++, and industrial automation experience gained at MAS Capital.
-                    </p>
-                    <p style="margin-top: 1.5rem; color: var(--text-secondary); line-height: 1.7; font-size: 1.05rem;">
-                        Rather than treating hardware as disconnected silos, I develop platforms from the component level up. When building the ToF SLAM autonomous mobile robot, the chassis geometry was designed in tandem with the sensor field of view, the wheel center of gravity, and the 4-layer control PCB envelope.
-                    </p>
-                    <p style="color: var(--text-secondary); line-height: 1.7; font-size: 1.05rem;">
-                        During my industrial training at MAS Capital, I learned firsthand that engineering excellence requires more than functional breadboards—it requires structured production BOMs, design for manufacture (DFM), strict safety interlocks, and rigorous factory floor commissioning alongside technicians and operators.
-                    </p>
-                    <div class="hero-actions" style="margin-top: 2.25rem;">
-                        <a class="button" href="Zaidh-Rizme-CV.pdf" target="_blank" rel="noopener">Download Complete CV <span class="arrow">&nearr;</span></a>
-                        <a class="button secondary" href="contact.html">Get In Touch <span class="arrow">&rarr;</span></a>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <!-- Career History Timeline -->
-        <section class="section">
-            <div class="shell about-grid">
-                <p class="section-label">Professional Experience</p>
-                <div>
-                    <div class="timeline">
-                        <article class="timeline-row reveal">
-                            <time>Jul 2025 &ndash; Feb 2026</time>
+                    <ol class="timeline">
+                        <li>
+                            <p class="when">Jul 2025 &ndash; Feb 2026</p>
                             <div>
-                                <h3 style="font-size: 1.25rem;">Automation Engineer Intern &middot; MAS Capital (Intimates Division)</h3>
-                                <p style="margin-top: 0.5rem; line-height: 1.65; color: var(--text-secondary);">
-                                    Embedded in manufacturing operations focusing on automation machinery, mechanism design, sensor integration, and continuous improvement across garment manufacturing lines.
-                                </p>
-                                <ul style="margin: 0.75rem 0 0; padding-left: 1.2rem; color: var(--text-secondary); line-height: 1.6; font-size: 0.95rem;">
+                                <h3>Automation engineer intern</h3>
+                                <p class="org">MAS Capital, Intimates Division</p>
+                                <p>Embedded in manufacturing operations focusing on automation machinery, mechanism design, sensor integration, and continuous improvement across garment manufacturing lines.</p>
+                                <ul>
                                     <li>Engineered the pneumatic Modified Industrial Iron workstation with guided 4-bar linkage kinematics and a 23-part production BOM.</li>
                                     <li>Reverse-engineered the FLOD glue-pellet hopper with SolidWorks design configurations, acrylic level inspection, and motorized clearing agitator.</li>
                                     <li>Supported installation, wiring, testing, and production commissioning of ultrasonic die and 3D cup-bonding machines.</li>
                                     <li>Conducted PLC ladder logic exercises, sensor calibration, and preventative factory troubleshooting.</li>
                                 </ul>
                             </div>
-                        </article>
-
-                        <article class="timeline-row reveal">
-                            <time>Jul 2024 &ndash; Jul 2025</time>
+                        </li>
+                        <li>
+                            <p class="when">Jul 2024 &ndash; Jul 2025</p>
                             <div>
-                                <h3 style="font-size: 1.25rem;">Academic Assistant &middot; LivePhysics</h3>
-                                <p style="margin-top: 0.5rem; line-height: 1.65; color: var(--text-secondary);">
-                                    Authored rigorous advanced-level physics exam questions, formulated step-by-step mathematical marking rubrics, and created instructional materials covering mechanics, wave phenomena, and electronics.
-                                </p>
+                                <h3>Academic assistant</h3>
+                                <p class="org">LivePhysics</p>
+                                <p>Authored rigorous advanced-level physics exam questions, formulated step-by-step mathematical marking rubrics, and created instructional materials covering mechanics, wave phenomena, and electronics.</p>
                             </div>
-                        </article>
-
-                        <article class="timeline-row reveal">
-                            <time>Jan 2023 &ndash; Sep 2024</time>
+                        </li>
+                        <li>
+                            <p class="when">Jan 2023 &ndash; Sep 2024</p>
                             <div>
-                                <h3 style="font-size: 1.25rem;">Robotics &amp; STEM Instructor &middot; NEOGRAENIUM</h3>
-                                <p style="margin-top: 0.5rem; line-height: 1.65; color: var(--text-secondary);">
-                                    Designed and conducted hands-on robotics workshops utilizing LEGO Mindstorms, BBC Micro:Bit microcontrollers, electronic sensor interfaces, and introductory algorithms for aspiring engineers.
-                                </p>
+                                <h3>Robotics and STEM instructor</h3>
+                                <p class="org">NEOGRAENIUM</p>
+                                <p>Designed and conducted hands-on robotics workshops utilizing LEGO Mindstorms, BBC Micro:Bit microcontrollers, electronic sensor interfaces, and introductory algorithms for aspiring engineers.</p>
                             </div>
-                        </article>
-                    </div>
+                        </li>
+                    </ol>
                 </div>
             </div>
         </section>
 
-        <!-- Education & Academics -->
-        <section class="section">
-            <div class="shell about-grid">
-                <p class="section-label">Academic Foundations</p>
+        <section class="section section--ruled" aria-labelledby="education-title">
+            <div class="wrap split">
+                <div class="split-head"><h2 id="education-title">Education</h2></div>
                 <div>
-                    <div class="timeline">
-                        <article class="timeline-row reveal">
-                            <time>2023 &ndash; 2026</time>
+                    <ol class="timeline">
+                        <li>
+                            <p class="when">2023 &ndash; 2026</p>
                             <div>
-                                <h3 style="font-size: 1.25rem;">BEng (Hons) Mechatronics Engineering</h3>
-                                <p style="margin-top: 0.5rem; line-height: 1.65; color: var(--text-secondary);">
-                                    University of Wolverhampton (completed at CINEC Campus, Sri Lanka). Comprehensive engineering coursework covering robotics kinematics, embedded microcontrollers, control theory, fluid power systems, CAD/CAM, and final year capstone autonomous SLAM robot design.
-                                </p>
+                                <h3>BEng (Hons) Mechatronics Engineering</h3>
+                                <p class="org">University of Wolverhampton, completed at CINEC Campus, Sri Lanka</p>
+                                <p>Comprehensive engineering coursework covering robotics kinematics, embedded microcontrollers, control theory, fluid power systems, CAD/CAM, and final year capstone autonomous SLAM robot design.</p>
                             </div>
-                        </article>
-
-                        <article class="timeline-row reveal">
-                            <time>2020 &ndash; 2022</time>
+                        </li>
+                        <li>
+                            <p class="when">2020 &ndash; 2022</p>
                             <div>
-                                <h3 style="font-size: 1.25rem;">GCE Advanced Level &middot; Physical Sciences</h3>
-                                <p style="margin-top: 0.5rem; line-height: 1.65; color: var(--text-secondary);">
-                                    Isipathana College, Colombo. Completed Combined Mathematics (Grade B), Chemistry (Grade B), and Physics (Grade C), establishing a strong rigorous foundation in analytical mechanics, calculus, and physical systems.
-                                </p>
+                                <h3>GCE Advanced Level, physical sciences</h3>
+                                <p class="org">Isipathana College, Colombo</p>
+                                <p>Completed Combined Mathematics (Grade B), Chemistry (Grade B), and Physics (Grade C), establishing a strong rigorous foundation in analytical mechanics, calculus, and physical systems.</p>
                             </div>
-                        </article>
-                    </div>
+                        </li>
+                    </ol>
                 </div>
             </div>
         </section>
 
-        <!-- Comprehensive Skills Matrix -->
-        <section class="section">
-            <div class="shell about-grid">
-                <p class="section-label">Technical Competencies</p>
-                <div>
-                    <div class="skills-list">
-                        <article class="skill-group reveal">
-                            <h3>PCB &amp; Hardware Engineering</h3>
-                            <p>KiCad schematic capture, 2-layer and 4-layer multilayer layout, differential routing, power conversion (LM2596S, LDOs), sensor headers (I2C/SPI), DFM preparation, Gerbers, and interactive BOM generation.</p>
-                        </article>
-
-                        <article class="skill-group reveal">
-                            <h3>SolidWorks CAD &amp; DFM</h3>
-                            <p>Parametric 3D part modeling, complex multi-body assemblies, design configurations, tolerance stack-ups, detailed engineering drawings, pneumatic cylinder linkages, 3D printing (FDM/ABS), laser cutting, and CNC machining coordination.</p>
-                        </article>
-
-                        <article class="skill-group reveal">
-                            <h3>Embedded Firmware &amp; Sensing</h3>
-                            <p>ESP32 dual-core, ATmega328P, C/C++, Arduino framework, MPU6050 IMU, MS5837 hydrostatic pressure, VL53L8CX multizone ToF lidar, quadrature encoders, and motor/stepper drivers (ULN2003, H-Bridges).</p>
-                        </article>
-
-                        <article class="skill-group reveal">
-                            <h3>Industrial Automation</h3>
-                            <p>Factory automation workflows, pneumatic air regulation and valves, electrical safety circuits (E-Stops), relay controls, sensor alignment, production line commissioning, and live troubleshooting.</p>
-                        </article>
-
-                        <article class="skill-group reveal">
-                            <h3>Software &amp; Host Tools</h3>
-                            <p>Python (PyQt5 GUI, sockets, telemetry logging), MATLAB (occupancy grid mapping, scan matching, simulation), Git version control, and serial protocols (UART, TCP/IP).</p>
-                        </article>
-
-                        <article class="skill-group reveal">
-                            <h3>Engineering Evidence</h3>
-                            <p>Systematic calibration workflows, repeatability tests, verification matrices, failure analysis, component BOM cost tracking, and publication-ready technical reports.</p>
-                        </article>
-                    </div>
+        <section class="section section--ruled" aria-labelledby="skills-title">
+            <div class="wrap split">
+                <div class="split-head"><h2 id="skills-title">Technical competencies</h2></div>
+                <div class="notes">
+                    <article>
+                        <h3>PCB and hardware engineering</h3>
+                        <p>KiCad schematic capture, 2-layer and 4-layer multilayer layout, differential routing, power conversion (LM2596S, LDOs), sensor headers (I2C/SPI), DFM preparation, Gerbers, and interactive BOM generation.</p>
+                    </article>
+                    <article>
+                        <h3>SolidWorks CAD and DFM</h3>
+                        <p>Parametric 3D part modeling, complex multi-body assemblies, design configurations, tolerance stack-ups, detailed engineering drawings, pneumatic cylinder linkages, 3D printing (FDM/ABS), laser cutting, and CNC machining coordination.</p>
+                    </article>
+                    <article>
+                        <h3>Embedded firmware and sensing</h3>
+                        <p>ESP32 dual-core, ATmega328P, C/C++, Arduino framework, MPU6050 IMU, MS5837 hydrostatic pressure, VL53L8CX multizone ToF lidar, quadrature encoders, and motor/stepper drivers (ULN2003, H-Bridges).</p>
+                    </article>
+                    <article>
+                        <h3>Industrial automation</h3>
+                        <p>Factory automation workflows, pneumatic air regulation and valves, electrical safety circuits (E-Stops), relay controls, sensor alignment, production line commissioning, and live troubleshooting.</p>
+                    </article>
+                    <article>
+                        <h3>Software and host tools</h3>
+                        <p>Python (PyQt5 GUI, sockets, telemetry logging), MATLAB (occupancy grid mapping, scan matching, simulation), Git version control, and serial protocols (UART, TCP/IP).</p>
+                    </article>
+                    <article>
+                        <h3>Engineering evidence</h3>
+                        <p>Systematic calibration workflows, repeatability tests, verification matrices, failure analysis, component BOM cost tracking, and publication-ready technical reports.</p>
+                    </article>
                 </div>
             </div>
         </section>
     </main>
 
     <footer class="site-footer">
-        <div class="shell footer-row">
-            <p>&copy; <span data-year>2026</span> Zaidh Rizme &middot; Colombo, Sri Lanka</p>
-            <p><a href="contact.html">Get in touch</a> &middot; <a href="Zaidh-Rizme-CV.pdf" target="_blank" rel="noopener">Download CV &nearr;</a></p>
+        <div class="wrap footer-inner">
+            <p>&copy; <span data-year>2026</span> Zaidh Rizme. Mechatronics engineer, Colombo.</p>
+            <ul class="footer-links">
+                <li><a href="mailto:rizme.zaidh@gmail.com">Email</a></li>
+                <li><a href="https://www.linkedin.com/in/zaidhriz/" target="_blank" rel="noopener">LinkedIn</a></li>
+                <li><a href="https://github.com/zaidh-mech" target="_blank" rel="noopener">GitHub</a></li>
+                <li><a href="Zaidh-Rizme-CV.pdf" target="_blank" rel="noopener">CV</a></li>
+            </ul>
         </div>
     </footer>
 </body>

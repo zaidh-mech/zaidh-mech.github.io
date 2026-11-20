@@ -3,103 +3,306 @@
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <meta name="description" content="Case study: purpose-built ToF SLAM robot integrating SolidWorks mechanical design, custom PCBs, a Python control GUI and MATLAB mapping software by Zaidh Rizme.">
-    <meta name="theme-color" content="#FAF9F5">
-    <title>ToF SLAM Robot | Zaidh Rizme</title>
-    <link rel="icon" href="favicon.ico">
-    <link rel="stylesheet" href="css/styles.css?v=20261019-1">
-    <script src="js/main.js?v=20261019-1" defer></script>
+    <title>ToF SLAM robot | Zaidh Rizme</title>
+    <meta name="description" content="Case study: a purpose-built ToF SLAM robot integrating SolidWorks mechanical design, custom PCBs, a Python control GUI and MATLAB mapping software by Zaidh Rizme.">
+    <meta name="theme-color" content="#ffffff">
+    <meta property="og:type" content="article">
+    <meta property="og:title" content="ToF SLAM robot | Zaidh Rizme">
+    <meta property="og:description" content="A differential-drive robot designed around low-cost Time-of-Flight SLAM: chassis, PCBs, firmware and mapping software.">
+    <meta property="og:url" content="https://zaidh-mech.github.io/tof-slam.html">
+    <meta property="og:image" content="https://zaidh-mech.github.io/images/projects/tof/robot-cad-main.webp">
+    <link rel="icon" href="favicon.ico" sizes="any">
+    <link rel="icon" type="image/png" sizes="32x32" href="favicon-32x32.png">
+    <link rel="apple-touch-icon" href="apple-touch-icon.png">
+    <link rel="manifest" href="site.webmanifest">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Archivo:wdth,wght@62..125,100..900&amp;display=swap">
+    <link rel="stylesheet" href="css/styles.css?v=20261120">
+    <script>(function(d){d.classList.add('js');try{var t=localStorage.getItem('zr-theme');if(t==='dark'||t==='light')d.setAttribute('data-theme',t);}catch(e){}addEventListener('pagereveal',function(e){var v=e.viewTransition;if(v){v.ready.catch(function(){});v.updateCallbackDone.catch(function(){});}});})(document.documentElement);</script>
+    <script src="js/main.js?v=20261120" defer></script>
 </head>
-<body>
-<a class="skip-link" href="#main">Skip to content</a>
-<header class="site-header">
-    <div class="nav-shell">
-        <a class="brand" href="index.html" aria-label="Zaidh Rizme Homepage">
-            <span class="status-dot" title="Available for engineering opportunities"></span>
-            <div class="brand-info">
-                <span class="brand-title">Zaidh Rizme</span>
-                <span class="brand-tag">Mechatronics &amp; Robotics</span>
+<body class="page-case">
+    <a class="skip-link" href="#main">Skip to content</a>
+
+    <header class="site-header">
+        <div class="wrap header-inner">
+            <a class="wordmark" href="index.html">Zaidh Rizme</a>
+            <nav class="site-nav" aria-label="Primary">
+                <a href="work.html" aria-current="true">Work</a>
+                <a href="about.html">About</a>
+                <a href="contact.html">Contact</a>
+                <a href="Zaidh-Rizme-CV.pdf" target="_blank" rel="noopener">CV</a>
+            </nav>
+            <div class="header-tools">
+                <button class="theme-toggle" type="button" aria-label="Switch colour theme">
+                    <svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="8.25" fill="none" stroke="currentColor" stroke-width="1.5"/><path d="M12 3.75a8.25 8.25 0 0 1 0 16.5z" fill="currentColor"/></svg>
+                </button>
+                <button class="menu-toggle" type="button" aria-expanded="false" aria-controls="mobile-menu">Menu</button>
             </div>
-        </a>
-        <nav class="main-nav" aria-label="Primary navigation">
-            <a href="index.html">Home</a>
-            <a href="work.html" aria-current="page">Projects</a>
-            <a href="about.html">About</a>
-            <a href="contact.html">Contact</a>
-        </nav>
-        <div class="nav-actions">
-            <button type="button" class="theme-toggle-btn" aria-label="Toggle light and dark mode" title="Toggle theme (shortcut: t)">
-                <svg class="icon-sun" viewBox="0 0 24 24"><circle cx="12" cy="12" r="5"></circle><line x1="12" y1="1" x2="12" y2="3"></line><line x1="12" y1="21" x2="12" y2="23"></line><line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line><line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line><line x1="1" y1="12" x2="3" y2="12"></line><line x1="21" y1="12" x2="23" y2="12"></line><line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line><line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line></svg>
-                <svg class="icon-moon" viewBox="0 0 24 24"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path></svg>
-            </button>
-            <a class="button small nav-cv" href="Zaidh-Rizme-CV.pdf" target="_blank" rel="noopener">CV <span class="arrow">&nearr;</span></a>
         </div>
-    </div>
-</header>
-<main id="main">
-    <header class="case-intro shell">
-        <a class="back-link" href="work.html">&larr; All projects</a>
-        <p class="kicker">Robotics / Final year project</p>
-        <h1>ToF SLAM &amp; Autonomous Mobile Robot</h1>
-        <p class="case-deck">A purpose-built differential-drive robot developed around the mechanical, sensing, electronics and host-software requirements of a low-cost indoor Time-of-Flight SLAM system.</p>
-        <dl class="meta"><div><dt>Context</dt><dd>BEng final year project</dd></div><div><dt>Period</dt><dd>Dec 2025 - Jul 2026</dd></div><div><dt>Role</dt><dd>Individual system design &amp; build</dd></div><div><dt>Tools</dt><dd>SolidWorks, KiCad, ESP32, MATLAB, Python</dd></div></dl>
     </header>
 
-    <figure class="case-main-image robot-main"><img src="images/projects/tof/robot-cad-main.webp" alt="SolidWorks CAD model of the purpose-built ToF SLAM mobile robot"></figure>
+    <main id="main">
+        <header class="case-head wrap">
+            <a class="back-link intro" href="work.html">All projects</a>
+            <p class="case-kicker intro" style="--i:1">Robotics, final-year project</p>
+            <h1 class="intro" style="--i:2">ToF SLAM and autonomous mobile robot</h1>
+            <p class="lede intro" style="--i:3">A purpose-built differential-drive robot developed around the mechanical, sensing, electronics and host-software requirements of a low-cost indoor Time-of-Flight SLAM system.</p>
+            <dl class="facts intro" style="--i:4">
+                <div><dt>Context</dt><dd>BEng final year project</dd></div>
+                <div><dt>Period</dt><dd>Dec 2025 &ndash; Jul 2026</dd></div>
+                <div><dt>Role</dt><dd>Individual system design and build</dd></div>
+                <div><dt>Tools</dt><dd>SolidWorks, KiCad, ESP32, MATLAB, Python</dd></div>
+            </dl>
+        </header>
 
-    <section class="case-section"><div class="shell case-layout"><h2>Why I built the robot around the project</h2><div class="case-copy"><p class="dropcap">I chose not to adapt an existing robot model because the mechanical platform was part of the engineering problem. A generic chassis would have fixed the wheelbase, sensor position and internal volume before the sensing and electronics architecture had been resolved.</p><p>Designing the platform from the component level allowed the scanner field of view, drive geometry, battery position, PCB envelope, cable paths and service access to be developed together. It also created a controlled mechanical reference for encoder-based motion and repeatable ToF scanning.</p><blockquote class="article-quote" style="margin: 2rem 0;">&ldquo;A generic mobile base fixes wheel geometry and sensor placement before sensing physics are resolved. Designing from scratch allowed the scanner field of view, drive kinematics, and PCB packaging to be developed together.&rdquo;</blockquote><div class="detail-grid"><article><h3>Sensor-first geometry</h3><p>The front scanner was positioned with an unobstructed view and a defined rotational axis.</p></article><article><h3>Stable drive layout</h3><p>The wheel, motor and caster positions were set as one differential-drive package.</p></article><h3>Integrated electronics</h3><p>PCB, battery and interfaces were packaged into the chassis instead of added after it.</p></article><article><h3>Build access</h3><p>Layered plates and a separate shell keep internal parts reachable during assembly and iteration.</p></article></div></div></div></section>
+        <figure class="case-cover wrap">
+            <div class="plate plate--render" data-vt="tof">
+                <img src="images/projects/tof/robot-cad-main.webp" alt="SolidWorks CAD model of the purpose-built ToF SLAM mobile robot" width="722" height="375" fetchpriority="high" decoding="async">
+            </div>
+        </figure>
 
-    <section class="case-section"><div class="shell"><div class="section-head"><p class="section-label">Design criteria</p><div><h2>A compact platform that could be built, tested and changed.</h2><p>The chassis was developed against practical system requirements rather than appearance alone.</p></div></div><div class="criteria-strip"><article><span>01</span><h3>Compactness</h3><p>Keep the full sensing and drive system within a manageable indoor footprint.</p></article><article><span>02</span><h3>Maintainability</h3><p>Retain access to the PCB, battery, motors, scanner and connectors.</p></article><article><span>03</span><h3>Repeatability</h3><p>Provide fixed sensor and wheel relationships for mapping and odometry.</p></article><article><span>04</span><h3>Expandability</h3><p>Leave defined interfaces for sensors, display and later PCB development.</p></article></div></div></section>
+        <section class="case-section" aria-labelledby="why-title">
+            <div class="wrap split">
+                <div class="split-head"><h2 id="why-title">Why I built the robot around the project</h2></div>
+                <div class="prose">
+                    <p class="lede">I chose not to adapt an existing robot model because the mechanical platform was part of the engineering problem. A generic chassis would have fixed the wheelbase, sensor position and internal volume before the sensing and electronics architecture had been resolved.</p>
+                    <p>Designing the platform from the component level allowed the scanner field of view, drive geometry, battery position, PCB envelope, cable paths and service access to be developed together. It also created a controlled mechanical reference for encoder-based motion and repeatable ToF scanning.</p>
+                    <blockquote class="pullquote">&ldquo;A generic mobile base fixes wheel geometry and sensor placement before sensing physics are resolved. Designing from scratch allowed the scanner field of view, drive kinematics, and PCB packaging to be developed together.&rdquo;</blockquote>
+                    <div class="notes">
+                        <article><h3>Sensor-first geometry</h3><p>The front scanner was positioned with an unobstructed view and a defined rotational axis.</p></article>
+                        <article><h3>Stable drive layout</h3><p>The wheel, motor and caster positions were set as one differential-drive package.</p></article>
+                        <article><h3>Integrated electronics</h3><p>PCB, battery and interfaces were packaged into the chassis instead of added after it.</p></article>
+                        <article><h3>Build access</h3><p>Layered plates and a separate shell keep internal parts reachable during assembly and iteration.</p></article>
+                    </div>
+                </div>
+            </div>
+        </section>
 
-    <section class="case-section" id="parts"><div class="shell"><div class="section-head"><p class="section-label">Part-level SolidWorks design</p><div><h2>The robot was developed as an assembly of functional parts.</h2><p>Each model addresses a mounting, alignment, protection or motion requirement. Supplier components were coordinated with custom geometry inside the top-level assembly.</p></div></div><div class="part-grid tof-part-grid">
-        <article><div class="part-media"><img src="images/projects/tof/parts/top-chassis.webp" alt="Top chassis plate for the ToF robot" loading="lazy"></div><h3>Top chassis</h3><p>Upper mounting plane for electronics, battery access and the scanning assembly.</p></article>
-        <article><div class="part-media"><img src="images/projects/tof/parts/bottom-chassis.webp" alt="Bottom chassis plate and mounting features for the ToF robot" loading="lazy"></div><h3>Bottom chassis</h3><p>Primary structural plate locating the drive system, supports and lower mounting features.</p></article>
-        <article><div class="part-media"><img src="images/projects/tof/parts/body-shell.webp" alt="External body designed for the ToF robot" loading="lazy"></div><h3>Body</h3><p>Protective enclosure formed around the completed internal package and wheel clearances.</p></article>
-        <article><div class="part-media"><img src="images/projects/tof/parts/gear-motor.webp" alt="N20 DC geared motor CAD model used in the ToF robot" loading="lazy"></div><h3>Gear motor</h3><p>N20 DC geared motor with encoder interface used for differential-drive motion and wheel odometry.</p></article>
-        <article><div class="part-media"><img src="images/projects/tof/pcb-first.webp" alt="Custom control PCB designed for the ToF robot" loading="lazy"></div><h3>Control PCB</h3><p>Purpose-built board integrating power conversion, motor control, stepper drive and sensor connections.</p></article>
-        <article><div class="part-media"><img src="images/projects/tof/parts/tof-sensor-housing.webp" alt="VL53L8CX ToF sensor and protective housing" loading="lazy"></div><h3>ToF sensor &amp; housing</h3><p>Locates and protects the VL53L8CX while mounting it on the repeatable scanning axis.</p></article>
-        <article><div class="part-media"><img src="images/projects/tof/parts/stepper-motor.webp" alt="28BYJ-48 stepper motor CAD model used by the ToF scanner" loading="lazy"></div><h3>Stepper motor</h3><p>28BYJ-48 actuator rotating the sensor through controlled angular increments during a scan.</p></article>
-        <article><div class="part-media"><img src="images/projects/tof/parts/imu-sensor.webp" alt="MPU6050 IMU sensor CAD model used in the ToF robot" loading="lazy"></div><h3>IMU sensor</h3><p>MPU6050 inertial sensor providing motion and orientation measurements for the robot system.</p></article>
-    </div></div></section>
+        <section class="case-section" aria-labelledby="criteria-title">
+            <div class="wrap">
+                <div class="section-intro">
+                    <h2 id="criteria-title">A compact platform that could be built, tested and changed.</h2>
+                    <p>The chassis was developed against practical system requirements rather than appearance alone.</p>
+                </div>
+                <div class="notes notes--4">
+                    <article><h3>Compactness</h3><p>Keep the full sensing and drive system within a manageable indoor footprint.</p></article>
+                    <article><h3>Maintainability</h3><p>Retain access to the PCB, battery, motors, scanner and connectors.</p></article>
+                    <article><h3>Repeatability</h3><p>Provide fixed sensor and wheel relationships for mapping and odometry.</p></article>
+                    <article><h3>Expandability</h3><p>Leave defined interfaces for sensors, display and later PCB development.</p></article>
+                </div>
+            </div>
+        </section>
 
-    <section class="case-section"><div class="shell"><div class="section-head"><p class="section-label">Assembly integration</p><div><h2>Mechanical and electrical packaging were resolved together.</h2><p>The open assembly was used to check the real occupied volume, mounting relationships and access before the housing was fitted.</p></div></div><div class="gallery"><figure class="wide"><div class="gallery-media wide cad-stage"><img src="images/projects/tof/robot-cad-open.webp" alt="Open SolidWorks assembly showing the robot chassis, PCB, motors and scanner" loading="lazy"></div><figcaption class="caption">Top-level assembly: PCB, battery region, drive hardware and stepper-mounted scanner.</figcaption></figure><figure class="wide"><div class="gallery-media wide cad-stage"><img src="images/projects/tof/robot-cad-side.webp" alt="Side view of the open ToF robot assembly" loading="lazy"></div><figcaption class="caption">Side inspection of component height, wheel position and chassis clearance.</figcaption></figure></div></div></section>
+        <section class="case-section" id="parts" aria-labelledby="parts-title">
+            <div class="wrap">
+                <div class="section-intro">
+                    <h2 id="parts-title">The robot was developed as an assembly of functional parts.</h2>
+                    <p>Each model addresses a mounting, alignment, protection or motion requirement. Supplier components were coordinated with custom geometry inside the top-level assembly.</p>
+                </div>
+                <div class="gallery gallery--4">
+                    <figure class="figure part">
+                        <div class="plate plate--render ratio-photo"><img src="images/projects/tof/parts/top-chassis.webp" alt="Top chassis plate for the ToF robot" width="1758" height="1151" loading="lazy" decoding="async"></div>
+                        <figcaption><h3>Top chassis</h3><p>Upper mounting plane for electronics, battery access and the scanning assembly.</p></figcaption>
+                    </figure>
+                    <figure class="figure part">
+                        <div class="plate plate--render ratio-photo"><img src="images/projects/tof/parts/bottom-chassis.webp" alt="Bottom chassis plate and mounting features for the ToF robot" width="1758" height="1151" loading="lazy" decoding="async"></div>
+                        <figcaption><h3>Bottom chassis</h3><p>Primary structural plate locating the drive system, supports and lower mounting features.</p></figcaption>
+                    </figure>
+                    <figure class="figure part">
+                        <div class="plate plate--render ratio-photo"><img src="images/projects/tof/parts/body-shell.webp" alt="External body designed for the ToF robot" width="1758" height="1151" loading="lazy" decoding="async"></div>
+                        <figcaption><h3>Body</h3><p>Protective enclosure formed around the completed internal package and wheel clearances.</p></figcaption>
+                    </figure>
+                    <figure class="figure part">
+                        <div class="plate plate--render ratio-photo"><img src="images/projects/tof/parts/gear-motor.webp" alt="N20 DC geared motor CAD model used in the ToF robot" width="1758" height="1151" loading="lazy" decoding="async"></div>
+                        <figcaption><h3>Gear motor</h3><p>N20 DC geared motor with encoder interface used for differential-drive motion and wheel odometry.</p></figcaption>
+                    </figure>
+                    <figure class="figure part">
+                        <div class="plate ratio-photo"><img src="images/projects/tof/pcb-first.webp" alt="Custom control PCB designed for the ToF robot" width="687" height="681" loading="lazy" decoding="async"></div>
+                        <figcaption><h3>Control PCB</h3><p>Purpose-built board integrating power conversion, motor control, stepper drive and sensor connections.</p></figcaption>
+                    </figure>
+                    <figure class="figure part">
+                        <div class="plate plate--render ratio-photo"><img src="images/projects/tof/parts/tof-sensor-housing.webp" alt="VL53L8CX ToF sensor and protective housing" width="1504" height="1151" loading="lazy" decoding="async"></div>
+                        <figcaption><h3>ToF sensor and housing</h3><p>Locates and protects the VL53L8CX while mounting it on the repeatable scanning axis.</p></figcaption>
+                    </figure>
+                    <figure class="figure part">
+                        <div class="plate plate--render ratio-photo"><img src="images/projects/tof/parts/stepper-motor.webp" alt="28BYJ-48 stepper motor CAD model used by the ToF scanner" width="1758" height="1151" loading="lazy" decoding="async"></div>
+                        <figcaption><h3>Stepper motor</h3><p>28BYJ-48 actuator rotating the sensor through controlled angular increments during a scan.</p></figcaption>
+                    </figure>
+                    <figure class="figure part">
+                        <div class="plate plate--render ratio-photo"><img src="images/projects/tof/parts/imu-sensor.webp" alt="MPU6050 IMU sensor CAD model used in the ToF robot" width="1758" height="1151" loading="lazy" decoding="async"></div>
+                        <figcaption><h3>IMU sensor</h3><p>MPU6050 inertial sensor providing motion and orientation measurements for the robot system.</p></figcaption>
+                    </figure>
+                </div>
+            </div>
+        </section>
 
-    <section class="case-section"><div class="shell case-layout"><h2>Mechanical decisions</h2><div class="case-copy"><p>The battery was positioned centrally over the drive axis to support traction and reduce the chance of wheel slip affecting odometry. Electronics and sensing hardware were placed on the upper deck, keeping the drive package below and simplifying access during development.</p><p>The VL53L8CX has a limited field of view, so it was mounted on a 28BYJ-48 stepper-driven scanner. The stepper provided repeatable angular increments, while a homing sensor established a consistent zero reference after startup.</p><ul class="evidence-list"><li><span>01</span>Defined component envelopes and fixed drive, sensor and battery relationships.</li><li><span>02</span>Modelled custom parts and supplier hardware as a coordinated SolidWorks assembly.</li><li><span>03</span>Checked scanner visibility, wheel clearance, mounting access and cable direction.</li><li><span>04</span>Built the external housing around the verified internal architecture.</li><li><span>05</span>Prepared individual part drawings and an exploded assembly package.</li></ul></div></div></section>
+        <section class="case-section" aria-labelledby="assembly-title">
+            <div class="wrap">
+                <div class="section-intro">
+                    <h2 id="assembly-title">Mechanical and electrical packaging were resolved together.</h2>
+                    <p>The open assembly was used to check the real occupied volume, mounting relationships and access before the housing was fitted.</p>
+                </div>
+                <div class="gallery">
+                    <figure class="figure">
+                        <div class="plate plate--render ratio-wide"><img src="images/projects/tof/robot-cad-open.webp" alt="Open SolidWorks assembly showing the robot chassis, PCB, motors and scanner" width="1130" height="666" loading="lazy" decoding="async"></div>
+                        <figcaption>Top-level assembly: PCB, battery region, drive hardware and stepper-mounted scanner.</figcaption>
+                    </figure>
+                    <figure class="figure">
+                        <div class="plate plate--render ratio-wide"><img src="images/projects/tof/robot-cad-side.webp" alt="Side view of the open ToF robot assembly" width="750" height="356" loading="lazy" decoding="async"></div>
+                        <figcaption>Side inspection of component height, wheel position and chassis clearance.</figcaption>
+                    </figure>
+                </div>
+            </div>
+        </section>
 
-    <section class="case-section" id="drawings"><div class="shell"><div class="section-head"><p class="section-label">Engineering drawings</p><div><h2>Part and assembly documentation.</h2><p>The drawing set communicates fabrication dimensions, mounting positions and the relationship between the mechanical subsystems. Each preview opens the full PDF.</p></div></div><div class="gallery drawing-gallery">
-        <figure class="wide"><a class="drawing-link" href="documents/tof/assembly.pdf" target="_blank" rel="noopener"><div class="gallery-media wide drawing-sheet"><img src="images/projects/tof/drawing-assembly.webp" alt="Exploded SolidWorks assembly drawing of the ToF robot" loading="lazy"></div><figcaption class="caption">Robot assembly: exploded view, callouts and assembly relationships. <span>Open PDF &nearr;</span></figcaption></a></figure>
-        <figure><a class="drawing-link" href="documents/tof/chassis.pdf" target="_blank" rel="noopener"><div class="gallery-media drawing-sheet portrait"><img src="images/projects/tof/drawing-chassis.webp" alt="Dimensioned bottom chassis drawing" loading="lazy"></div><figcaption class="caption">Bottom chassis geometry and mounting locations. <span>Open PDF &nearr;</span></figcaption></a></figure>
-        <figure><a class="drawing-link" href="documents/tof/top-chassis.pdf" target="_blank" rel="noopener"><div class="gallery-media drawing-sheet portrait"><img src="images/projects/tof/drawing-top-chassis.webp" alt="Dimensioned top chassis drawing" loading="lazy"></div><figcaption class="caption">Top chassis and electronics access features. <span>Open PDF &nearr;</span></figcaption></a></figure>
-        <figure><a class="drawing-link" href="documents/tof/wheels-imu.pdf" target="_blank" rel="noopener"><div class="gallery-media drawing-sheet portrait"><img src="images/projects/tof/drawing-wheels-imu.webp" alt="Wheel, motor and IMU engineering drawing" loading="lazy"></div><figcaption class="caption">Drive wheel, N20 motor, encoder and IMU arrangement. <span>Open PDF &nearr;</span></figcaption></a></figure>
-        <figure><a class="drawing-link" href="documents/tof/tof-sensor.pdf" target="_blank" rel="noopener"><div class="gallery-media drawing-sheet portrait"><img src="images/projects/tof/drawing-tof-sensor.webp" alt="Exploded VL53L8CX sensor housing drawing" loading="lazy"></div><figcaption class="caption">VL53L8CX housing, mount and lid assembly. <span>Open PDF &nearr;</span></figcaption></a></figure>
-    </div></div></section>
+        <section class="case-section" aria-labelledby="decisions-title">
+            <div class="wrap split">
+                <div class="split-head"><h2 id="decisions-title">Mechanical decisions</h2></div>
+                <div class="prose">
+                    <p>The battery was positioned centrally over the drive axis to support traction and reduce the chance of wheel slip affecting odometry. Electronics and sensing hardware were placed on the upper deck, keeping the drive package below and simplifying access during development.</p>
+                    <p>The VL53L8CX has a limited field of view, so it was mounted on a 28BYJ-48 stepper-driven scanner. The stepper provided repeatable angular increments, while a homing sensor established a consistent zero reference after startup.</p>
+                    <ol class="steps">
+                        <li>Defined component envelopes and fixed drive, sensor and battery relationships.</li>
+                        <li>Modelled custom parts and supplier hardware as a coordinated SolidWorks assembly.</li>
+                        <li>Checked scanner visibility, wheel clearance, mounting access and cable direction.</li>
+                        <li>Built the external housing around the verified internal architecture.</li>
+                        <li>Prepared individual part drawings and an exploded assembly package.</li>
+                    </ol>
+                </div>
+            </div>
+        </section>
 
-    <section class="case-section" id="software-integration"><div class="shell">
-        <div class="section-head"><p class="section-label">Software integration</p><div><h2>One workflow from operator command to mapped environment.</h2><p>The robot was developed as a distributed system. The ESP32 handles time-critical hardware tasks, a Python GUI provides the operator interface, and MATLAB converts timestamped motion and range data into the live SLAM map.</p></div></div>
-        <figure class="software-figure"><div class="software-media software-diagram"><img src="images/projects/tof/software/software-architecture.webp" alt="Architecture diagram linking the ESP32 robot, Python operator interface and MATLAB SLAM process" loading="lazy"></div><figcaption class="caption">Distributed architecture: embedded control on the robot, operator control in Python and host-side mapping in MATLAB.</figcaption></figure>
+        <section class="case-section" id="drawings" aria-labelledby="drawings-title">
+            <div class="wrap">
+                <div class="section-intro">
+                    <h2 id="drawings-title">Part and assembly documentation.</h2>
+                    <p>The drawing set communicates fabrication dimensions, mounting positions and the relationship between the mechanical subsystems. Each preview opens the full PDF.</p>
+                </div>
+                <figure class="figure">
+                    <a class="doc-link" href="documents/tof/assembly.pdf" target="_blank" rel="noopener">
+                        <div class="plate plate--render ratio-cover"><img src="images/projects/tof/drawing-assembly.webp" alt="Exploded SolidWorks assembly drawing of the ToF robot" width="1754" height="1241" loading="lazy" decoding="async"></div>
+                        <span class="doc-link-label"><span>Robot assembly: exploded view, callouts and assembly relationships.</span><span class="open is-ext">Open PDF</span></span>
+                    </a>
+                </figure>
+                <div class="gallery gallery--4">
+                    <figure class="figure">
+                        <a class="doc-link" href="documents/tof/chassis.pdf" target="_blank" rel="noopener">
+                            <div class="plate plate--render ratio-sheet-tall"><img src="images/projects/tof/drawing-chassis.webp" alt="Dimensioned bottom chassis drawing" width="1241" height="1754" loading="lazy" decoding="async"></div>
+                            <span class="doc-link-label"><span>Bottom chassis geometry and mounting locations.</span><span class="open is-ext">PDF</span></span>
+                        </a>
+                    </figure>
+                    <figure class="figure">
+                        <a class="doc-link" href="documents/tof/top-chassis.pdf" target="_blank" rel="noopener">
+                            <div class="plate plate--render ratio-sheet-tall"><img src="images/projects/tof/drawing-top-chassis.webp" alt="Dimensioned top chassis drawing" width="1241" height="1754" loading="lazy" decoding="async"></div>
+                            <span class="doc-link-label"><span>Top chassis and electronics access features.</span><span class="open is-ext">PDF</span></span>
+                        </a>
+                    </figure>
+                    <figure class="figure">
+                        <a class="doc-link" href="documents/tof/wheels-imu.pdf" target="_blank" rel="noopener">
+                            <div class="plate plate--render ratio-sheet-tall"><img src="images/projects/tof/drawing-wheels-imu.webp" alt="Wheel, motor and IMU engineering drawing" width="1241" height="1754" loading="lazy" decoding="async"></div>
+                            <span class="doc-link-label"><span>Drive wheel, N20 motor, encoder and IMU arrangement.</span><span class="open is-ext">PDF</span></span>
+                        </a>
+                    </figure>
+                    <figure class="figure">
+                        <a class="doc-link" href="documents/tof/tof-sensor.pdf" target="_blank" rel="noopener">
+                            <div class="plate plate--render ratio-sheet-tall"><img src="images/projects/tof/drawing-tof-sensor.webp" alt="Exploded VL53L8CX sensor housing drawing" width="1241" height="1754" loading="lazy" decoding="async"></div>
+                            <span class="doc-link-label"><span>VL53L8CX housing, mount and lid assembly.</span><span class="open is-ext">PDF</span></span>
+                        </a>
+                    </figure>
+                </div>
+            </div>
+        </section>
 
-        <div class="case-layout software-case"><h2>How the software fits the robot</h2><div class="case-copy"><p>The software was separated by responsibility so that motor safety and sensor timing remain on the robot while heavier mapping and simulation tasks run on the computer.</p><p>The ESP32 reads wheel encoders, the MPU6050 and the scanning VL53L8CX, then forms timestamped odometry and range packets. The Python interface selects either the physical robot or the MATLAB simulation, sends motion and scan commands, and exposes encoder, IMU and ToF diagnostics during development.</p><p>For physical operation, MATLAB receives the robot telemetry, reconstructs motion from cumulative encoder ticks and IMU yaw, aligns each ToF measurement with its acquisition pose, and updates the occupancy map and SLAM estimate. The same control vocabulary is accepted by the MATLAB software-in-the-loop simulator, allowing the command and mapping workflow to be checked before operating the hardware.</p></div></div>
+        <section class="case-section" id="software-integration" aria-labelledby="software-title">
+            <div class="wrap">
+                <div class="section-intro">
+                    <h2 id="software-title">One workflow from operator command to mapped environment.</h2>
+                    <p>The robot was developed as a distributed system. The ESP32 handles time-critical hardware tasks, a Python GUI provides the operator interface, and MATLAB converts timestamped motion and range data into the live SLAM map.</p>
+                </div>
+                <figure class="figure">
+                    <div class="plate plate--render ratio-wide"><img src="images/projects/tof/software/software-architecture.webp" alt="Architecture diagram linking the ESP32 robot, Python operator interface and MATLAB SLAM process" width="1800" height="1050" loading="lazy" decoding="async"></div>
+                    <figcaption>Distributed architecture: embedded control on the robot, operator control in Python and host-side mapping in MATLAB.</figcaption>
+                </figure>
 
-        <div class="software-flow" aria-label="Software communication routes">
-            <article><span>Control / TCP 8081</span><h3>Python GUI to ESP32</h3><p>Drive, stop, reset, scan and diagnostic commands for the physical robot.</p></article>
-            <article><span>Telemetry / TCP 8080</span><h3>ESP32 to MATLAB</h3><p>Timestamped encoder, yaw, scan angle and ToF distance records.</p></article>
-            <article><span>Simulation / TCP 8091</span><h3>Python GUI to MATLAB</h3><p>The same operator controls target the simulated robot through localhost.</p></article>
+                <div class="split">
+                    <div class="split-head"><h2>How the software fits the robot</h2></div>
+                    <div class="prose">
+                        <p>The software was separated by responsibility so that motor safety and sensor timing remain on the robot while heavier mapping and simulation tasks run on the computer.</p>
+                        <p>The ESP32 reads wheel encoders, the MPU6050 and the scanning VL53L8CX, then forms timestamped odometry and range packets. The Python interface selects either the physical robot or the MATLAB simulation, sends motion and scan commands, and exposes encoder, IMU and ToF diagnostics during development.</p>
+                        <p>For physical operation, MATLAB receives the robot telemetry, reconstructs motion from cumulative encoder ticks and IMU yaw, aligns each ToF measurement with its acquisition pose, and updates the occupancy map and SLAM estimate. The same control vocabulary is accepted by the MATLAB software-in-the-loop simulator, allowing the command and mapping workflow to be checked before operating the hardware.</p>
+                    </div>
+                </div>
+
+                <div class="flow" aria-label="Software communication routes">
+                    <article><p class="route">Control, TCP 8081</p><h3>Python GUI to ESP32</h3><p>Drive, stop, reset, scan and diagnostic commands for the physical robot.</p></article>
+                    <article><p class="route">Telemetry, TCP 8080</p><h3>ESP32 to MATLAB</h3><p>Timestamped encoder, yaw, scan angle and ToF distance records.</p></article>
+                    <article><p class="route">Simulation, TCP 8091</p><h3>Python GUI to MATLAB</h3><p>The same operator controls target the simulated robot through localhost.</p></article>
+                </div>
+
+                <div class="gallery">
+                    <figure class="figure span-all">
+                        <div class="plate plate--fit ratio-wide"><img src="images/projects/tof/software/python-control-gui.webp" alt="Python GUI for ToF SLAM robot control, diagnostics and simulation selection" width="1492" height="1226" loading="lazy" decoding="async"></div>
+                        <figcaption>Python control GUI: hardware connection, actual/simulation target selection, teleoperation, encoder and IMU checks, scan control and live status.</figcaption>
+                    </figure>
+                    <figure class="figure">
+                        <div class="plate plate--render ratio-strip"><img src="images/projects/tof/software/processing-pipeline.webp" alt="MATLAB processing pipeline from telemetry parsing to corrected SLAM map" width="1800" height="760" loading="lazy" decoding="async"></div>
+                        <figcaption>MATLAB pipeline: telemetry parsing, pose reconstruction, motion deskew, occupancy updates and scan matching.</figcaption>
+                    </figure>
+                    <figure class="figure">
+                        <div class="plate plate--render ratio-strip"><img src="images/projects/tof/software/gui-safety-state.webp" alt="State diagram for safe teleoperation in the Python GUI" width="1800" height="760" loading="lazy" decoding="async"></div>
+                        <figcaption>Teleoperation safety: motion is enabled deliberately, commands repeat only while a key is held, and release sends an immediate stop.</figcaption>
+                    </figure>
+                </div>
+            </div>
+        </section>
+
+        <section class="case-section" id="pcb-progression" aria-labelledby="pcb-title">
+            <div class="wrap">
+                <div class="section-intro">
+                    <h2 id="pcb-title">Two boards, each documenting a step in the system.</h2>
+                    <p>The implemented two-layer PCB consolidated the working robot hardware. The later four-layer design explored a more integrated ESP32 architecture with dedicated power and ground planes.</p>
+                </div>
+                <div class="stages">
+                    <a class="stage" href="tof-pcb-first.html">
+                        <div class="plate plate--fit ratio-photo" data-vt="pcb-first"><img src="images/projects/tof/pcb-first.webp" alt="First two-layer PCB designed for the ToF robot" width="687" height="681" loading="lazy" decoding="async"></div>
+                        <span class="stage-kicker">Stage 1, implemented PCB</span>
+                        <h3>First robot control board</h3>
+                        <p>ESP32 development module, power conversion, motor and stepper control, sensor headers, indicators and test points on a 100 &times; 100 mm two-layer board.</p>
+                        <span class="stage-cta">Open layouts, components and BOM</span>
+                    </a>
+                    <a class="stage" href="tof-pcb-advanced.html">
+                        <div class="plate ratio-photo" data-vt="pcb-advanced"><img src="images/projects/tof/pcb-advanced/board-top.webp" alt="Advanced ESP32 SLAM four-layer PCB render" width="1800" height="1123" loading="lazy" decoding="async"></div>
+                        <span class="stage-kicker">Stage 2, advanced design</span>
+                        <h3>ESP32 SLAM four-layer PCB</h3>
+                        <p>A production-oriented design proposal using an ESP32-WROOM-32, USB-C programming, onboard regulation and separate signal, power and ground layers.</p>
+                        <span class="stage-cta">Open layers, components and BOM</span>
+                    </a>
+                </div>
+            </div>
+        </section>
+
+        <nav class="next-case" aria-label="Next project">
+            <div class="wrap">
+                <a href="sense-oil.html">
+                    <span><span class="next-label">Next project</span><span class="next-title">Sense-Oil LevelGuard</span></span>
+                    <svg class="next-arrow" viewBox="0 0 64 24" aria-hidden="true"><path d="M0 12h61M50 1l11 11-11 11" fill="none" stroke="currentColor" stroke-width="2"/></svg>
+                </a>
+            </div>
+        </nav>
+    </main>
+
+    <footer class="site-footer">
+        <div class="wrap footer-inner">
+            <p>&copy; <span data-year>2026</span> Zaidh Rizme. Mechatronics engineer, Colombo.</p>
+            <ul class="footer-links">
+                <li><a href="mailto:rizme.zaidh@gmail.com">Email</a></li>
+                <li><a href="https://www.linkedin.com/in/zaidhriz/" target="_blank" rel="noopener">LinkedIn</a></li>
+                <li><a href="https://github.com/zaidh-mech" target="_blank" rel="noopener">GitHub</a></li>
+                <li><a href="Zaidh-Rizme-CV.pdf" target="_blank" rel="noopener">CV</a></li>
+            </ul>
         </div>
-
-        <div class="gallery software-gallery">
-            <figure class="wide"><div class="gallery-media wide software-gui"><img src="images/projects/tof/software/python-control-gui.webp" alt="Python GUI for ToF SLAM robot control, diagnostics and simulation selection" loading="lazy"></div><figcaption class="caption">Python control GUI: hardware connection, actual/simulation target selection, teleoperation, encoder and IMU checks, scan control and live status.</figcaption></figure>
-            <figure><div class="gallery-media software-diagram"><img src="images/projects/tof/software/processing-pipeline.webp" alt="MATLAB processing pipeline from telemetry parsing to corrected SLAM map" loading="lazy"></div><figcaption class="caption">MATLAB pipeline: telemetry parsing, pose reconstruction, motion deskew, occupancy updates and scan matching.</figcaption></figure>
-            <figure><div class="gallery-media software-diagram"><img src="images/projects/tof/software/gui-safety-state.webp" alt="State diagram for safe teleoperation in the Python GUI" loading="lazy"></div><figcaption class="caption">Teleoperation safety: motion is enabled deliberately, commands repeat only while a key is held, and release sends an immediate stop.</figcaption></figure>
-        </div>
-    </div></section>
-
-    <section class="case-section" id="pcb-progression"><div class="shell"><div class="section-head"><p class="section-label">PCB progression</p><div><h2>Two boards, each documenting a step in the system.</h2><p>The implemented two-layer PCB consolidated the working robot hardware. The later four-layer design explored a more integrated ESP32 architecture with dedicated power and ground planes.</p></div></div><div class="pcb-progression">
-        <a class="pcb-stage-link" href="tof-pcb-first.html"><article class="pcb-stage"><div class="stage-copy"><span class="card-index">Stage 01 / Implemented PCB</span><h3>First robot control board</h3><p>ESP32 development module, power conversion, motor and stepper control, sensor headers, indicators and test points on a 100 x 100 mm two-layer board.</p><span class="stage-cta">Open layouts, components &amp; BOM <b>&rarr;</b></span></div><div class="pcb-image"><img src="images/projects/tof/pcb-first.webp" alt="First two-layer PCB designed for the ToF robot" loading="lazy"></div></article></a>
-        <a class="pcb-stage-link" href="tof-pcb-advanced.html"><article class="pcb-stage advanced"><div class="stage-copy"><span class="card-index">Stage 02 / Advanced design</span><h3>ESP32 SLAM four-layer PCB</h3><p>A production-oriented design proposal using an ESP32-WROOM-32, USB-C programming, onboard regulation and separate signal, power and ground layers.</p><span class="stage-cta">Open layers, components &amp; BOM <b>&rarr;</b></span></div><div class="pcb-image"><img src="images/projects/tof/pcb-advanced.webp" alt="Advanced ESP32 SLAM four-layer PCB render" loading="lazy"></div></article></a>
-    </div></div></section>
-
-    <nav class="next-project"><div class="shell"><a href="sense-oil.html"><span>Next: Sense-Oil LevelGuard</span><span>&rarr;</span></a></div></nav>
-</main>
-<footer class="site-footer"><div class="shell footer-row"><p>&copy; <span data-year>2026</span> Zaidh Rizme</p><p><a href="work.html">All projects</a></p></div></footer>
+    </footer>
 </body>
 </html>
